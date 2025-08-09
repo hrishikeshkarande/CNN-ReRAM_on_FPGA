@@ -1,0 +1,398 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7z020clg400-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+WARNING: [Runs 36-114] Unrecognized file type 'RESOURSES' for 'xadc_wiz_0.resources' found in the checkpoint xml
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14384 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 392.930 ; gain = 97.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/imports/hdl/top.v:5]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.runs/synth_1/.Xil/Vivado-18412-LOREFARM/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (1#1) [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.runs/synth_1/.Xil/Vivado-18412-LOREFARM/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'myxadc' of module 'xadc_wiz_0' requires 22 connections, but only 16 given [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/imports/hdl/top.v:29]
+INFO: [Synth 8-226] default block is never used [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/imports/hdl/top.v:56]
+INFO: [Synth 8-6157] synthesizing module 'tm1637_driver' [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/new/tm1637_driver.v:3]
+	Parameter CLK_HALF_PERIOD bound to: 208 - type: integer 
+	Parameter BIT_DELAY_CYCLES bound to: 2 - type: integer 
+	Parameter STATE_IDLE bound to: 5'b00000 
+	Parameter STATE_START bound to: 5'b00001 
+	Parameter STATE_SEND_BYTE bound to: 5'b00010 
+	Parameter STATE_WAIT_ACK bound to: 5'b00011 
+	Parameter STATE_STOP bound to: 5'b00100 
+	Parameter STATE_PREPARE_NEXT_CMD bound to: 5'b00101 
+	Parameter STATE_SEND_DATA_ADDR bound to: 5'b00110 
+	Parameter STATE_SEND_DIGIT0 bound to: 5'b00111 
+	Parameter STATE_SEND_DIGIT1 bound to: 5'b01000 
+	Parameter STATE_SEND_DIGIT2 bound to: 5'b01001 
+	Parameter STATE_SEND_DIGIT3 bound to: 5'b01010 
+	Parameter STATE_SEND_DISPLAY_CTRL bound to: 5'b01011 
+	Parameter STATE_DELAY bound to: 5'b01100 
+INFO: [Synth 8-226] default block is never used [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/new/tm1637_driver.v:50]
+INFO: [Synth 8-226] default block is never used [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/new/tm1637_driver.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'tm1637_driver' (2#1) [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/new/tm1637_driver.v:3]
+WARNING: [Synth 8-6014] Unused sequential element data1_reg was removed.  [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/imports/hdl/top.v:69]
+WARNING: [Synth 8-6014] Unused sequential element data2_reg was removed.  [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/imports/hdl/top.v:70]
+WARNING: [Synth 8-6014] Unused sequential element data3_reg was removed.  [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/imports/hdl/top.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'top' (3#1) [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sources_1/imports/hdl/top.v:5]
+WARNING: [Synth 8-3917] design top has port led[3] driven by constant 0
+WARNING: [Synth 8-3917] design top has port led[2] driven by constant 0
+WARNING: [Synth 8-3917] design top has port led[1] driven by constant 0
+WARNING: [Synth 8-3917] design top has port led[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 447.008 ; gain = 151.254
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 447.008 ; gain = 151.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 447.008 ; gain = 151.254
+---------------------------------------------------------------------------------
+WARNING: [Runs 36-114] Unrecognized file type 'RESOURSES' for 'xadc_wiz_0.resources' found in the checkpoint xml
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/xadc_wiz_0/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'myxadc'
+Finished Parsing XDC File [c:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/xadc_wiz_0/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'myxadc'
+Parsing XDC File [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/constrs_1/imports/constraints/Zybo-Z7.xdc]
+WARNING: [Vivado 12-584] No ports matched 'tm1637_clk'. [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/constrs_1/imports/constraints/Zybo-Z7.xdc:205]
+WARNING: [Vivado 12-584] No ports matched 'tm1637_dio'. [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/constrs_1/imports/constraints/Zybo-Z7.xdc:206]
+Finished Parsing XDC File [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/constrs_1/imports/constraints/Zybo-Z7.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/constrs_1/imports/constraints/Zybo-Z7.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/constrs_1/imports/constraints/Zybo-Z7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 810.734 ; gain = 0.000
+WARNING: [Runs 36-114] Unrecognized file type 'RESOURSES' for 'xadc_wiz_0.resources' found in the checkpoint xml
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 810.734 ; gain = 514.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 810.734 ; gain = 514.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for myxadc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 810.734 ; gain = 514.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "dio_output_enable" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "tm_clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "current_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "byte_to_send" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ledidx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 810.734 ; gain = 514.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   3 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	  13 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module tm1637_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   3 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	  13 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[9]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[8]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[7]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[6]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[5]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[4]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[3]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[2]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[1]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (clk_divide_counter_reg[0]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (tm_clk_reg) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (sub_bit_delay_counter_reg[3]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (sub_bit_delay_counter_reg[2]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (sub_bit_delay_counter_reg[1]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (sub_bit_delay_counter_reg[0]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[7]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[6]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[5]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[4]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[3]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[2]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[1]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit1_val_reg[0]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[7]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[6]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[5]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[4]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[3]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[2]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[1]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (seg_data_digit0_val_reg[0]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[7]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[6]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[5]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[4]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[3]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[2]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[1]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (byte_to_send_reg[0]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[4]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[3]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[2]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[1]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[0]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[4]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[3]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[2]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[1]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[0]) is unused and will be removed from module tm1637_driver.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data0_reg[0]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 810.734 ; gain = 514.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 810.734 ; gain = 514.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 813.844 ; gain = 518.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myxadc has unconnected pin vp_in
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myxadc has unconnected pin vn_in
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 813.844 ; gain = 518.090
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 813.844 ; gain = 518.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 813.844 ; gain = 518.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |xadc_wiz_0 |     1|
+|2     |BUFG       |     1|
+|3     |LUT1       |     1|
+|4     |LUT2       |     1|
+|5     |LUT3       |     1|
+|6     |LUT4       |     1|
+|7     |FDRE       |     4|
+|8     |IBUF       |     9|
+|9     |OBUF       |     4|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    48|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 813.844 ; gain = 518.090
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 57 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 813.844 ; gain = 154.363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 813.844 ; gain = 518.090
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 71 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 824.883 ; gain = 540.637
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 824.883 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 17 18:03:56 2025...

@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 18 11:01:55 2025
+# Process ID: 7824
+# Current directory: C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3008 C:\Users\hrish\Downloads\Wahl_Thesis_Haris_Student_Arbeit\Zybo-Z7-20-XADC-2018.2-1\vivado_proj\project_1 - Copy\project_1.xpr
+# Log file: C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy/vivado.log
+# Journal file: C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy/project_1.xpr}
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+close_hw

@@ -1,0 +1,89 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance tb_top.uut.myxadc.inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
+[0] Simulation started
+[0] Analog inputs configured:
+       AD14: 0.80V (0xccc)
+       AD7:  0.20V (0x333)
+       AD15: 1.00V (0xfff)
+       AD6:  0.00V (0x0)
+[0] Initializing Pmod JA inputs...
+[0] XADC switching to channel: 0x0
+[0] XADC switching to channel: 0x1e
+[0]   Reading AD14 (0xccc0)
+[0] LED outputs: xxxx (LD0:x LD1:x LD2:x LD3:x)
+[4000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[1000000] Simulation complete
+$finish called at time : 1 us : File "C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1/project_1.srcs/sim_1/new/tb_top.v" Line 88
+[1020000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[2044000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[2052000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[3068000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[4092000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[4100000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[5116000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[6140000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[6148000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[7164000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[8188000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[8196000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[9212000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[10236000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[10244000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[11260000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[12284000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[12292000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[13308000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[14332000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[14340000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[15356000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[16380000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[16388000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[17404000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[18428000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[18436000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)
+[19452000] PWM duty cycles updated:
+       LD0: 0x0 (0/255)
+       LD1: 0x0 (0/255)
+       LD2: 0x0 (0/255)
+       LD3: 0x0 (0/255)
+[20476000] LED outputs: 1111 (LD0:1 LD1:1 LD2:1 LD3:1)
+[20484000] LED outputs: 0000 (LD0:0 LD1:0 LD2:0 LD3:0)

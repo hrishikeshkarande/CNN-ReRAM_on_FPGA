@@ -1,0 +1,154 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:40:38 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 7824
+License: Customer
+
+Current time: 	Wed Jun 18 11:02:42 CEST 2025
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1280x800
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 322 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.1/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.1/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	hrish
+User home directory: C:/Users/hrish
+User working directory: C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.1
+RDI_DATADIR: C:/Xilinx/Vivado/2018.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.1/bin
+
+Vivado preferences file location: C:/Users/hrish/AppData/Roaming/Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: C:/Users/hrish/AppData/Roaming/Xilinx/Vivado/2018.1/
+Vivado layouts directory: C:/Users/hrish/AppData/Roaming/Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy/vivado.log
+Vivado journal file location: 	C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy/vivado.jou
+Engine tmp dir: 	C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy/.Xil/Vivado-7824-LOREFARM
+
+GUI allocated memory:	187 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 538 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 75 MB (+75861kb) [00:00:17]
+// [Engine Memory]: 528 MB (+402295kb) [00:00:17]
+// bv (ch):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\hrish\Downloads\Wahl_Thesis_Haris_Student_Arbeit\Zybo-Z7-20-XADC-2018.2-1\vivado_proj\project_1 - Copy\project_1.xpr. Version: Vivado v2018.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy/project_1.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy' 
+// HMemoryUtils.trashcanNow. Engine heap size: 542 MB. GUI used memory: 37 MB. Current time: 6/18/25 11:02:44 AM CEST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 556 MB (+1592kb) [00:00:27]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 601 MB (+18370kb) [00:00:30]
+// [Engine Memory]: 636 MB (+4356kb) [00:00:35]
+// Tcl Message: open_project {C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy/project_1.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy' INFO: [Project 1-313] Project file moved from 'C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 636 MB. GUI used memory: 42 MB. Current time: 6/18/25 11:03:01 AM CEST
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 818.148 ; gain = 84.668 
+// Project name: project_1; location: C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/Zybo-Z7-20-XADC-2018.2-1/vivado_proj/project_1 - Copy; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (top.v) elapsed time: 0.2s
+// Elapsed time: 100 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 663 MB. GUI used memory: 44 MB. Current time: 6/18/25 11:04:44 AM CEST
+selectCodeEditor("top.v", 234, 212); // cd (w, ch)
+// Elapsed time: 264 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U (q, ch)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U (q, ch)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U (q, ch)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // Z (ch)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // Z (ch)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U (q, ch)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U (q, ch)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // Z (ch)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // U (ch)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN, "Open Implemented Design"); // Z (ch)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // ac (ch)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U (q, ch)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bv (ch):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// [Engine Memory]: 668 MB (+614kb) [00:06:50]
+// [GUI Memory]: 83 MB (+4439kb) [00:06:51]
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bv (ch)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ch)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, ch)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bv (ch):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.1   **** Build date : Apr  4 2018-19:32:53     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+dismissDialog("Auto Connect"); // bv (ch)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ch)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, ch)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Elapsed time: 29 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ch)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, ch)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Elapsed time: 43 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ch)
+// Elapsed time: 42 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aC, ch)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (ch): Confirm Close: addNotify

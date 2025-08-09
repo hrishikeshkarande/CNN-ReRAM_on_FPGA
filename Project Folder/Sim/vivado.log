@@ -1,0 +1,239 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jul 28 14:42:13 2025
+# Process ID: 14532
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7336 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\Sim\Sim.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 790.094 ; gain = 56.191
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'reram_cell_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj reram_cell_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sources_1/new/reram_cell.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_cell
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sim_1/new/reram_cell_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_cell_tb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 45fd118e296e4cf9908420759dbb98b6 --incr --debug typical --relax --mt 2 -L xilinx_vip -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot reram_cell_tb_behav xil_defaultlib.reram_cell_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reram_cell(SET_DELAY_CYCLES=5,RE...
+Compiling module xil_defaultlib.reram_cell_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot reram_cell_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 836.656 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "reram_cell_tb_behav -key {Behavioral:sim_1:Functional:reram_cell_tb} -tclbatch {reram_cell_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source reram_cell_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ms
+-----------------------------------------------------
+           ReRAM Cell Testbench Started            
+-----------------------------------------------------
+Time 0: Cell RESET! Initial State: 1, Endurance: 0
+Time 5000: Cell RESET! Initial State: 1, Endurance: 0
+Time 15000: Cell RESET! Initial State: 1, Endurance: 0
+Time 25000: Cell RESET! Initial State: 1, Endurance: 0
+Time 35000: Cell RESET! Initial State: 1, Endurance: 0
+Time 45000: Cell RESET! Initial State: 1, Endurance: 0
+Time 50000: Reset Released. Initializing test sequence.
+Time 60000: Initial state check. Expected: 1, Actual: 1. Failed: 0
+Time 60000: Starting SET operation (HRS -> LRS).
+Time 65000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 75000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 85000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 95000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 105000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 115000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 1
+Time 125000: SET operation completed. Expected: 0, Actual: 0. Busy: 0, Failed: 0
+Time 125000: Starting RESET operation (LRS -> HRS).
+Time 125000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 135000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 145000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 155000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 165000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 175000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 2
+Time 185000: RESET operation completed. Expected: 1, Actual: 1. Busy: 0, Failed: 0
+Time 185000: Starting repeated write operations to test endurance limit (8).
+Time 185000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 195000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 205000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 215000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 225000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 235000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 3
+Time 245000: Write Cycle 1. Current State: 0, Busy: 0, Failed: 0
+Time 245000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 255000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 265000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 275000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 285000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 295000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 4
+Time 305000: Write Cycle 2. Current State: 1, Busy: 0, Failed: 0
+Time 305000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 315000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 325000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 335000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 345000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 355000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 5
+Time 365000: Write Cycle 3. Current State: 0, Busy: 0, Failed: 0
+Time 365000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 375000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 385000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 395000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 405000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 415000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 6
+Time 425000: Write Cycle 4. Current State: 1, Busy: 0, Failed: 0
+Time 425000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 435000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 445000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 455000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 465000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 475000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 7
+Time 485000: Write Cycle 5. Current State: 0, Busy: 0, Failed: 0
+Time 485000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 495000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 505000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 515000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 525000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 535000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 8
+Time 545000: Write Cycle 6. Current State: 1, Busy: 0, Failed: 0
+Time 545000: Cell FAILED! Endurance Limit (8) reached. Current endurance: 8
+Time 545000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 555000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 565000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 575000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 585000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 595000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 9
+Time 605000: Write Cycle 7. Current State: 0, Busy: 0, Failed: 1
+Time 605000: Cell FAILED at cycle 7. Remaining cycles will attempt writes to a failed cell.
+Time 605000: Attempting write to a FAILED cell.
+Time 605000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 615000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 625000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 635000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 645000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 655000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 665000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 675000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 685000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 695000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 705000: Write attempt on failed cell completed. Busy: 0, Failed: 1, Read Data: 0
+-----------------------------------------------------
+           ReRAM Cell Testbench Finished           
+-----------------------------------------------------
+$finish called at time : 705 ns : File "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sim_1/new/reram_cell_tb.sv" Line 177
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'reram_cell_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ms
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 850.375 ; gain = 13.719
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010iclg225-1L
+Top: reram_core
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 976.387 ; gain = 112.871
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'reram_core' [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sources_1/new/reram_core.sv:6]
+	Parameter ROWS bound to: 8 - type: integer 
+	Parameter COLS bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter LRS_VAL bound to: 1'b0 
+	Parameter HRS_VAL bound to: 1'b1 
+	Parameter CELL_SET_DELAY_CYCLES bound to: 10 - type: integer 
+	Parameter CELL_RESET_DELAY_CYCLES bound to: 10 - type: integer 
+	Parameter CELL_ENDURANCE_LIMIT bound to: 1000 - type: integer 
+	Parameter CORE_IDLE bound to: 2'b00 
+	Parameter CORE_START_WRITE bound to: 2'b01 
+	Parameter CORE_WAIT_WRITE_COMPLETE bound to: 2'b11 
+	Parameter CORE_READING bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'reram_cell' [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sources_1/new/reram_cell.sv:6]
+	Parameter LRS_STATE bound to: 1'b0 
+	Parameter HRS_STATE bound to: 1'b1 
+	Parameter SET_DELAY_CYCLES bound to: 10 - type: integer 
+	Parameter RESET_DELAY_CYCLES bound to: 10 - type: integer 
+	Parameter ENDURANCE_LIMIT bound to: 1000 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter SETTING bound to: 2'b01 
+	Parameter RESETTING bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'reram_cell' (1#1) [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sources_1/new/reram_cell.sv:6]
+INFO: [Synth 8-226] default block is never used [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sources_1/new/reram_core.sv:115]
+INFO: [Synth 8-6155] done synthesizing module 'reram_core' (2#1) [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sources_1/new/reram_core.sv:6]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1031.418 ; gain = 167.902
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1031.418 ; gain = 167.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1031.418 ; gain = 167.902
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010iclg225-1L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1357.355 ; gain = 493.840
+9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1357.355 ; gain = 493.840
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 28 17:35:07 2025...

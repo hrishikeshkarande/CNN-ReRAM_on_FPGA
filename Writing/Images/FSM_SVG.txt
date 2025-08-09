@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="108.5" cy="153.5" rx="30" ry="30"/>
+	<text x="95.5" y="159.5" font-family="Times New Roman" font-size="20">init</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="108.5" cy="153.5" rx="24" ry="24"/>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="364.5" cy="206.5" rx="30" ry="30"/>
+	<text x="341.5" y="212.5" font-family="Times New Roman" font-size="20">IDLE</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="659.5" cy="183.5" rx="30" ry="30"/>
+	<text x="646.5" y="189.5" font-family="Times New Roman" font-size="20">def</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="123.5" cy="354.5" rx="30" ry="30"/>
+	<text x="81.5" y="360.5" font-family="Times New Roman" font-size="20">SETTING</text>
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="609.5" cy="346.5" rx="30" ry="30"/>
+	<text x="555.5" y="352.5" font-family="Times New Roman" font-size="20">RESETTING</text>
+	<polygon stroke="black" stroke-width="1" points="127.5,78.5 115.867,124.419"/>
+	<text x="81.5" y="56.5" font-family="Times New Roman" font-size="20">clk, rst_n, current=HRS,delay=0,endurance=0</text>
+	<polygon fill="black" stroke-width="1" points="115.867,124.419 122.679,117.892 112.985,115.436"/>
+	<polygon stroke="black" stroke-width="1" points="137.877,159.582 335.123,200.418"/>
+	<polygon fill="black" stroke-width="1" points="335.123,200.418 328.303,193.9 326.275,203.692"/>
+	<text x="77.5" y="209.5" font-family="Times New Roman" font-size="20">write_en, fail_flag=false</text>
+	<path stroke="black" stroke-width="1" fill="none" d="M 351.275,179.703 A 22.5,22.5 0 1 1 377.725,179.703"/>
+	<text x="309.5" y="130.5" font-family="Times New Roman" font-size="20">fail_flag=true</text>
+	<polygon fill="black" stroke-width="1" points="377.725,179.703 386.473,176.17 378.382,170.292"/>
+	<polygon stroke="black" stroke-width="1" points="629.591,185.832 394.409,204.168"/>
+	<polygon fill="black" stroke-width="1" points="394.409,204.168 402.774,208.531 401.996,198.561"/>
+	<text x="439.5" y="181.5" font-family="Times New Roman" font-size="20">error_state=true</text>
+	<path stroke="black" stroke-width="1" fill="none" d="M 393.583,213.84 A 471.761,471.761 0 0 1 588.411,325.17"/>
+	<polygon fill="black" stroke-width="1" points="588.411,325.17 586.05,316.037 579.166,323.29"/>
+	<text x="502.5" y="248.5" font-family="Times New Roman" font-size="20">target=HRS, delay++,endurance++</text>
+	<polygon stroke="black" stroke-width="1" points="583.453,331.616 390.547,221.384"/>
+	<polygon fill="black" stroke-width="1" points="390.547,221.384 395.013,229.694 399.974,221.012"/>
+	<text x="374.5" y="297.5" font-family="Times New Roman" font-size="20">WRITE done</text>
+	<polygon stroke="black" stroke-width="1" points="149.064,338.801 338.936,222.199"/>
+	<polygon fill="black" stroke-width="1" points="338.936,222.199 329.502,222.125 334.735,230.646"/>
+	<text x="131.5" y="271.5" font-family="Times New Roman" font-size="20">WRITE done</text>
+	<path stroke="black" stroke-width="1" fill="none" d="M 347.274,231.048 A 321.924,321.924 0 0 1 153.185,350.24"/>
+	<polygon fill="black" stroke-width="1" points="153.185,350.24 161.982,353.646 160.102,343.825"/>
+	<text x="265.5" y="329.5" font-family="Times New Roman" font-size="20">target=LRS,delay++,endurance++</text>
+</svg>

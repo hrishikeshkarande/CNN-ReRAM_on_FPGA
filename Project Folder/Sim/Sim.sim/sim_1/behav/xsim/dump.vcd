@@ -1,0 +1,1891 @@
+$date
+   Sun Jul 27 22:34:29 2025
+$end
+$version
+  2018.1
+$end
+$timescale
+  1ps
+$end
+$scope module reram_core_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 4 # tb_addr [3:0] $end
+$var reg 1 $ tb_data_in $end
+$var reg 1 % tb_write_en $end
+$var reg 1 & tb_read_en $end
+$var wire 1 ' tb_data_out $end
+$var wire 1 ( tb_busy $end
+$var wire 16 ) tb_all_failed_cells [15:0] $end
+$var parameter 32 * TB_ROWS [31:0] $end
+$var parameter 32 + TB_COLS [31:0] $end
+$var parameter 32 , TB_ADDR_WIDTH [31:0] $end
+$var parameter 0 - TB_LRS_VAL $end
+$var parameter 0 . TB_HRS_VAL $end
+$var parameter 32 / TB_CELL_SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 0 TB_CELL_RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 1 TB_CELL_ENDURANCE_LIMIT [31:0] $end
+$var parameter 32 2 CLK_PERIOD [31:0] $end
+$scope module u_reram_core $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 4 5 addr [3:0] $end
+$var wire 1 6 data_in $end
+$var wire 1 7 write_en $end
+$var wire 1 8 read_en $end
+$var wire 1 ' data_out $end
+$var wire 1 ( busy $end
+$var wire 16 ) all_failed_cells [15:0] $end
+$var wire 16 9 cell_read_data [15:0] $end
+$var wire 16 : cell_busy [15:0] $end
+$var wire 16 ; cell_failed [15:0] $end
+$var reg 1 < selected_cell_write_en $end
+$var reg 1 = selected_cell_target_state $end
+$var reg 4 > current_op_addr [3:0] $end
+$var reg 2 ? core_fsm_state [1:0] $end
+$var reg 16 @ cell_write_en_local [15:0] $end
+$var reg 16 A cell_target_state_local [15:0] $end
+$var reg 1 B data_out_reg $end
+$var parameter 32 C ROWS [31:0] $end
+$var parameter 32 D COLS [31:0] $end
+$var parameter 32 E ADDR_WIDTH [31:0] $end
+$var parameter 0 F LRS_VAL $end
+$var parameter 0 G HRS_VAL $end
+$var parameter 32 H CELL_SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 I CELL_RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 J CELL_ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 K CORE_IDLE [1:0] $end
+$var parameter 2 L CORE_START_WRITE [1:0] $end
+$var parameter 2 M CORE_WAIT_WRITE_COMPLETE [1:0] $end
+$var parameter 2 N CORE_READING [1:0] $end
+$var parameter 32 O \row_inst[0].col_inst[0].CELL_INDEX  [31:0] $end
+$var parameter 32 P \row_inst[0].col_inst[1].CELL_INDEX  [31:0] $end
+$var parameter 32 Q \row_inst[0].col_inst[2].CELL_INDEX  [31:0] $end
+$var parameter 32 R \row_inst[0].col_inst[3].CELL_INDEX  [31:0] $end
+$var parameter 32 S \row_inst[1].col_inst[0].CELL_INDEX  [31:0] $end
+$var parameter 32 T \row_inst[1].col_inst[1].CELL_INDEX  [31:0] $end
+$var parameter 32 U \row_inst[1].col_inst[2].CELL_INDEX  [31:0] $end
+$var parameter 32 V \row_inst[1].col_inst[3].CELL_INDEX  [31:0] $end
+$var parameter 32 W \row_inst[2].col_inst[0].CELL_INDEX  [31:0] $end
+$var parameter 32 X \row_inst[2].col_inst[1].CELL_INDEX  [31:0] $end
+$var parameter 32 Y \row_inst[2].col_inst[2].CELL_INDEX  [31:0] $end
+$var parameter 32 Z \row_inst[2].col_inst[3].CELL_INDEX  [31:0] $end
+$var parameter 32 [ \row_inst[3].col_inst[0].CELL_INDEX  [31:0] $end
+$var parameter 32 \ \row_inst[3].col_inst[1].CELL_INDEX  [31:0] $end
+$var parameter 32 ] \row_inst[3].col_inst[2].CELL_INDEX  [31:0] $end
+$var parameter 32 ^ \row_inst[3].col_inst[3].CELL_INDEX  [31:0] $end
+$scope module row_inst[0].col_inst[0].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 _ write_en $end
+$var wire 1 ` target_state $end
+$var wire 1 a read_data $end
+$var wire 1 b busy $end
+$var wire 1 c failed $end
+$var reg 1 d current_state $end
+$var reg 32 e delay_counter [31:0] $end
+$var reg 2 f write_fsm_state [1:0] $end
+$var reg 32 g endurance_counter [31:0] $end
+$var reg 1 h cell_failed_flag $end
+$var parameter 0 i LRS_STATE $end
+$var parameter 0 j HRS_STATE $end
+$var parameter 32 k SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 l RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 m ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 n IDLE [1:0] $end
+$var parameter 2 o SETTING [1:0] $end
+$var parameter 2 p RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[0].col_inst[1].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 q write_en $end
+$var wire 1 r target_state $end
+$var wire 1 s read_data $end
+$var wire 1 t busy $end
+$var wire 1 u failed $end
+$var reg 1 v current_state $end
+$var reg 32 w delay_counter [31:0] $end
+$var reg 2 x write_fsm_state [1:0] $end
+$var reg 32 y endurance_counter [31:0] $end
+$var reg 1 z cell_failed_flag $end
+$var parameter 0 { LRS_STATE $end
+$var parameter 0 | HRS_STATE $end
+$var parameter 32 } SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 ~ RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 !! ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 "! IDLE [1:0] $end
+$var parameter 2 #! SETTING [1:0] $end
+$var parameter 2 $! RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[0].col_inst[2].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 %! write_en $end
+$var wire 1 &! target_state $end
+$var wire 1 '! read_data $end
+$var wire 1 (! busy $end
+$var wire 1 )! failed $end
+$var reg 1 *! current_state $end
+$var reg 32 +! delay_counter [31:0] $end
+$var reg 2 ,! write_fsm_state [1:0] $end
+$var reg 32 -! endurance_counter [31:0] $end
+$var reg 1 .! cell_failed_flag $end
+$var parameter 0 /! LRS_STATE $end
+$var parameter 0 0! HRS_STATE $end
+$var parameter 32 1! SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 2! RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 3! ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 4! IDLE [1:0] $end
+$var parameter 2 5! SETTING [1:0] $end
+$var parameter 2 6! RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[0].col_inst[3].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 7! write_en $end
+$var wire 1 8! target_state $end
+$var wire 1 9! read_data $end
+$var wire 1 :! busy $end
+$var wire 1 ;! failed $end
+$var reg 1 <! current_state $end
+$var reg 32 =! delay_counter [31:0] $end
+$var reg 2 >! write_fsm_state [1:0] $end
+$var reg 32 ?! endurance_counter [31:0] $end
+$var reg 1 @! cell_failed_flag $end
+$var parameter 0 A! LRS_STATE $end
+$var parameter 0 B! HRS_STATE $end
+$var parameter 32 C! SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 D! RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 E! ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 F! IDLE [1:0] $end
+$var parameter 2 G! SETTING [1:0] $end
+$var parameter 2 H! RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[1].col_inst[0].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 I! write_en $end
+$var wire 1 J! target_state $end
+$var wire 1 K! read_data $end
+$var wire 1 L! busy $end
+$var wire 1 M! failed $end
+$var reg 1 N! current_state $end
+$var reg 32 O! delay_counter [31:0] $end
+$var reg 2 P! write_fsm_state [1:0] $end
+$var reg 32 Q! endurance_counter [31:0] $end
+$var reg 1 R! cell_failed_flag $end
+$var parameter 0 S! LRS_STATE $end
+$var parameter 0 T! HRS_STATE $end
+$var parameter 32 U! SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 V! RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 W! ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 X! IDLE [1:0] $end
+$var parameter 2 Y! SETTING [1:0] $end
+$var parameter 2 Z! RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[1].col_inst[1].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 [! write_en $end
+$var wire 1 \! target_state $end
+$var wire 1 ]! read_data $end
+$var wire 1 ^! busy $end
+$var wire 1 _! failed $end
+$var reg 1 `! current_state $end
+$var reg 32 a! delay_counter [31:0] $end
+$var reg 2 b! write_fsm_state [1:0] $end
+$var reg 32 c! endurance_counter [31:0] $end
+$var reg 1 d! cell_failed_flag $end
+$var parameter 0 e! LRS_STATE $end
+$var parameter 0 f! HRS_STATE $end
+$var parameter 32 g! SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 h! RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 i! ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 j! IDLE [1:0] $end
+$var parameter 2 k! SETTING [1:0] $end
+$var parameter 2 l! RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[1].col_inst[2].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 m! write_en $end
+$var wire 1 n! target_state $end
+$var wire 1 o! read_data $end
+$var wire 1 p! busy $end
+$var wire 1 q! failed $end
+$var reg 1 r! current_state $end
+$var reg 32 s! delay_counter [31:0] $end
+$var reg 2 t! write_fsm_state [1:0] $end
+$var reg 32 u! endurance_counter [31:0] $end
+$var reg 1 v! cell_failed_flag $end
+$var parameter 0 w! LRS_STATE $end
+$var parameter 0 x! HRS_STATE $end
+$var parameter 32 y! SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 z! RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 {! ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 |! IDLE [1:0] $end
+$var parameter 2 }! SETTING [1:0] $end
+$var parameter 2 ~! RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[1].col_inst[3].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 !" write_en $end
+$var wire 1 "" target_state $end
+$var wire 1 #" read_data $end
+$var wire 1 $" busy $end
+$var wire 1 %" failed $end
+$var reg 1 &" current_state $end
+$var reg 32 '" delay_counter [31:0] $end
+$var reg 2 (" write_fsm_state [1:0] $end
+$var reg 32 )" endurance_counter [31:0] $end
+$var reg 1 *" cell_failed_flag $end
+$var parameter 0 +" LRS_STATE $end
+$var parameter 0 ," HRS_STATE $end
+$var parameter 32 -" SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 ." RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 /" ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 0" IDLE [1:0] $end
+$var parameter 2 1" SETTING [1:0] $end
+$var parameter 2 2" RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[2].col_inst[0].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 3" write_en $end
+$var wire 1 4" target_state $end
+$var wire 1 5" read_data $end
+$var wire 1 6" busy $end
+$var wire 1 7" failed $end
+$var reg 1 8" current_state $end
+$var reg 32 9" delay_counter [31:0] $end
+$var reg 2 :" write_fsm_state [1:0] $end
+$var reg 32 ;" endurance_counter [31:0] $end
+$var reg 1 <" cell_failed_flag $end
+$var parameter 0 =" LRS_STATE $end
+$var parameter 0 >" HRS_STATE $end
+$var parameter 32 ?" SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 @" RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 A" ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 B" IDLE [1:0] $end
+$var parameter 2 C" SETTING [1:0] $end
+$var parameter 2 D" RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[2].col_inst[1].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 E" write_en $end
+$var wire 1 F" target_state $end
+$var wire 1 G" read_data $end
+$var wire 1 H" busy $end
+$var wire 1 I" failed $end
+$var reg 1 J" current_state $end
+$var reg 32 K" delay_counter [31:0] $end
+$var reg 2 L" write_fsm_state [1:0] $end
+$var reg 32 M" endurance_counter [31:0] $end
+$var reg 1 N" cell_failed_flag $end
+$var parameter 0 O" LRS_STATE $end
+$var parameter 0 P" HRS_STATE $end
+$var parameter 32 Q" SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 R" RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 S" ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 T" IDLE [1:0] $end
+$var parameter 2 U" SETTING [1:0] $end
+$var parameter 2 V" RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[2].col_inst[2].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 W" write_en $end
+$var wire 1 X" target_state $end
+$var wire 1 Y" read_data $end
+$var wire 1 Z" busy $end
+$var wire 1 [" failed $end
+$var reg 1 \" current_state $end
+$var reg 32 ]" delay_counter [31:0] $end
+$var reg 2 ^" write_fsm_state [1:0] $end
+$var reg 32 _" endurance_counter [31:0] $end
+$var reg 1 `" cell_failed_flag $end
+$var parameter 0 a" LRS_STATE $end
+$var parameter 0 b" HRS_STATE $end
+$var parameter 32 c" SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 d" RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 e" ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 f" IDLE [1:0] $end
+$var parameter 2 g" SETTING [1:0] $end
+$var parameter 2 h" RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[2].col_inst[3].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 i" write_en $end
+$var wire 1 j" target_state $end
+$var wire 1 k" read_data $end
+$var wire 1 l" busy $end
+$var wire 1 m" failed $end
+$var reg 1 n" current_state $end
+$var reg 32 o" delay_counter [31:0] $end
+$var reg 2 p" write_fsm_state [1:0] $end
+$var reg 32 q" endurance_counter [31:0] $end
+$var reg 1 r" cell_failed_flag $end
+$var parameter 0 s" LRS_STATE $end
+$var parameter 0 t" HRS_STATE $end
+$var parameter 32 u" SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 v" RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 w" ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 x" IDLE [1:0] $end
+$var parameter 2 y" SETTING [1:0] $end
+$var parameter 2 z" RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[3].col_inst[0].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 {" write_en $end
+$var wire 1 |" target_state $end
+$var wire 1 }" read_data $end
+$var wire 1 ~" busy $end
+$var wire 1 !# failed $end
+$var reg 1 "# current_state $end
+$var reg 32 ## delay_counter [31:0] $end
+$var reg 2 $# write_fsm_state [1:0] $end
+$var reg 32 %# endurance_counter [31:0] $end
+$var reg 1 &# cell_failed_flag $end
+$var parameter 0 '# LRS_STATE $end
+$var parameter 0 (# HRS_STATE $end
+$var parameter 32 )# SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 *# RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 +# ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 ,# IDLE [1:0] $end
+$var parameter 2 -# SETTING [1:0] $end
+$var parameter 2 .# RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[3].col_inst[1].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 /# write_en $end
+$var wire 1 0# target_state $end
+$var wire 1 1# read_data $end
+$var wire 1 2# busy $end
+$var wire 1 3# failed $end
+$var reg 1 4# current_state $end
+$var reg 32 5# delay_counter [31:0] $end
+$var reg 2 6# write_fsm_state [1:0] $end
+$var reg 32 7# endurance_counter [31:0] $end
+$var reg 1 8# cell_failed_flag $end
+$var parameter 0 9# LRS_STATE $end
+$var parameter 0 :# HRS_STATE $end
+$var parameter 32 ;# SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 <# RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 =# ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 ># IDLE [1:0] $end
+$var parameter 2 ?# SETTING [1:0] $end
+$var parameter 2 @# RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[3].col_inst[2].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 A# write_en $end
+$var wire 1 B# target_state $end
+$var wire 1 C# read_data $end
+$var wire 1 D# busy $end
+$var wire 1 E# failed $end
+$var reg 1 F# current_state $end
+$var reg 32 G# delay_counter [31:0] $end
+$var reg 2 H# write_fsm_state [1:0] $end
+$var reg 32 I# endurance_counter [31:0] $end
+$var reg 1 J# cell_failed_flag $end
+$var parameter 0 K# LRS_STATE $end
+$var parameter 0 L# HRS_STATE $end
+$var parameter 32 M# SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 N# RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 O# ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 P# IDLE [1:0] $end
+$var parameter 2 Q# SETTING [1:0] $end
+$var parameter 2 R# RESETTING [1:0] $end
+$upscope $end
+$scope module row_inst[3].col_inst[3].u_reram_cell $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 S# write_en $end
+$var wire 1 T# target_state $end
+$var wire 1 U# read_data $end
+$var wire 1 V# busy $end
+$var wire 1 W# failed $end
+$var reg 1 X# current_state $end
+$var reg 32 Y# delay_counter [31:0] $end
+$var reg 2 Z# write_fsm_state [1:0] $end
+$var reg 32 [# endurance_counter [31:0] $end
+$var reg 1 \# cell_failed_flag $end
+$var parameter 0 ]# LRS_STATE $end
+$var parameter 0 ^# HRS_STATE $end
+$var parameter 32 _# SET_DELAY_CYCLES [31:0] $end
+$var parameter 32 `# RESET_DELAY_CYCLES [31:0] $end
+$var parameter 32 a# ENDURANCE_LIMIT [31:0] $end
+$var parameter 2 b# IDLE [1:0] $end
+$var parameter 2 c# SETTING [1:0] $end
+$var parameter 2 d# RESETTING [1:0] $end
+$upscope $end
+$upscope $end
+$scope begin Block150_22 $end
+$var integer 32 e# i $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b1010 !!
+0!"
+0!#
+0"
+b0 "!
+0""
+1"#
+b0 #
+b1 #!
+1#"
+b0 ##
+1$
+b10 $!
+0$"
+b0 $#
+0%
+0%!
+0%"
+b0 %#
+0&
+0&!
+1&"
+0&#
+1'
+1'!
+b0 '"
+0'#
+0(
+0(!
+b0 ("
+1(#
+b0 )
+0)!
+b0 )"
+b101 )#
+b100 *
+1*!
+0*"
+b101 *#
+b100 +
+b0 +!
+0+"
+b1010 +#
+b100 ,
+b0 ,!
+1,"
+b0 ,#
+0-
+b0 -!
+b101 -"
+b1 -#
+1.
+0.!
+b101 ."
+b10 .#
+b101 /
+0/!
+b1010 /"
+0/#
+b101 0
+10!
+b0 0"
+00#
+b1010 1
+b101 1!
+b1 1"
+11#
+b10011100010000 2
+b101 2!
+b10 2"
+02#
+03
+b1010 3!
+03"
+03#
+04
+b0 4!
+04"
+14#
+b0 5
+b1 5!
+15"
+b0 5#
+16
+b10 6!
+06"
+b0 6#
+07
+07!
+07"
+b0 7#
+08
+08!
+18"
+08#
+b1111111111111111 9
+19!
+b0 9"
+09#
+b0 :
+0:!
+b0 :"
+1:#
+b0 ;
+0;!
+b0 ;"
+b101 ;#
+0<
+1<!
+0<"
+b101 <#
+0=
+b0 =!
+0="
+b1010 =#
+b0 >
+b0 >!
+1>"
+b0 >#
+b0 ?
+b0 ?!
+b101 ?"
+b1 ?#
+b0 @
+0@!
+b101 @"
+b10 @#
+b0 A
+0A!
+b1010 A"
+0A#
+1B
+1B!
+b0 B"
+0B#
+b100 C
+b101 C!
+b1 C"
+1C#
+b100 D
+b101 D!
+b10 D"
+0D#
+b100 E
+b1010 E!
+0E"
+0E#
+0F
+b0 F!
+0F"
+1F#
+1G
+b1 G!
+1G"
+b0 G#
+b101 H
+b10 H!
+0H"
+b0 H#
+b101 I
+0I!
+0I"
+b0 I#
+b1010 J
+0J!
+1J"
+0J#
+b0 K
+1K!
+b0 K"
+0K#
+b1 L
+0L!
+b0 L"
+1L#
+b11 M
+0M!
+b0 M"
+b101 M#
+b10 N
+1N!
+0N"
+b101 N#
+b0 O
+b0 O!
+0O"
+b1010 O#
+b1 P
+b0 P!
+1P"
+b0 P#
+b10 Q
+b0 Q!
+b101 Q"
+b1 Q#
+b11 R
+0R!
+b101 R"
+b10 R#
+b100 S
+0S!
+b1010 S"
+0S#
+b101 T
+1T!
+b0 T"
+0T#
+b110 U
+b101 U!
+b1 U"
+1U#
+b111 V
+b101 V!
+b10 V"
+0V#
+b1000 W
+b1010 W!
+0W"
+0W#
+b1001 X
+b0 X!
+0X"
+1X#
+b1010 Y
+b1 Y!
+1Y"
+b0 Y#
+b1011 Z
+b10 Z!
+0Z"
+b0 Z#
+b1100 [
+0[!
+0["
+b0 [#
+b1101 \
+0\!
+1\"
+0\#
+b1110 ]
+1]!
+b0 ]"
+0]#
+b1111 ^
+0^!
+b0 ^"
+1^#
+0_
+0_!
+b0 _"
+b101 _#
+0`
+1`!
+0`"
+b101 `#
+1a
+b0 a!
+0a"
+b1010 a#
+0b
+b0 b!
+1b"
+b0 b#
+0c
+b0 c!
+b101 c"
+b1 c#
+1d
+0d!
+b101 d"
+b10 d#
+b0 e
+0e!
+b1010 e"
+bx e#
+b0 f
+1f!
+b0 f"
+b0 g
+b101 g!
+b1 g"
+0h
+b101 h!
+b10 h"
+0i
+b1010 i!
+0i"
+1j
+b0 j!
+0j"
+b101 k
+b1 k!
+1k"
+b101 l
+b10 l!
+0l"
+b1010 m
+0m!
+0m"
+b0 n
+0n!
+1n"
+b1 o
+1o!
+b0 o"
+b10 p
+0p!
+b0 p"
+0q
+0q!
+b0 q"
+0r
+1r!
+0r"
+1s
+b0 s!
+0s"
+0t
+b0 t!
+1t"
+0u
+b0 u!
+b101 u"
+1v
+0v!
+b101 v"
+b0 w
+0w!
+b1010 w"
+b0 x
+1x!
+b0 x"
+b0 y
+b101 y!
+b1 y"
+0z
+b101 z!
+b10 z"
+0{
+b1010 {!
+0{"
+1|
+b0 |!
+0|"
+b101 }
+b1 }!
+1}"
+b101 ~
+b10 ~!
+0~"
+$end
+#5000000
+1!
+13
+#10000000
+0!
+03
+#15000000
+1!
+13
+#20000000
+0!
+1"
+03
+14
+#25000000
+1!
+13
+#30000000
+0!
+03
+#35000000
+1!
+13
+#40000000
+0!
+b0 #
+0$
+1%
+03
+06
+17
+#45000000
+1!
+1(
+13
+b1 ?
+#50000000
+0!
+03
+#55000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b0 A
+1_
+#60000000
+0!
+03
+#65000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+1b
+b1 f
+#70000000
+0!
+03
+#75000000
+1!
+13
+b1 e
+#80000000
+0!
+03
+#85000000
+1!
+13
+b10 e
+#90000000
+0!
+03
+#95000000
+1!
+b0 #
+0&
+13
+08
+b11 e
+#100000000
+0!
+03
+#105000000
+1!
+b1 #
+1%
+1(
+13
+b1 5
+17
+b1 >
+b1 ?
+b0 @
+b0 A
+b100 e
+#110000000
+0!
+03
+#115000000
+1!
+0%
+13
+07
+b1111111111111110 9
+b0 :
+1<
+b11 ?
+b10 @
+b0 A
+0a
+0b
+0d
+b0 f
+b1 g
+1q
+#120000000
+0!
+03
+#125000000
+1!
+0(
+13
+b10 :
+0<
+b0 ?
+b0 @
+b0 A
+0q
+1t
+b1 x
+#130000000
+0!
+03
+#135000000
+1!
+13
+b1 w
+#140000000
+0!
+03
+#145000000
+1!
+13
+b10 w
+#150000000
+0!
+03
+#155000000
+1!
+b1 #
+0&
+13
+08
+b11 w
+#160000000
+0!
+03
+#165000000
+1!
+b0 #
+1$
+1%
+0'
+1(
+13
+b0 5
+16
+17
+1=
+b0 >
+b1 ?
+b0 @
+b0 A
+0B
+b100 w
+#170000000
+0!
+03
+#175000000
+1!
+0%
+13
+07
+b1111111111111100 9
+b0 :
+1<
+b11 ?
+b1 @
+b1 A
+0B
+1_
+1`
+0s
+0t
+0v
+b0 x
+b1 y
+#180000000
+0!
+03
+#185000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+0`
+1b
+b0 e
+b10 f
+#190000000
+0!
+03
+#195000000
+1!
+13
+b1 e
+#200000000
+0!
+03
+#205000000
+1!
+13
+b10 e
+#210000000
+0!
+03
+#215000000
+1!
+b0 #
+0&
+13
+08
+b11 e
+#220000000
+0!
+03
+#225000000
+1!
+b0 #
+0$
+1%
+1(
+13
+06
+17
+0=
+b1 ?
+b0 @
+b0 A
+b100 e
+b0 e#
+#230000000
+0!
+03
+#235000000
+1!
+0%
+1'
+13
+07
+b1111111111111101 9
+b0 :
+1<
+b11 ?
+b1 @
+b0 A
+1B
+1_
+1a
+0b
+1d
+b0 f
+b10 g
+#240000000
+0!
+03
+#245000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+1b
+b0 e
+b1 f
+#250000000
+0!
+03
+#255000000
+1!
+13
+b1 e
+#260000000
+0!
+03
+#265000000
+1!
+13
+b10 e
+#270000000
+0!
+03
+#275000000
+1!
+1$
+1%
+1(
+13
+16
+17
+1=
+b1 ?
+b0 @
+b0 A
+b11 e
+b1 e#
+#280000000
+0!
+03
+#285000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b1 A
+1_
+1`
+b100 e
+#290000000
+0!
+03
+#295000000
+1!
+0'
+13
+b1111111111111100 9
+b0 :
+0B
+0a
+0b
+0d
+b0 f
+b11 g
+#300000000
+0!
+03
+#305000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+0`
+1b
+b0 e
+b10 f
+#310000000
+0!
+03
+#315000000
+1!
+13
+b1 e
+#320000000
+0!
+03
+#325000000
+1!
+13
+b10 e
+#330000000
+0!
+03
+#335000000
+1!
+0$
+1%
+1(
+13
+06
+17
+0=
+b1 ?
+b0 @
+b0 A
+b11 e
+b10 e#
+#340000000
+0!
+03
+#345000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b0 A
+1_
+b100 e
+#350000000
+0!
+03
+#355000000
+1!
+1'
+13
+b1111111111111101 9
+b0 :
+1B
+1a
+0b
+1d
+b0 f
+b100 g
+#360000000
+0!
+03
+#365000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+1b
+b0 e
+b1 f
+#370000000
+0!
+03
+#375000000
+1!
+13
+b1 e
+#380000000
+0!
+03
+#385000000
+1!
+13
+b10 e
+#390000000
+0!
+03
+#395000000
+1!
+1$
+1%
+1(
+13
+16
+17
+1=
+b1 ?
+b0 @
+b0 A
+b11 e
+b11 e#
+#400000000
+0!
+03
+#405000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b1 A
+1_
+1`
+b100 e
+#410000000
+0!
+03
+#415000000
+1!
+0'
+13
+b1111111111111100 9
+b0 :
+0B
+0a
+0b
+0d
+b0 f
+b101 g
+#420000000
+0!
+03
+#425000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+0`
+1b
+b0 e
+b10 f
+#430000000
+0!
+03
+#435000000
+1!
+13
+b1 e
+#440000000
+0!
+03
+#445000000
+1!
+13
+b10 e
+#450000000
+0!
+03
+#455000000
+1!
+0$
+1%
+1(
+13
+06
+17
+0=
+b1 ?
+b0 @
+b0 A
+b11 e
+b100 e#
+#460000000
+0!
+03
+#465000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b0 A
+1_
+b100 e
+#470000000
+0!
+03
+#475000000
+1!
+1'
+13
+b1111111111111101 9
+b0 :
+1B
+1a
+0b
+1d
+b0 f
+b110 g
+#480000000
+0!
+03
+#485000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+1b
+b0 e
+b1 f
+#490000000
+0!
+03
+#495000000
+1!
+13
+b1 e
+#500000000
+0!
+03
+#505000000
+1!
+13
+b10 e
+#510000000
+0!
+03
+#515000000
+1!
+1$
+1%
+1(
+13
+16
+17
+1=
+b1 ?
+b0 @
+b0 A
+b11 e
+b101 e#
+#520000000
+0!
+03
+#525000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b1 A
+1_
+1`
+b100 e
+#530000000
+0!
+03
+#535000000
+1!
+0'
+13
+b1111111111111100 9
+b0 :
+0B
+0a
+0b
+0d
+b0 f
+b111 g
+#540000000
+0!
+03
+#545000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+0`
+1b
+b0 e
+b10 f
+#550000000
+0!
+03
+#555000000
+1!
+13
+b1 e
+#560000000
+0!
+03
+#565000000
+1!
+13
+b10 e
+#570000000
+0!
+03
+#575000000
+1!
+0$
+1%
+1(
+13
+06
+17
+0=
+b1 ?
+b0 @
+b0 A
+b11 e
+b110 e#
+#580000000
+0!
+03
+#585000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b0 A
+1_
+b100 e
+#590000000
+0!
+03
+#595000000
+1!
+1'
+13
+b1111111111111101 9
+b0 :
+1B
+1a
+0b
+1d
+b0 f
+b1000 g
+#600000000
+0!
+03
+#605000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+1b
+b0 e
+b1 f
+#610000000
+0!
+03
+#615000000
+1!
+13
+b1 e
+#620000000
+0!
+03
+#625000000
+1!
+13
+b10 e
+#630000000
+0!
+03
+#635000000
+1!
+1$
+1%
+1(
+13
+16
+17
+1=
+b1 ?
+b0 @
+b0 A
+b11 e
+b111 e#
+#640000000
+0!
+03
+#645000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b1 A
+1_
+1`
+b100 e
+#650000000
+0!
+03
+#655000000
+1!
+0'
+13
+b1111111111111100 9
+b0 :
+0B
+0a
+0b
+0d
+b0 f
+b1001 g
+#660000000
+0!
+03
+#665000000
+1!
+0(
+13
+b1 :
+0<
+b0 ?
+b0 @
+b0 A
+0_
+0`
+1b
+b0 e
+b10 f
+#670000000
+0!
+03
+#675000000
+1!
+13
+b1 e
+#680000000
+0!
+03
+#685000000
+1!
+13
+b10 e
+#690000000
+0!
+03
+#695000000
+1!
+0$
+1%
+1(
+13
+06
+17
+0=
+b1 ?
+b0 @
+b0 A
+b11 e
+b1000 e#
+#700000000
+0!
+03
+#705000000
+1!
+0%
+13
+07
+1<
+b11 ?
+b1 @
+b0 A
+1_
+b100 e
+#710000000
+0!
+03
+#715000000
+1!
+1'
+13
+b1111111111111101 9
+b0 :
+1B
+1a
+0b
+1d
+b0 f
+b1010 g
+#720000000
+0!
+03
+#725000000
+1!
+0(
+b1 )
+13
+b1 :
+b1 ;
+0<
+b0 ?
+b0 @
+b0 A
+0_
+1b
+1c
+b0 e
+b1 f
+1h
+#730000000
+0!
+03
+#735000000
+1!
+13
+b1 e
+#740000000
+0!
+03
+#745000000
+1!
+13
+b10 e
+#750000000
+0!
+03
+#755000000
+1!
+1$
+1%
+13
+16
+17
+b11 e
+b1001 e#
+#760000000
+0!
+03
+#765000000
+1!
+0%
+13
+07
+b100 e
+#770000000
+0!
+03
+#775000000
+1!
+0'
+13
+b1111111111111100 9
+b0 :
+0B
+0a
+0b
+0d
+b0 f
+b1011 g
+#780000000
+0!
+03
+#785000000
+1!
+0$
+1%
+13
+06
+17
+b1010 e#
+#790000000
+0!
+03
+#795000000
+1!
+0%
+13
+07
+#800000000
+0!
+03
+#805000000
+1!
+13
+#810000000
+0!
+03
+#815000000
+1!
+1$
+1%
+13
+16
+17
+b1011 e#
+#820000000
+0!
+03
+#825000000
+1!
+0%
+13
+07
+#830000000
+0!
+03
+#835000000
+1!
+13
+#840000000
+0!
+03
+#845000000
+1!
+0$
+1%
+13
+06
+17
+b1100 e#
+#850000000
+0!
+03
+#855000000
+1!
+0%
+13
+07
+#860000000
+0!
+03
+#865000000
+1!
+13
+#870000000
+0!
+03
+#875000000
+1!
+1$
+1%
+13
+16
+17
+b1101 e#
+#880000000
+0!
+03
+#885000000
+1!
+0%
+13
+07
+#890000000
+0!
+03
+#895000000
+1!
+13
+#900000000
+0!
+03
+#905000000
+1!
+0$
+1%
+13
+06
+17
+b1110 e#
+#910000000
+0!
+03
+#915000000
+1!
+0%
+13
+07
+#920000000
+0!
+03
+#925000000
+1!
+13
+#930000000
+0!
+03
+#935000000
+b1111 e#

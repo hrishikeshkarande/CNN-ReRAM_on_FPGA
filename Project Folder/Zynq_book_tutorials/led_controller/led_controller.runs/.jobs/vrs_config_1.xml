@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="led_test_system_auto_pc_0_synth_1" LaunchDir="C:/Users/hrish/Downloads/Wahl Thesis Haris Student Arbeit/Zynq_book_tutorials/led_controller/led_controller.runs/led_test_system_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="led_test_system_processing_system7_0_0_synth_1" LaunchDir="C:/Users/hrish/Downloads/Wahl Thesis Haris Student Arbeit/Zynq_book_tutorials/led_controller/led_controller.runs/led_test_system_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="led_test_system_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/Users/hrish/Downloads/Wahl Thesis Haris Student Arbeit/Zynq_book_tutorials/led_controller/led_controller.runs/led_test_system_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="led_test_system_led_controller_0_0_synth_1" LaunchDir="C:/Users/hrish/Downloads/Wahl Thesis Haris Student Arbeit/Zynq_book_tutorials/led_controller/led_controller.runs/led_test_system_led_controller_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/hrish/Downloads/Wahl Thesis Haris Student Arbeit/Zynq_book_tutorials/led_controller/led_controller.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="led_test_system_auto_pc_0_synth_1"/>
+		<Parent Id="led_test_system_processing_system7_0_0_synth_1"/>
+		<Parent Id="led_test_system_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="led_test_system_led_controller_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/hrish/Downloads/Wahl Thesis Haris Student Arbeit/Zynq_book_tutorials/led_controller/led_controller.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="led_test_system_auto_pc_0_synth_1"/>
+		<Parent Id="led_test_system_processing_system7_0_0_synth_1"/>
+		<Parent Id="led_test_system_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="led_test_system_led_controller_0_0_synth_1"/>
+	</Run>
+</Runs>
+

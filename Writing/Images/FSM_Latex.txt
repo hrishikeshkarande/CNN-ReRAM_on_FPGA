@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (10.8,-15.3) circle (3);
+\draw (10.8,-15.3) node {$init$};
+\draw [black] (10.8,-15.3) circle (2.4);
+\draw [black] (36.4,-20.6) circle (3);
+\draw (36.4,-20.6) node {$IDLE$};
+\draw [black] (65.9,-18.3) circle (3);
+\draw (65.9,-18.3) node {$def$};
+\draw [black] (12.3,-35.4) circle (3);
+\draw (12.3,-35.4) node {$SETTING$};
+\draw [black] (60.9,-34.6) circle (3);
+\draw (60.9,-34.6) node {$RESETTING$};
+\draw [black] (12.7,-7.8) -- (11.54,-12.39);
+\draw (26.53,-6) node [above] {$clk,\mbox{ }rst_n,\mbox{ }current=HRS,delay=0,endurance=0$};
+\fill [black] (11.54,-12.39) -- (12.22,-11.74) -- (11.25,-11.49);
+\draw [black] (13.74,-15.91) -- (33.46,-19.99);
+\fill [black] (33.46,-19.99) -- (32.78,-19.34) -- (32.58,-20.32);
+\draw (17.54,-19.34) node [below] {$write_en,\mbox{ }fail_flag=false$};
+\draw [black] (35.077,-17.92) arc (234:-54:2.25);
+\draw (36.4,-13.35) node [above] {$fail_flag=true$};
+\fill [black] (37.72,-17.92) -- (38.6,-17.57) -- (37.79,-16.98);
+\draw [black] (62.91,-18.53) -- (39.39,-20.37);
+\fill [black] (39.39,-20.37) -- (40.23,-20.8) -- (40.15,-19.81);
+\draw (50.33,-18.48) node [above] {$error_state=true$};
+\draw [black] (39.308,-21.334) arc (74.01335:46.49689:47.176);
+\fill [black] (58.79,-32.47) -- (58.56,-31.55) -- (57.87,-32.28);
+\draw (64.23,-25.2) node [above] {$target=HRS,\mbox{ }delay++,endurance++$};
+\draw [black] (58.3,-33.11) -- (39,-22.09);
+\fill [black] (39,-22.09) -- (39.45,-22.92) -- (39.95,-22.05);
+\draw (42.81,-28.11) node [below] {$WRITE\mbox{ }done$};
+\draw [black] (14.86,-33.83) -- (33.84,-22.17);
+\fill [black] (33.84,-22.17) -- (32.9,-22.16) -- (33.42,-23.01);
+\draw (18.5,-27.5) node [above] {$WRITE\mbox{ }done$};
+\draw [black] (34.677,-23.055) arc (-37.72836:-79.16282:32.192);
+\fill [black] (15.27,-34.97) -- (16.15,-35.31) -- (15.96,-34.33);
+\draw (40.23,-31.3) node [below] {$target=LRS,delay++,endurance++$};
+\end{tikzpicture}
+\end{center}
+
+\end{document}

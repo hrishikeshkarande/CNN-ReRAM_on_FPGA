@@ -1,0 +1,26 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+
+=== Starting Testbench Simulation ===
+
+=== Starting Fine Conversion Test ===
+TIME=100000: START=1 DONE=0 DOUT=00 (Analog_Input=1024)
+TIME=110000: START=0 DONE=0 DOUT=00 (Analog_Input=1024)
+TIME=235000: START=0 DONE=1 DOUT=40 (Analog_Input=1024)
+TIME=245000: START=0 DONE=0 DOUT=40 (Analog_Input=1024)
+ERROR: Timeout waiting for fine conversion at TIME=1110000!
+$finish called at time : 1110 ns : File "C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/ReRAM_On_FPGA/ReRAM_On_FPGA.srcs/sim_1/new/tb_twin_range_sar_adc.v" Line 55
+Fine Conversion Complete: Input=1024, Output= 64 (0x40)
+
+=== Starting Coarse Conversion Test ===
+TIME=1210000: START=1 DONE=0 DOUT=40 (Analog_Input=3000)
+TIME=1215000: START=1 DONE=0 DOUT=00 (Analog_Input=3000)
+TIME=1220000: START=0 DONE=0 DOUT=00 (Analog_Input=3000)
+TIME=1345000: START=0 DONE=1 DOUT=bb (Analog_Input=3000)
+TIME=1355000: START=0 DONE=0 DOUT=bb (Analog_Input=3000)
+ERROR: Timeout waiting for coarse conversion at TIME=2220000!
+$finish called at time : 2220 ns : File "C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/ReRAM_On_FPGA/ReRAM_On_FPGA.srcs/sim_1/new/tb_twin_range_sar_adc.v" Line 78
+Coarse Conversion Complete: Input=3000, Output=187 (0xbb)
+
+All tests completed successfully!
+$finish called at time : 2320 ns : File "C:/Users/hrish/Downloads/Wahl_Thesis_Haris_Student_Arbeit/ReRAM_On_FPGA/ReRAM_On_FPGA.srcs/sim_1/new/tb_twin_range_sar_adc.v" Line 87

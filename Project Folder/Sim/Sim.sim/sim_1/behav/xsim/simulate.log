@@ -1,0 +1,97 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+-----------------------------------------------------
+           ReRAM Cell Testbench Started            
+-----------------------------------------------------
+Time 0: Cell RESET! Initial State: 1, Endurance: 0
+Time 5000: Cell RESET! Initial State: 1, Endurance: 0
+Time 15000: Cell RESET! Initial State: 1, Endurance: 0
+Time 25000: Cell RESET! Initial State: 1, Endurance: 0
+Time 35000: Cell RESET! Initial State: 1, Endurance: 0
+Time 45000: Cell RESET! Initial State: 1, Endurance: 0
+Time 50000: Reset Released. Initializing test sequence.
+Time 60000: Initial state check. Expected: 1, Actual: 1. Failed: 0
+Time 60000: Starting SET operation (HRS -> LRS).
+Time 65000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 75000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 85000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 95000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 105000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 115000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 1
+Time 125000: SET operation completed. Expected: 0, Actual: 0. Busy: 0, Failed: 0
+Time 125000: Starting RESET operation (LRS -> HRS).
+Time 125000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 135000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 145000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 155000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 165000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 175000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 2
+Time 185000: RESET operation completed. Expected: 1, Actual: 1. Busy: 0, Failed: 0
+Time 185000: Starting repeated write operations to test endurance limit (8).
+Time 185000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 195000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 205000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 215000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 225000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 235000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 3
+Time 245000: Write Cycle 1. Current State: 0, Busy: 0, Failed: 0
+Time 245000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 255000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 265000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 275000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 285000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 295000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 4
+Time 305000: Write Cycle 2. Current State: 1, Busy: 0, Failed: 0
+Time 305000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 315000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 325000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 335000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 345000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 355000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 5
+Time 365000: Write Cycle 3. Current State: 0, Busy: 0, Failed: 0
+Time 365000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 375000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 385000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 395000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 405000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 415000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 6
+Time 425000: Write Cycle 4. Current State: 1, Busy: 0, Failed: 0
+Time 425000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 435000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 445000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 455000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 465000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 475000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 7
+Time 485000: Write Cycle 5. Current State: 0, Busy: 0, Failed: 0
+Time 485000: Cell (IDLE->RESETTING) for target 1. Current: 0
+Time 495000: Cell (RESETTING) Delay: 0/5. Current State: 0
+Time 505000: Cell (RESETTING) Delay: 1/5. Current State: 0
+Time 515000: Cell (RESETTING) Delay: 2/5. Current State: 0
+Time 525000: Cell (RESETTING) Delay: 3/5. Current State: 0
+Time 535000: Cell (RESETTING->IDLE) COMPLETE. New State: 1, Endurance: 8
+Time 545000: Write Cycle 6. Current State: 1, Busy: 0, Failed: 0
+Time 545000: Cell FAILED! Endurance Limit (8) reached. Current endurance: 8
+Time 545000: Cell (IDLE->SETTING) for target 0. Current: 1
+Time 555000: Cell (SETTING) Delay: 0/5. Current State: 1
+Time 565000: Cell (SETTING) Delay: 1/5. Current State: 1
+Time 575000: Cell (SETTING) Delay: 2/5. Current State: 1
+Time 585000: Cell (SETTING) Delay: 3/5. Current State: 1
+Time 595000: Cell (SETTING->IDLE) COMPLETE. New State: 0, Endurance: 9
+Time 605000: Write Cycle 7. Current State: 0, Busy: 0, Failed: 1
+Time 605000: Cell FAILED at cycle 7. Remaining cycles will attempt writes to a failed cell.
+Time 605000: Attempting write to a FAILED cell.
+Time 605000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 615000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 625000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 635000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 645000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 655000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 665000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 675000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 685000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 695000: Cell (IDLE) Write attempt to FAILED cell. Current: 0, Endurance: 9
+Time 705000: Write attempt on failed cell completed. Busy: 0, Failed: 1, Read Data: 0
+-----------------------------------------------------
+           ReRAM Cell Testbench Finished           
+-----------------------------------------------------
+$finish called at time : 705 ns : File "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/Sim/Sim.srcs/sim_1/new/reram_cell_tb.sv" Line 177

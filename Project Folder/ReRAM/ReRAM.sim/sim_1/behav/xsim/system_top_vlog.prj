@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ReRAM.srcs/sources_1/new/reram_crossbar_emulation.v" \
+"../../../../ReRAM.srcs/sources_1/new/trq_adc_top.v" \
+"../../../../ReRAM.srcs/sources_1/new/twin_range_sar_adc.v" \
+"../../../../ReRAM.srcs/sources_1/new/system_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

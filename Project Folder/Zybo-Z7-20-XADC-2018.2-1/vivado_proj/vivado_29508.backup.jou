@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jul 30 12:50:14 2019
+# Process ID: 29508
+# Current directory: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28740
+# Log file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Github/Zybo-Z7-20-XADC/proj/Zybo-Z7-20-XADC.xpr
+open_project D:/Github/Zybo-Z7-20-XADC/proj/Zybo-Z7-20-XADC.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstreamopen_hw
+2
+wait_on_run impl_1
+wait_on_run impl_1; puts "DONE!!!"
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/Github/Zybo-Z7-20-XADC/proj/Zybo-Z7-20-XADC.runs/impl_1/top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Github/Zybo-Z7-20-XADC/proj/Zybo-Z7-20-XADC.runs/impl_1/top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+archive_project D:/Github/Zybo-Z7-20-XADC/Zybo-Z7-20-XADC.xpr.zip -temp_dir C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-29508-WK142 -force -include_local_ip_cache
