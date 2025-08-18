@@ -1,0 +1,268 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Aug 18 22:09:58 2025
+# Process ID: 10364
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11336 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRAM_AXI_Project\ReRAM_AXI_Project.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 822.625 ; gain = 103.496
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:user:reram_axi_ip:1.0 - reram_axi_ip_0
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system_bd> from BD file <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 906.758 ; gain = 72.141
+validate_bd_design -force
+generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
+INFO: [BD 41-1662] The design 'system_bd.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd> 
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/sim/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hdl/system_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reram_axi_ip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd.hwh
+Generated Block Design Tcl file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd_bd.tcl
+Generated Hardware Definition File C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.hwdef
+export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Aug 18 22:11:32 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/synth_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name reram_axi_ip_v1_0_project -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project\ Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.tmp/reram_axi_ip_v1_0_project} {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0/component.xml}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/hrish/downloads/reram_thesis/project folder/reram_axi_project/reram_axi_project.tmp/reram_axi_ip_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+current_project ReRAM_AXI_Project
+current_project reram_axi_ip_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0/component.xml' ignored by IP packager.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0\hdl/reram_axi_ip_v1_0_S00_AXI.v:318]
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ip_repo\reram_axi_ip_1.0\xilinx.com_user_reram_axi_ip_1.0.zip} [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0}
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:reram_axi_ip:1.0 [get_ips  system_bd_reram_axi_ip_0_7] -log ip_upgrade.log
+Upgrading 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd'
+INFO: [IP_Flow 19-3422] Upgraded system_bd_reram_axi_ip_0_7 (reram_axi_ip_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips system_bd_reram_axi_ip_0_7] -no_script -sync -force -quiet
+generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd> 
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/sim/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hdl/system_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reram_axi_ip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd.hwh
+Generated Block Design Tcl file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd_bd.tcl
+Generated Hardware Definition File C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.hwdef
+export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+regenerate_bd_layout
+validate_bd_design -force
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd> 
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ui/bd_c6d0cb12.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [BD 41-1662] The design 'system_bd.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/sim/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hdl/system_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reram_axi_ip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd.hwh
+Generated Block Design Tcl file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd_bd.tcl
+Generated Hardware Definition File C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.hwdef
+[Mon Aug 18 22:16:11 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/synth_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name reram_axi_ip_v1_0_project -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project\ Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.tmp/reram_axi_ip_v1_0_project} {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0/component.xml}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/hrish/downloads/reram_thesis/project folder/reram_axi_project/reram_axi_project.tmp/reram_axi_ip_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1191.242 ; gain = 6.410
+update_compile_order -fileset sources_1
+current_project ReRAM_AXI_Project
+current_project reram_axi_ip_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0/component.xml' ignored by IP packager.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0\hdl/reram_axi_ip_v1_0_S00_AXI.v:318]
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ip_repo\reram_axi_ip_1.0\xilinx.com_user_reram_axi_ip_1.0.zip} [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0}
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:reram_axi_ip:1.0 [get_ips  system_bd_reram_axi_ip_0_7] -log ip_upgrade.log
+Upgrading 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd'
+INFO: [IP_Flow 19-3422] Upgraded system_bd_reram_axi_ip_0_7 (reram_axi_ip_v1.0 1.0) from revision 4 to revision 5
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd> 
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ui/bd_c6d0cb12.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips system_bd_reram_axi_ip_0_7] -no_script -sync -force -quiet
+generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd> 
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/sim/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hdl/system_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reram_axi_ip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd.hwh
+Generated Block Design Tcl file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd_bd.tcl
+Generated Hardware Definition File C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.hwdef
+export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design -force
+report_ip_status -name ip_status 
+validate_bd_design -force
+reset_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
+export_ip_user_files -of_objects  [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -sync -no_script -force -quiet
+generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
+INFO: [BD 41-1662] The design 'system_bd.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd> 
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/sim/system_bd.v
+VHDL Output written to : C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hdl/system_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reram_axi_ip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd.hwh
+Generated Block Design Tcl file C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/hw_handoff/system_bd_bd.tcl
+Generated Hardware Definition File C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/synth/system_bd.hwdef
+generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1333.824 ; gain = 96.438
+export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Aug 18 22:34:54 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/system_bd_rst_ps7_0_50M_1_board.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/system_bd_rst_ps7_0_50M_1_board.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Parsing XDC File [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/system_bd_rst_ps7_0_50M_1.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/system_bd_rst_ps7_0_50M_1.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Parsing XDC File [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_2/system_bd_processing_system7_0_2.xdc] for cell 'system_bd_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_2/system_bd_processing_system7_0_2.xdc] for cell 'system_bd_i/processing_system7_0/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1704.254 ; gain = 370.430
+launch_runs impl_1 -jobs 4
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 2369.422 ; gain = 16.863
+ERROR: [Common 17-158] 'file' can only be specified once.
+[Mon Aug 18 22:38:25 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 140 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.358 . Memory (MB): peak = 2374.984 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.358 . Memory (MB): peak = 2374.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Aug 18 22:41:39 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/impl_1/runme.log
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+file mkdir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.sdk}
+write_hwdef -force  -file {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.sdk/system_bd_wrapper.hdf}
+file copy -force {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/impl_1/system_bd_wrapper.bit} {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/Bitstream/MyBitstreamFile.bit}
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 18 22:51:39 2025...
