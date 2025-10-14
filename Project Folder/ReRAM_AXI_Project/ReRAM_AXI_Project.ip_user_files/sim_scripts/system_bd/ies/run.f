@@ -43,16 +43,36 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system_bd/ip/system_bd_processing_system7_0_2/sim/system_bd_processing_system7_0_2.v" \
+  "../../../bd/system_bd/ip/system_bd_ila_0_0/sim/system_bd_ila_0_0.v" \
+  "../../../bd/system_bd/ip/system_bd_ila_1_0/sim/system_bd_ila_1_0.v" \
+-endlib
+-makelib ies_lib/blk_mem_gen_v8_3_6 \
+  "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/2751/simulation/blk_mem_gen_v8_3.v" \
+-endlib
+-makelib ies_lib/axi_bram_ctrl_v4_0_14 \
+  "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/system_bd/ip/system_bd_axi_bram_ctrl_0_0/sim/system_bd_axi_bram_ctrl_0_0.vhd" \
+-endlib
+-makelib ies_lib/blk_mem_gen_v8_4_1 \
+  "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/67d8/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/system_bd/ip/system_bd_axi_bram_ctrl_0_bram_1/sim/system_bd_axi_bram_ctrl_0_bram_1.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
   "../../../bd/system_bd/ipshared/984e/hdl/reram_axi_ip_v1_0_S00_AXI.v" \
   "../../../bd/system_bd/ipshared/984e/hdl/reram_axi_ip_v1_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/system_bd/ip/system_bd_reram_axi_ip_0_7/sim/system_bd_reram_axi_ip_0_7.v" \
+  "../../../bd/system_bd/ip/system_bd_reram_axi_ip_0_0/sim/system_bd_reram_axi_ip_0_0.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_register_slice_v2_1_16 \
+  "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/fifo_generator_v13_2_2 \
   "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/7aff/simulation/fifo_generator_vlog_beh.v" \
@@ -66,14 +86,18 @@
 -makelib ies_lib/axi_data_fifo_v2_1_15 \
   "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib ies_lib/axi_register_slice_v2_1_16 \
-  "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-makelib ies_lib/axi_crossbar_v2_1_17 \
+  "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/system_bd/ip/system_bd_xbar_0/sim/system_bd_xbar_0.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_16 \
   "../../../../ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ipshared/1229/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system_bd/ip/system_bd_auto_pc_0/sim/system_bd_auto_pc_0.v" \
+  "../../../bd/system_bd/ip/system_bd_auto_pc_1/sim/system_bd_auto_pc_1.v" \
   "../../../bd/system_bd/sim/system_bd.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \

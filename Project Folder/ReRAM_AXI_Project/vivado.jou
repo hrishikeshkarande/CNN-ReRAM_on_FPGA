@@ -2,10 +2,10 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Mon Aug 18 22:09:58 2025
-# Process ID: 10364
+# Start of session at: Sun Oct  5 19:25:25 2025
+# Process ID: 4160
 # Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11336 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRAM_AXI_Project\ReRAM_AXI_Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5844 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRAM_AXI_Project\ReRAM_AXI_Project.xpr
 # Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/vivado.log
 # Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project\vivado.jou
 #-----------------------------------------------------------
@@ -13,86 +13,13 @@ start_gui
 open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.xpr}
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}
-validate_bd_design -force
-generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
-export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-ipx::edit_ip_in_project -upgrade true -name reram_axi_ip_v1_0_project -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project\ Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.tmp/reram_axi_ip_v1_0_project} {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0/component.xml}
-update_compile_order -fileset sources_1
-current_project ReRAM_AXI_Project
-current_project reram_axi_ip_v1_0_project
-ipx::merge_project_changes files [ipx::current_core]
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property core_revision 4 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::check_integrity -quiet [ipx::current_core]
-ipx::archive_core {c:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ip_repo\reram_axi_ip_1.0\xilinx.com_user_reram_axi_ip_1.0.zip} [ipx::current_core]
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0}
-report_ip_status -name ip_status 
-upgrade_ip -vlnv xilinx.com:user:reram_axi_ip:1.0 [get_ips  system_bd_reram_axi_ip_0_7] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips system_bd_reram_axi_ip_0_7] -no_script -sync -force -quiet
-generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
-export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
+regenerate_bd_layout
 regenerate_bd_layout
 validate_bd_design -force
-regenerate_bd_layout
 save_bd_design
 reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-ipx::edit_ip_in_project -upgrade true -name reram_axi_ip_v1_0_project -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project\ Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.tmp/reram_axi_ip_v1_0_project} {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0/component.xml}
-update_compile_order -fileset sources_1
-current_project ReRAM_AXI_Project
-current_project reram_axi_ip_v1_0_project
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property core_revision 5 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::check_integrity -quiet [ipx::current_core]
-ipx::archive_core {c:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ip_repo\reram_axi_ip_1.0\xilinx.com_user_reram_axi_ip_1.0.zip} [ipx::current_core]
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path {c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0}
-report_ip_status -name ip_status 
-upgrade_ip -vlnv xilinx.com:user:reram_axi_ip:1.0 [get_ips  system_bd_reram_axi_ip_0_7] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips system_bd_reram_axi_ip_0_7] -no_script -sync -force -quiet
-generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
-export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-regenerate_bd_layout
-regenerate_bd_layout
-validate_bd_design -force
-report_ip_status -name ip_status 
-validate_bd_design -force
-reset_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
-export_ip_user_files -of_objects  [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -sync -no_script -force -quiet
-generate_target all [get_files  {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}]
-export_ip_user_files -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}}] -directory {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files} -ipstatic_source_dir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/modelsim} {questa=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/questa} {riviera=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-open_run synth_1 -name synth_1
-launch_runs impl_1 -jobs 4
-wait_on_run impl_1
-close_design
-open_run impl_1
-report_ip_status -name ip_status 
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
-file mkdir {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.sdk}
-write_hwdef -force  -file {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.sdk/system_bd_wrapper.hdf}
-file copy -force {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/impl_1/system_bd_wrapper.bit} {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/Bitstream/MyBitstreamFile.bit}
+file copy -force {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.runs/impl_1/system_bd_wrapper.sysdef} C:/Users/hrish/OneDrive/Desktop/id0/HW/system_bd_wrapper.hdf
+
+launch_sdk -workspace C:/Users/hrish/OneDrive/Desktop/id0/SDK -hwspec C:/Users/hrish/OneDrive/Desktop/id0/HW/system_bd_wrapper.hdf

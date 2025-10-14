@@ -1,0 +1,100 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Sun Oct  5 21:40:12 2025
+| Host         : LOREFARM running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file EightBitMemoryBlock_wrapper_control_sets_placed.rpt
+| Design       : EightBitMemoryBlock_wrapper
+| Device       : xc7z020
+--------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    29 |
+| Unused register locations in slices containing registers |    89 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      4 |            9 |
+|      6 |            1 |
+|      8 |            3 |
+|     12 |            2 |
+|     13 |            1 |
+|     14 |            2 |
+|    16+ |           10 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             109 |           34 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              80 |           20 |
+| Yes          | No                    | No                     |             244 |           56 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              30 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|                        Clock Signal                        |                                                                               Enable Signal                                                                               |                                                                    Set/Reset Signal                                                                   | Slice Load Count | Bel Load Count |
++------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/bresp_push                                |                                                                                                                                                       |                1 |              2 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 |                                                                                                                                                                           | EightBitMemoryBlock_i/rst_ps7_0_50M/U0/EXT_LPF/lpf_int                                                                                                |                1 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 |                                                                                                                                                                           | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_valid_i_reg_0               |                2 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 |                                                                                                                                                                           | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/s_ready_i_reg_0               |                2 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/axaddr_incr_reg[0][0]                  |                                                                                                                                                       |                1 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/E[0]                                   | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/axlen_cnt_reg[7]   |                2 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/wrap_boundary_axaddr_r_reg[11][0]      |                                                                                                                                                       |                2 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/axaddr_wrap_reg[11][0]                 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/axlen_cnt_reg[7]_1 |                1 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/E[0]                                   |                                                                                                                                                       |                2 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr[11]_i_1_n_0 |                                                                                                                                                       |                2 |              4 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/rst_ps7_0_50M/U0/SEQ/seq_cnt_en                                                                                                                     | EightBitMemoryBlock_i/rst_ps7_0_50M/U0/SEQ/SEQ_COUNTER/clear                                                                                          |                1 |              6 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 |                                                                                                                                                                           | EightBitMemoryBlock_i/RegisterMemory_0/inst/RegisterMemory_v1_0_S00_AXI_inst/p_0_in                                                                   |                3 |              8 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/mhandshake_r                                         | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/SR[0]                 |                2 |              8 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/RegisterMemory_0/inst/RegisterMemory_v1_0_S00_AXI_inst/reg_data_out_0                                                                               | EightBitMemoryBlock_i/RegisterMemory_0/inst/RegisterMemory_v1_0_S00_AXI_inst/p_0_in                                                                   |                3 |              8 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/E[0]                                   |                                                                                                                                                       |                5 |             12 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/axaddr_wrap_reg[11][0]                 |                                                                                                                                                       |                5 |             12 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/r_push_r                                             |                                                                                                                                                       |                5 |             13 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/p_1_in                                              |                                                                                                                                                       |                3 |             14 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/skid_buffer_reg[0]_0                                |                                                                                                                                                       |                3 |             14 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/b_push                                 |                                                                                                                                                       |                3 |             16 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/wr_en0                                |                                                                                                                                                       |                6 |             21 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/s_axi_arready                                     |                                                                                                                                                       |                5 |             27 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/s_axi_awready                                     |                                                                                                                                                       |                4 |             27 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/m_payload_i_reg[0]_1[0]                |                                                                                                                                                       |                5 |             27 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/m_payload_i_reg[0][0]                  |                                                                                                                                                       |                5 |             27 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/r.r_pipe/skid_buffer_reg[0]_0                                |                                                                                                                                                       |                6 |             34 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/r.r_pipe/p_1_in                                              |                                                                                                                                                       |                8 |             34 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 |                                                                                                                                                                           | EightBitMemoryBlock_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/areset_d1                                       |               12 |             60 |
+|  EightBitMemoryBlock_i/processing_system7_0/inst/FCLK_CLK0 |                                                                                                                                                                           |                                                                                                                                                       |               35 |            110 |
++------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,25 @@
+14:54:55 **** Incremental Build of configuration Debug for project ReramWithBramTest ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+14:56:04 **** Incremental Build of configuration Debug for project ReramWithBramTest ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+14:58:12 **** Incremental Build of configuration Debug for project ReramWithBramTest ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+14:58:54 **** Incremental Build of configuration Debug for project ReramWithBramTest ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+15:03:23 **** Incremental Build of configuration Debug for project ReramWithBramTest ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.

@@ -1,0 +1,89 @@
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include <stdint.h>
+
+#ifndef RERAM_BASE
+#define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+#endif
+#ifndef BRAM_BASE
+#define BRAM_BASE       XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR
+#endif
+
+#define REG_CONTROL     (RERAM_BASE + 0x00) // [0]=start, [1]=target_state, [2]=data_in
+#define REG_ADDR        (RERAM_BASE + 0x04) // cell index
+#define REG_STATUS      (RERAM_BASE + 0x08) // [0]=busy,[1]=failed,[2]=read,[3]=data
+
+static inline uint32_t rr_busy   (uint32_t st){ return ( st       & 1u); }
+static inline uint32_t rr_failed (uint32_t st){ return ((st >> 1) & 1u); }
+static inline uint32_t rr_read   (uint32_t st){ return ((st >> 2) & 1u); } // 0=LRS,1=HRS
+static inline uint32_t rr_dout   (uint32_t st){ return ((st >> 3) & 1u); }
+
+static inline void rr_kick(uint32_t target_state, uint32_t data_in_bit){
+    uint32_t ctl = (1u<<0) | ((target_state & 1u) << 1) | ((data_in_bit & 1u) << 2);
+    Xil_Out32(REG_CONTROL, ctl);
+}
+static void rr_write_cell(uint32_t addr, uint32_t target_state, uint32_t data_in_bit){
+    Xil_Out32(REG_ADDR, addr);
+    rr_kick(target_state, data_in_bit);
+    while (rr_busy(Xil_In32(REG_STATUS))) { /* spin */ }
+}
+
+static inline void bram_write16(uint32_t value){
+    for (uint32_t i=0; i<16; ++i) Xil_Out32(BRAM_BASE + 4*i, value);
+}
+static inline void bram_dump16(const char* tag){
+    xil_printf("%s\n", tag);
+    for (uint32_t i=0; i<16; ++i){
+        uint32_t w = Xil_In32(BRAM_BASE + 4*i);
+        xil_printf("  [%02lu] 0x%08X  (busy=%u fail=%u read=%u data=%u)\r\n",
+                   i, w, (w&1u), ((w>>1)&1u), ((w>>2)&1u), ((w>>3)&1u));
+    }
+}
+
+int main(void)
+{
+    xil_printf("=== ReRAM + BRAM Mirror: DEADBEEF demo ===\r\n");
+    xil_printf("RERAM_BASE=0x%08X, BRAM_BASE=0x%08X\r\n", (unsigned)RERAM_BASE, (unsigned)BRAM_BASE);
+
+    const uint32_t STATE_LRS = 0u; // matches RTL (0=LRS, 1=HRS)
+    const uint32_t STATE_HRS = 1u;
+
+    // 1) Fill BRAM first 16 words with DEADBEEF from PS
+    xil_printf("\r\nFilling BRAM[0..15] with 0xDEADBEEF from PS...\r\n");
+    bram_write16(0xDEADBEEFu);
+
+    // Read back immediately (most entries will still show DEADBEEF)
+    bram_dump16("Immediate BRAM dump (expect DEADBEEF):");
+
+    // Wait a bit to let the hardware mirror writer overwrite entries
+    usleep(1000); // ~1 ms
+    bram_dump16("After 1 ms (mirror writer will have overwritten with live status words):");
+
+    // 2) Exercise a few cells and compare BRAM
+    for (uint32_t addr=0; addr<4; ++addr){
+        xil_printf("\r\nCell %lu: SET to LRS, data=%lu\r\n", addr, (unsigned)(addr&1u));
+        rr_write_cell(addr, STATE_LRS, (addr&1u));
+
+        uint32_t st = Xil_In32(REG_STATUS);
+        xil_printf("  STATUS: busy=%u fail=%u read=%u data=%u (0x%08X)\r\n",
+                   rr_busy(st), rr_failed(st), rr_read(st), rr_dout(st), st);
+        xil_printf("  BRAM[%02lu]=0x%08X\r\n", addr, Xil_In32(BRAM_BASE + 4*addr));
+
+        xil_printf("Cell %lu: RESET to HRS\r\n", addr);
+        rr_write_cell(addr, STATE_HRS, 0);
+
+        st = Xil_In32(REG_STATUS);
+        xil_printf("  STATUS: busy=%u fail=%u read=%u data=%u (0x%08X)\r\n",
+                   rr_busy(st), rr_failed(st), rr_read(st), rr_dout(st), st);
+        xil_printf("  BRAM[%02lu]=0x%08X\r\n", addr, Xil_In32(BRAM_BASE + 4*addr));
+    }
+
+    // Final BRAM snapshot
+    bram_dump16("\r\nFinal BRAM mirror (first 16 cells):");
+
+    xil_printf("\r\nDone. (Note: any PS writes to BRAM will be quickly overwritten by the mirror logic.)\r\n");
+    while (1) { }
+    return 0;
+}

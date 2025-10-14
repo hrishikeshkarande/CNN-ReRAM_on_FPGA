@@ -1,0 +1,92 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Sun Oct 12 22:38:57 2025
+| Host         : LOREFARM running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'RevisionDesign_axi_reram_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of RevisionDesign_axi_reram_0_0 (xilinx.com:user:axi_reram:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'RevisionDesign_axi_reram_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'bram_addrb' width 12 differs from original width 4
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Sun Oct 12 20:23:20 2025
+| Host         : LOREFARM running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'RevisionDesign_axi_reram_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of RevisionDesign_axi_reram_0_0 (xilinx.com:user:axi_reram:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'RevisionDesign_axi_reram_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'bram_addrb'
+
+-Upgrade has added port 'bram_clkb'
+
+-Upgrade has added port 'bram_dinb'
+
+-Upgrade has added port 'bram_doutb'
+
+-Upgrade has added port 'bram_enb'
+
+-Upgrade has added port 'bram_rstb'
+
+-Upgrade has added port 'bram_web'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Sun Oct 12 19:11:42 2025
+| Host         : LOREFARM running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'RevisionDesign_axi_reram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of RevisionDesign_axi_reram_0_0 (xilinx.com:user:axi_reram:1.0) from (Rev. 2) to (Rev. 3)
+

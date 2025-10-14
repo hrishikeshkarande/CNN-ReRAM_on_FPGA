@@ -1,4 +1,5 @@
 vhdl xil_defaultlib  \
 "../../../bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/sim/system_bd_rst_ps7_0_50M_1.vhd" \
+"../../../bd/system_bd/ip/system_bd_axi_bram_ctrl_0_0/sim/system_bd_axi_bram_ctrl_0_0.vhd" \
 
 nosort

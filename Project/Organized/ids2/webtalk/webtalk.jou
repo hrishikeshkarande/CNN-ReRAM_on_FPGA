@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# 
+# Start of session at: Mon Sep  8 17:07:03 2025
+# Process ID: 24000
+# Current directory: C:/Users/hrish/OneDrive/Desktop/ids2/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/hrish/OneDrive/Desktop/ids2/webtalk/webtalk.log
+# Journal file: C:/Users/hrish/OneDrive/Desktop/ids2/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

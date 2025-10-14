@@ -1,0 +1,29 @@
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+
+#define RERAM_IP_BASEADDR  XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+
+int main()
+{
+    xil_printf("Testing ReRAM AXI IP...\r\n");
+
+    // Example register offsets (change to match your IP)
+    #define REG_DATA_IN     0x00
+    #define REG_DATA_OUT    0x04
+    #define REG_STATUS      0x08
+
+    // Write a value to your IP
+    Xil_Out32(RERAM_IP_BASEADDR + REG_DATA_IN, 0xABCD1234);
+
+    // Optionally read back
+    uint32_t read_value = Xil_In32(RERAM_IP_BASEADDR + REG_DATA_OUT);
+    xil_printf("Read back value: 0x%08X\r\n", read_value);
+
+    // Check status register
+    uint32_t status = Xil_In32(RERAM_IP_BASEADDR + REG_STATUS);
+    xil_printf("Status: 0x%08X\r\n", status);
+
+    xil_printf("Test complete.\r\n");
+    return 0;
+}

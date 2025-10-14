@@ -1,0 +1,202 @@
+21:00:28 **** Incremental Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+21:00:35 **** Incremental Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+21:19:44 **** Incremental Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+21:26:29 **** Auto Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ReRamRevisionWithBram_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rr_kick':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:25:15: note: in expansion of macro 'REG_CONTROL'
+     Xil_Out32(REG_CONTROL, ctl);
+               ^~~~~~~~~~~
+../src/helloworld.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:25:15: note: in expansion of macro 'REG_CONTROL'
+     Xil_Out32(REG_CONTROL, ctl);
+               ^~~~~~~~~~~
+../src/helloworld.c: In function 'rr_write_cell':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:28:15: note: in expansion of macro 'REG_ADDR'
+     Xil_Out32(REG_ADDR, addr);
+               ^~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+21:27:11 **** Auto Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ReRamRevisionWithBram_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rr_kick':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:25:15: note: in expansion of macro 'REG_CONTROL'
+     Xil_Out32(REG_CONTROL, ctl);
+               ^~~~~~~~~~~
+../src/helloworld.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:25:15: note: in expansion of macro 'REG_CONTROL'
+     Xil_Out32(REG_CONTROL, ctl);
+               ^~~~~~~~~~~
+../src/helloworld.c: In function 'rr_write_cell':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:28:15: note: in expansion of macro 'REG_ADDR'
+     Xil_Out32(REG_ADDR, addr);
+               ^~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+21:27:44 **** Auto Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ReRamRevisionWithBram_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rr_kick':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:25:15: note: in expansion of macro 'REG_CONTROL'
+     Xil_Out32(REG_CONTROL, ctl);
+               ^~~~~~~~~~~
+../src/helloworld.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:25:15: note: in expansion of macro 'REG_CONTROL'
+     Xil_Out32(REG_CONTROL, ctl);
+               ^~~~~~~~~~~
+../src/helloworld.c: In function 'rr_write_cell':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:28:15: note: in expansion of macro 'REG_ADDR'
+     Xil_Out32(REG_ADDR, addr);
+               ^~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:8:25: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^
+../src/helloworld.c:8:25: note: in definition of macro 'RERAM_BASE'
+ #define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+21:28:09 **** Auto Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ReRamRevisionWithBram_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: ReRamRevisionWithBram.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ReRamRevisionWithBram_bsp/ps7_cortexa9_0/lib -o "ReRamRevisionWithBram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ReRamRevisionWithBram.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size ReRamRevisionWithBram.elf  |tee "ReRamRevisionWithBram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23976	   1144	  22568	  47688	   ba48	ReRamRevisionWithBram.elf
+Finished building: ReRamRevisionWithBram.elf.size
+ 
+21:28:57 **** Incremental Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+21:32:07 **** Incremental Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+21:47:46 **** Auto Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ReRamRevisionWithBram_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: ReRamRevisionWithBram.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ReRamRevisionWithBram_bsp/ps7_cortexa9_0/lib -o "ReRamRevisionWithBram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ReRamRevisionWithBram.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size ReRamRevisionWithBram.elf  |tee "ReRamRevisionWithBram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1144	  22568	  47928	   bb38	ReRamRevisionWithBram.elf
+Finished building: ReRamRevisionWithBram.elf.size
+ 
+21:48:30 **** Incremental Build of configuration Debug for project ReRamRevisionWithBram ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.

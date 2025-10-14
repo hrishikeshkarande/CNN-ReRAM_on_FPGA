@@ -13,11 +13,29 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_rst_p
 # IP: bd/system_bd/ip/system_bd_processing_system7_0_2/system_bd_processing_system7_0_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_processing_system7_0_2 || ORIG_REF_NAME==system_bd_processing_system7_0_2} -quiet] -quiet
 
-# IP: bd/system_bd/ip/system_bd_reram_axi_ip_0_7/system_bd_reram_axi_ip_0_7.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_reram_axi_ip_0_7 || ORIG_REF_NAME==system_bd_reram_axi_ip_0_7} -quiet] -quiet
+# IP: bd/system_bd/ip/system_bd_ila_0_0/system_bd_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_ila_0_0 || ORIG_REF_NAME==system_bd_ila_0_0} -quiet] -quiet
+
+# IP: bd/system_bd/ip/system_bd_ila_1_0/system_bd_ila_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_ila_1_0 || ORIG_REF_NAME==system_bd_ila_1_0} -quiet] -quiet
+
+# IP: bd/system_bd/ip/system_bd_axi_bram_ctrl_0_0/system_bd_axi_bram_ctrl_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_axi_bram_ctrl_0_0 || ORIG_REF_NAME==system_bd_axi_bram_ctrl_0_0} -quiet] -quiet
+
+# IP: bd/system_bd/ip/system_bd_axi_bram_ctrl_0_bram_1/system_bd_axi_bram_ctrl_0_bram_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_axi_bram_ctrl_0_bram_1 || ORIG_REF_NAME==system_bd_axi_bram_ctrl_0_bram_1} -quiet] -quiet
+
+# IP: bd/system_bd/ip/system_bd_reram_axi_ip_0_0/system_bd_reram_axi_ip_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_reram_axi_ip_0_0 || ORIG_REF_NAME==system_bd_reram_axi_ip_0_0} -quiet] -quiet
+
+# IP: bd/system_bd/ip/system_bd_xbar_0/system_bd_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_xbar_0 || ORIG_REF_NAME==system_bd_xbar_0} -quiet] -quiet
 
 # IP: bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_auto_pc_0 || ORIG_REF_NAME==system_bd_auto_pc_0} -quiet] -quiet
+
+# IP: bd/system_bd/ip/system_bd_auto_pc_1/system_bd_auto_pc_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_bd_auto_pc_1 || ORIG_REF_NAME==system_bd_auto_pc_1} -quiet] -quiet
 
 # XDC: bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/system_bd_rst_ps7_0_50M_1_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_bd_rst_ps7_0_50M_1 || ORIG_REF_NAME==system_bd_rst_ps7_0_50M_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
@@ -28,6 +46,30 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/system_bd/ip/system_bd_processing_system7_0_2/system_bd_processing_system7_0_2.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_bd_processing_system7_0_2 || ORIG_REF_NAME==system_bd_processing_system7_0_2} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
+# XDC: bd/system_bd/ip/system_bd_ila_0_0/ila_v6_2/constraints/ila_impl.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_bd_ila_0_0 || ORIG_REF_NAME==system_bd_ila_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/system_bd/ip/system_bd_ila_0_0/ila_v6_2/constraints/ila.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_bd_ila_0_0 || ORIG_REF_NAME==system_bd_ila_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/system_bd/ip/system_bd_ila_0_0/system_bd_ila_0_0_ooc.xdc
+
+# XDC: bd/system_bd/ip/system_bd_ila_1_0/ila_v6_2/constraints/ila_impl.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_bd_ila_1_0 || ORIG_REF_NAME==system_bd_ila_1_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/system_bd/ip/system_bd_ila_1_0/ila_v6_2/constraints/ila.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_bd_ila_1_0 || ORIG_REF_NAME==system_bd_ila_1_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/system_bd/ip/system_bd_ila_1_0/system_bd_ila_1_0_ooc.xdc
+
+# XDC: bd/system_bd/ip/system_bd_axi_bram_ctrl_0_0/system_bd_axi_bram_ctrl_0_0_ooc.xdc
+
+# XDC: bd/system_bd/ip/system_bd_axi_bram_ctrl_0_bram_1/system_bd_axi_bram_ctrl_0_bram_1_ooc.xdc
+
+# XDC: bd/system_bd/ip/system_bd_xbar_0/system_bd_xbar_0_ooc.xdc
+
 # XDC: bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0_ooc.xdc
+
+# XDC: bd/system_bd/ip/system_bd_auto_pc_1/system_bd_auto_pc_1_ooc.xdc
 
 # XDC: bd/system_bd/system_bd_ooc.xdc

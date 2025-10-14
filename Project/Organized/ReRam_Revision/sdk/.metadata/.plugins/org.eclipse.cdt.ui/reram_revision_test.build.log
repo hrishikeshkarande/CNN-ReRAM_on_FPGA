@@ -1,0 +1,8 @@
+14:09:32 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+
+14:09:33 Build Finished (took 1s.272ms)
+

@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -37,7 +36,19 @@ add_files {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Proje
 set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/system_bd_rst_ps7_0_50M_1_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_1/system_bd_rst_ps7_0_50M_1.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_2/system_bd_processing_system7_0_2.xdc}}]
+set_property used_in_synthesis false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_0_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_0_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_0_0/ila_v6_2/constraints/ila.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_0_0/system_bd_ila_0_0_ooc.xdc}}]
+set_property used_in_synthesis false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_1_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_1_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_1_0/ila_v6_2/constraints/ila.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_ila_1_0/system_bd_ila_1_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_axi_bram_ctrl_0_0/system_bd_axi_bram_ctrl_0_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_axi_bram_ctrl_0_bram_1/system_bd_axi_bram_ctrl_0_bram_1_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_xbar_0/system_bd_xbar_0_ooc.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/system_bd_auto_pc_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/ip/system_bd_auto_pc_1/system_bd_auto_pc_1_ooc.xdc}}]
 set_property used_in_implementation false [get_files -all {{C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being

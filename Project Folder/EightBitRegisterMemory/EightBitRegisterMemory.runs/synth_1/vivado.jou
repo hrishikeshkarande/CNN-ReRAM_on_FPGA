@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Oct  5 18:10:36 2025
+# Process ID: 1356
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/EightBitRegisterMemory/EightBitRegisterMemory.runs/synth_1
+# Command line: vivado.exe -log DesignForPStoReg_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DesignForPStoReg_wrapper.tcl
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/EightBitRegisterMemory/EightBitRegisterMemory.runs/synth_1/DesignForPStoReg_wrapper.vds
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/EightBitRegisterMemory/EightBitRegisterMemory.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source DesignForPStoReg_wrapper.tcl -notrace

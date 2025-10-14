@@ -1,0 +1,121 @@
+18:21:20 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+18:22:41 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+18:31:15 **** Auto Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../reram_revision_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:7:26: error: 'XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_PS7_AFI_0_S_AXI_BASEADDR'?
+ #define RERAM_BASEADDR   XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                          ^
+../src/helloworld.c:7:26: note: in definition of macro 'RERAM_BASEADDR'
+ #define RERAM_BASEADDR   XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:7:26: note: each undeclared identifier is reported only once for each function it appears in
+ #define RERAM_BASEADDR   XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                          ^
+../src/helloworld.c:7:26: note: in definition of macro 'RERAM_BASEADDR'
+ #define RERAM_BASEADDR   XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+18:32:09 **** Auto Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../reram_revision_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: reram_revision_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../reram_revision_test_bsp/ps7_cortexa9_0/lib -o "reram_revision_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: reram_revision_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size reram_revision_test.elf  |tee "reram_revision_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22572	   1144	  22568	  46284	   b4cc	reram_revision_test.elf
+Finished building: reram_revision_test.elf.size
+ 
+18:33:08 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+18:54:15 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+19:00:11 **** Auto Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../reram_revision_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: reram_revision_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../reram_revision_test_bsp/ps7_cortexa9_0/lib -o "reram_revision_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: reram_revision_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size reram_revision_test.elf  |tee "reram_revision_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22572	   1144	  22568	  46284	   b4cc	reram_revision_test.elf
+Finished building: reram_revision_test.elf.size
+ 
+19:00:40 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+19:02:13 **** Auto Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../reram_revision_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: reram_revision_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../reram_revision_test_bsp/ps7_cortexa9_0/lib -o "reram_revision_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: reram_revision_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size reram_revision_test.elf  |tee "reram_revision_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22572	   1144	  22568	  46284	   b4cc	reram_revision_test.elf
+Finished building: reram_revision_test.elf.size
+ 
+19:02:46 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+19:04:11 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+14:09:32 **** Incremental Build of configuration Debug for project reram_revision_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.

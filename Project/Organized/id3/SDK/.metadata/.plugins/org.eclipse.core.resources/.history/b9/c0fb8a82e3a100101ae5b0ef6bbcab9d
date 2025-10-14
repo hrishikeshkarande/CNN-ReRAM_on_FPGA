@@ -1,0 +1,19 @@
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xil_types.h"    // u32 type
+#include "xil_printf.h"   // xil_printf (if using UART)
+
+#define REG_BASE XPAR_SIMPLE_REG_0_BASEADDR  // from xparameters.h
+
+int main() {
+    // Write a value to your 8-bit register
+    Xil_Out32(REG_BASE, 0xA5);  // 0xA5 = 10100101
+
+    // Read it back
+    u32 value = Xil_In32(REG_BASE);
+
+    // For debugging: if using UART/printf
+    xil_printf("Read value: 0x%X\r\n", value);
+
+    while(1);  // stop here
+}

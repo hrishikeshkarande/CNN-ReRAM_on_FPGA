@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Oct  3 14:44:55 2025
+# Process ID: 1736
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25616 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRAM_AXI_Project\ReRAM_AXI_Project.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/reram_axi_ip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 898.070 ; gain = 172.930
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd}
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:ila:6.2 - ila_1
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_1: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding cell -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - axi_bram_ctrl_0_bram
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system_bd> from BD file <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_AXI_Project/ReRAM_AXI_Project.srcs/sources_1/bd/system_bd/system_bd.bd>
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 987.520 ; gain = 89.449

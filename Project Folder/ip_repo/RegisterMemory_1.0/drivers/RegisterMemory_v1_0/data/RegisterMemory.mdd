@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER RegisterMemory
+	OPTION supported_peripherals = (RegisterMemory);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = RegisterMemory;
+END DRIVER

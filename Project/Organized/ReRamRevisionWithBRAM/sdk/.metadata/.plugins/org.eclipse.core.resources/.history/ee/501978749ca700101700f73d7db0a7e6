@@ -1,0 +1,86 @@
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include <stdint.h>
+
+// ====== BASE ADDRESSES (adjust if your instance names differ) ======
+#ifndef RERAM_BASE
+#define RERAM_BASE      XPAR_RERAM_AXI_IP_0_S00_AXI_BASEADDR
+#endif
+
+#ifndef BRAM_BASE
+#define BRAM_BASE       XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR
+#endif
+
+// ====== ReRAM AXI register offsets ======
+// CONTROL: [0]=start, [1]=target_state, [2]=data_in
+#define REG_CONTROL     (RERAM_BASE + 0x00)
+// ADDR: [ADDR_WIDTH-1:0] cell index
+#define REG_ADDR        (RERAM_BASE + 0x04)
+// STATUS: [0]=busy, [1]=failed, [2]=read_state, [3]=data_out (live)
+#define REG_STATUS      (RERAM_BASE + 0x08)
+
+// Convenience bit extractors for STATUS
+static inline uint32_t rr_busy   (uint32_t st) { return ( st       & 1u); }
+static inline uint32_t rr_failed (uint32_t st) { return ((st >> 1) & 1u); }
+static inline uint32_t rr_read   (uint32_t st) { return ((st >> 2) & 1u); } // 0=LRS, 1=HRS
+static inline uint32_t rr_dout   (uint32_t st) { return ((st >> 3) & 1u); }
+
+// Pack CONTROL word: start(0)=1, target_state(1), data_in(2)
+static inline void rr_kick(uint32_t target_state, uint32_t data_in_bit) {
+    uint32_t ctl = (1u<<0) | ((target_state & 1u) << 1) | ((data_in_bit & 1u) << 2);
+    Xil_Out32(REG_CONTROL, ctl);
+}
+
+// High-level op: write a cell and wait for completion
+static void rr_write_cell(uint32_t addr, uint32_t target_state, uint32_t data_in_bit) {
+    Xil_Out32(REG_ADDR, addr);
+    rr_kick(target_state, data_in_bit);
+    // Poll BUSY until clear
+    while (rr_busy(Xil_In32(REG_STATUS))) { /* spin */ }
+}
+
+static void dump_status_and_bram(uint32_t addr) {
+    uint32_t st = Xil_In32(REG_STATUS);
+    uint32_t w  = Xil_In32(BRAM_BASE + 4*addr);  // mirror word from BRAM (port A via AXI)
+
+    xil_printf("  STATUS: busy=%u fail=%u read=%u data=%u (0x%08X)\r\n",
+               rr_busy(st), rr_failed(st), rr_read(st), rr_dout(st), st);
+
+    xil_printf("  BRAM[%02lu]: busy=%u fail=%u read=%u data=%u (0x%08X)\r\n",
+               addr, (w & 1u), ((w>>1)&1u), ((w>>2)&1u), ((w>>3)&1u), w);
+}
+
+int main(void)
+{
+    xil_printf("=== ReRAM + BRAM Mirror Test ===\r\n");
+    xil_printf("RERAM_BASE=0x%08X, BRAM_BASE=0x%08X\r\n", (unsigned)RERAM_BASE, (unsigned)BRAM_BASE);
+
+    // Constants matching your RTL: 0=LRS, 1=HRS
+    const uint32_t STATE_LRS = 0u;
+    const uint32_t STATE_HRS = 1u;
+
+    // --- Exercise a few cells: set to LRS with data pattern, then reset to HRS ---
+    for (uint32_t addr = 0; addr < 4; ++addr) {
+        xil_printf("\r\nCell %lu: SET to LRS, data=%lu\r\n", addr, (unsigned)(addr & 1u));
+        rr_write_cell(addr, STATE_LRS, (addr & 1u));
+        dump_status_and_bram(addr);
+
+        xil_printf("Cell %lu: RESET to HRS\r\n", addr);
+        rr_write_cell(addr, STATE_HRS, 0);
+        dump_status_and_bram(addr);
+    }
+
+    // --- Full BRAM mirror dump (first 16 words) ---
+    xil_printf("\r\nBRAM mirror (first 16 cells):\r\n");
+    for (uint32_t i = 0; i < 16; ++i) {
+        uint32_t w = Xil_In32(BRAM_BASE + 4*i);
+        xil_printf("  [%02lu] busy=%u fail=%u read=%u data=%u (0x%08X)\r\n",
+                   i, (w & 1u), ((w>>1)&1u), ((w>>2)&1u), ((w>>3)&1u), w);
+    }
+
+    xil_printf("\r\nDone. Leave running so Memory window stays live.\r\n");
+    while (1) { /* keep alive for Memory window */ }
+    return 0;
+}

@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/RevisionDesign/ip/RevisionDesign_rst_ps7_0_50M_0/sim/RevisionDesign_rst_ps7_0_50M_0.vhd" \
+"../../../bd/RevisionDesign/ip/RevisionDesign_axi_bram_ctrl_0_0/sim/RevisionDesign_axi_bram_ctrl_0_0.vhd" \
+
+nosort
