@@ -16,8 +16,8 @@ int main(void)
     xil_printf("=== Simple ReRAM AXI Register Test ===\r\n");
 
     // 1. Write address 0
-    Xil_Out32(RERAM_BASEADDR + REG_ADDR, 0x0);
-    xil_printf("ADDR written: 0x%08X\r\n", Xil_In32(RERAM_BASEADDR + REG_ADDR));
+    Xil_Out32(RERAM_BASEADDR + REG_ADDR, 0b00000101);
+    xil_printf("ADDR to five write written: 0x%08X\r\n", Xil_In32(RERAM_BASEADDR + REG_ADDR));
 
     // 2. Start SET (target=LRS=0, data_in=1)
     // bits: [2]=data_in(1), [1]=target_state(0=LRS), [0]=start(1)

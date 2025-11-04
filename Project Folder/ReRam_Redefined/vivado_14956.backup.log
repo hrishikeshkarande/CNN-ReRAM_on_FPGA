@@ -1,0 +1,595 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Oct 24 12:17:25 2025
+# Process ID: 14956
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3104 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRam_Redefined\ReRam_Redefined.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 793.480 ; gain = 73.512
+update_compile_order -fileset sources_1
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_runs synth_1 -jobs 4
+[Fri Oct 24 14:09:53 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.runs/synth_1/runme.log
+reset_run synth_1
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_reram_memory_controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj tb_axi_reram_memory_controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv" into library xilinx_vip
+WARNING: [VRFC 10-998] macro ARESET_XCHECK redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:79]
+WARNING: [VRFC 10-998] macro ARESET_XCHECK_SOL redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:80]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/clk_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/rst_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable write_reg_addr must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:726]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/Downloads/reram_cell_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_cell_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/3.0/reram_memory_controller_blocking.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_memory_controller_blocking
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/2.0/reram_word_array_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_word_array_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable test_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:267]
+WARNING: [VRFC 10-2167] variable expected_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:276]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 2413a4e8c8dd4490957e722b50b7e2e6 --incr --debug typical --relax --mt 2 -L xilinx_vip -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_axi_reram_memory_controller_behav xil_defaultlib.tb_axi_reram_memory_controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-1658] variable i is driven by invalid combination of procedural drivers [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:208]
+WARNING: [VRFC 10-2066] i driven by this always_comb block should not be driven by any other process [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:537]
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:695]
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:698]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 843.762 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_reram_memory_controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj tb_axi_reram_memory_controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv" into library xilinx_vip
+WARNING: [VRFC 10-998] macro ARESET_XCHECK redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:79]
+WARNING: [VRFC 10-998] macro ARESET_XCHECK_SOL redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:80]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/clk_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/rst_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable write_reg_addr must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:726]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/Downloads/reram_cell_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_cell_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/3.0/reram_memory_controller_blocking.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_memory_controller_blocking
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/2.0/reram_word_array_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_word_array_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable test_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:267]
+WARNING: [VRFC 10-2167] variable expected_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:276]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 2413a4e8c8dd4490957e722b50b7e2e6 --incr --debug typical --relax --mt 2 -L xilinx_vip -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_axi_reram_memory_controller_behav xil_defaultlib.tb_axi_reram_memory_controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:695]
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:698]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reram_cell_simple(MAX_WRITE_CYCL...
+Compiling module xil_defaultlib.reram_word_array_simple_default
+Compiling module xil_defaultlib.reram_memory_controller_blocking...
+Compiling module xil_defaultlib.axi_reram_memory_controller_defa...
+Compiling module xil_defaultlib.tb_axi_reram_memory_controller
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_axi_reram_memory_controller_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/hrish/Downloads/ReRAM_Thesis/Project -notrace
+couldn't read file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 24 14:21:54 2025...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 843.762 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_axi_reram_memory_controller_behav -key {Behavioral:sim_1:Functional:tb_axi_reram_memory_controller} -tclbatch {tb_axi_reram_memory_controller.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source tb_axi_reram_memory_controller.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+==============================================
+AXI4-Lite ReRAM Memory Controller Test Suite
+==============================================
+
+[Phase 1] Basic Memory Read/Write Operations
+[ERROR] Basic read failed. Expected: deadbeef, Got: 00000000, Resp: 0
+
+[Phase 2] Control Register Access
+[PASS] Status register: 00000000
+
+[Phase 3] Address Validation
+[PASS] Out-of-bounds access correctly rejected
+
+[Phase 4] Sequential Memory Test
+[ERROR] Sequential write 0 failed
+[ERROR] Sequential write 1 failed
+[ERROR] Sequential write 2 failed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_axi_reram_memory_controller_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 870.461 ; gain = 26.699
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+==============================================
+AXI4-Lite ReRAM Memory Controller Test Suite
+==============================================
+
+[Phase 1] Basic Memory Read/Write Operations
+[ERROR] Basic read failed. Expected: deadbeef, Got: 00000000, Resp: 0
+
+[Phase 2] Control Register Access
+[PASS] Status register: 00000000
+
+[Phase 3] Address Validation
+[PASS] Out-of-bounds access correctly rejected
+
+[Phase 4] Sequential Memory Test
+[ERROR] Sequential write 0 failed
+[ERROR] Sequential write 1 failed
+[ERROR] Sequential write 2 failed
+[ERROR] Sequential write 3 failed
+[ERROR] Sequential write 4 failed
+[ERROR] Sequential write 5 failed
+[ERROR] Sequential write 6 failed
+[ERROR] Sequential write 7 failed
+[ERROR] Sequential write 8 failed
+[ERROR] Sequential write 9 failed
+[ERROR] Sequential write 10 failed
+[ERROR] Sequential write 11 failed
+[ERROR] Sequential write 12 failed
+[ERROR] Sequential write 13 failed
+[ERROR] Sequential write 14 failed
+[ERROR] Sequential write 15 failed
+[ERROR] Sequential read 0 failed. Expected: 10000000, Got: 00000000
+[ERROR] Sequential read 1 failed. Expected: 10000001, Got: 00000000
+[ERROR] Sequential read 2 failed. Expected: 10000002, Got: 00000000
+[ERROR] Sequential read 3 failed. Expected: 10000003, Got: 00000000
+[ERROR] Sequential read 4 failed. Expected: 10000004, Got: 00000000
+[ERROR] Sequential read 5 failed. Expected: 10000005, Got: 00000000
+[ERROR] Sequential read 6 failed. Expected: 10000006, Got: 00000000
+[ERROR] Sequential read 7 failed. Expected: 10000007, Got: 00000000
+[ERROR] Sequential read 8 failed. Expected: 10000008, Got: 00000000
+[ERROR] Sequential read 9 failed. Expected: 10000009, Got: 00000000
+[ERROR] Sequential read 10 failed. Expected: 1000000a, Got: 00000000
+[ERROR] Sequential read 11 failed. Expected: 1000000b, Got: 00000000
+[ERROR] Sequential read 12 failed. Expected: 1000000c, Got: 00000000
+[ERROR] Sequential read 13 failed. Expected: 1000000d, Got: 00000000
+[ERROR] Sequential read 14 failed. Expected: 1000000e, Got: 00000000
+[ERROR] Sequential read 15 failed. Expected: 1000000f, Got: 00000000
+[PASS] Sequential memory test completed
+
+[Phase 5] Endurance Monitoring
+[PASS] Write cycles register: 00000000
+
+[Phase 6] Error Handling
+[ERROR] Invalid register access should return DECERR
+
+[Phase 7] Health Monitoring
+[PASS] Health summary: 00000000
+
+[Phase 8] Final Status Check
+[INFO] Total operations: 00000000
+
+==============================================
+Test Summary
+==============================================
+Total test phases: 8
+Total errors: 34
+*** 34 TESTS FAILED ***
+==============================================
+$finish called at time : 5005 ns : File "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv" Line 348
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 973.762 ; gain = 0.000
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_reram_memory_controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj tb_axi_reram_memory_controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv" into library xilinx_vip
+WARNING: [VRFC 10-998] macro ARESET_XCHECK redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:79]
+WARNING: [VRFC 10-998] macro ARESET_XCHECK_SOL redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:80]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/clk_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/rst_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable write_reg_addr must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:726]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/Downloads/reram_cell_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_cell_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/3.0/reram_memory_controller_blocking.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_memory_controller_blocking
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/2.0/reram_word_array_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_word_array_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable test_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:285]
+WARNING: [VRFC 10-2167] variable expected_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:294]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 2413a4e8c8dd4490957e722b50b7e2e6 --incr --debug typical --relax --mt 2 -L xilinx_vip -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_axi_reram_memory_controller_behav xil_defaultlib.tb_axi_reram_memory_controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:695]
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:698]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reram_cell_simple(MAX_WRITE_CYCL...
+Compiling module xil_defaultlib.reram_word_array_simple_default
+Compiling module xil_defaultlib.reram_memory_controller_blocking...
+Compiling module xil_defaultlib.axi_reram_memory_controller_defa...
+Compiling module xil_defaultlib.tb_axi_reram_memory_controller
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_axi_reram_memory_controller_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/hrish/Downloads/ReRAM_Thesis/Project -notrace
+couldn't read file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 24 15:02:55 2025...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 973.762 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_axi_reram_memory_controller_behav -key {Behavioral:sim_1:Functional:tb_axi_reram_memory_controller} -tclbatch {tb_axi_reram_memory_controller.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source tb_axi_reram_memory_controller.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+==============================================
+AXI4-Lite ReRAM Memory Controller Test Suite
+==============================================
+
+[Phase 1] Basic Memory Read/Write Operations
+[ERROR] Basic read failed. Expected: deadbeef, Got: 00000000, Resp: 0
+
+[Phase 2] Control Register Access
+[PASS] Status register: 00000000
+
+[Phase 3] Address Validation
+[PASS] Out-of-bounds access correctly rejected
+
+[Phase 4] Sequential Memory Test
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_axi_reram_memory_controller_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 974.340 ; gain = 0.578
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+==============================================
+AXI4-Lite ReRAM Memory Controller Test Suite
+==============================================
+
+[Phase 1] Basic Memory Read/Write Operations
+[ERROR] Basic read failed. Expected: deadbeef, Got: 00000000, Resp: 0
+
+[Phase 2] Control Register Access
+[PASS] Status register: 00000000
+
+[Phase 3] Address Validation
+[PASS] Out-of-bounds access correctly rejected
+
+[Phase 4] Sequential Memory Test
+[ERROR] Sequential read 0 failed. Expected: 10000000, Got: 00000000
+[ERROR] Sequential read 1 failed. Expected: 10000001, Got: 00000000
+[ERROR] Sequential read 2 failed. Expected: 10000002, Got: 00000000
+[ERROR] Sequential read 3 failed. Expected: 10000003, Got: 00000000
+[ERROR] Sequential read 4 failed. Expected: 10000004, Got: 00000000
+[ERROR] Sequential read 5 failed. Expected: 10000005, Got: 00000000
+[ERROR] Sequential read 6 failed. Expected: 10000006, Got: 00000000
+[ERROR] Sequential read 7 failed. Expected: 10000007, Got: 00000000
+[ERROR] Sequential read 8 failed. Expected: 10000008, Got: 00000000
+[ERROR] Sequential read 9 failed. Expected: 10000009, Got: 00000000
+[ERROR] Sequential read 10 failed. Expected: 1000000a, Got: 00000000
+[ERROR] Sequential read 11 failed. Expected: 1000000b, Got: 00000000
+[ERROR] Sequential read 12 failed. Expected: 1000000c, Got: 00000000
+[ERROR] Sequential read 13 failed. Expected: 1000000d, Got: 00000000
+[ERROR] Sequential read 14 failed. Expected: 1000000e, Got: 00000000
+[ERROR] Sequential read 15 failed. Expected: 1000000f, Got: 00000000
+[PASS] Sequential memory test completed
+
+[Phase 5] Endurance Monitoring
+[PASS] Write cycles register: 01010102
+
+[Phase 6] Error Handling
+[PASS] Invalid register access correctly rejected
+
+[Phase 7] Health Monitoring
+[PASS] Health summary: 00000010
+
+[Phase 8] Final Status Check
+[INFO] Total operations: 00110011
+
+==============================================
+Test Summary
+==============================================
+Total test phases: 8
+Total errors: 17
+*** 17 TESTS FAILED ***
+==============================================
+$finish called at time : 5065 ns : File "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv" Line 366
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_reram_memory_controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj tb_axi_reram_memory_controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv" into library xilinx_vip
+WARNING: [VRFC 10-998] macro ARESET_XCHECK redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:79]
+WARNING: [VRFC 10-998] macro ARESET_XCHECK_SOL redefined [C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv:80]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/clk_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/rst_vip_if.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable write_reg_addr must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:726]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/Downloads/reram_cell_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_cell_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/3.0/reram_memory_controller_blocking.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_memory_controller_blocking
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/2.0/reram_word_array_simple.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reram_word_array_simple
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_axi_reram_memory_controller
+WARNING: [VRFC 10-2167] variable test_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:285]
+WARNING: [VRFC 10-2167] variable expected_data must explicitly be declared as automatic or static [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv:294]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 2413a4e8c8dd4490957e722b50b7e2e6 --incr --debug typical --relax --mt 2 -L xilinx_vip -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_axi_reram_memory_controller_behav xil_defaultlib.tb_axi_reram_memory_controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:695]
+WARNING: [VRFC 10-597] element index 7 into mem_addr is out of bounds [C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/axi_reram_memory_controller.sv:698]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reram_cell_simple(MAX_WRITE_CYCL...
+Compiling module xil_defaultlib.reram_word_array_simple_default
+Compiling module xil_defaultlib.reram_memory_controller_blocking...
+Compiling module xil_defaultlib.axi_reram_memory_controller_defa...
+Compiling module xil_defaultlib.tb_axi_reram_memory_controller
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_axi_reram_memory_controller_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/hrish/Downloads/ReRAM_Thesis/Project -notrace
+couldn't read file "C:/Users/hrish/Downloads/ReRAM_Thesis/Project": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 24 15:17:38 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_axi_reram_memory_controller_behav -key {Behavioral:sim_1:Functional:tb_axi_reram_memory_controller} -tclbatch {tb_axi_reram_memory_controller.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source tb_axi_reram_memory_controller.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+==============================================
+AXI4-Lite ReRAM Memory Controller Test Suite
+==============================================
+
+[Phase 1] Basic Memory Read/Write Operations
+[ERROR] Basic read failed. Expected: deadbeef, Got: 00000000, Resp: 0
+
+[Phase 2] Control Register Access
+[PASS] Status register: 00000000
+
+[Phase 3] Address Validation
+[PASS] Out-of-bounds access correctly rejected
+
+[Phase 4] Sequential Memory Test
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_axi_reram_memory_controller_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 983.398 ; gain = 4.070
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+==============================================
+AXI4-Lite ReRAM Memory Controller Test Suite
+==============================================
+
+[Phase 1] Basic Memory Read/Write Operations
+[ERROR] Basic read failed. Expected: deadbeef, Got: 00000000, Resp: 0
+
+[Phase 2] Control Register Access
+[PASS] Status register: 00000000
+
+[Phase 3] Address Validation
+[PASS] Out-of-bounds access correctly rejected
+
+[Phase 4] Sequential Memory Test
+[ERROR] Sequential read 0 failed. Expected: 10000000, Got: 00000000
+[ERROR] Sequential read 1 failed. Expected: 10000001, Got: 00000000
+[ERROR] Sequential read 2 failed. Expected: 10000002, Got: 00000000
+[ERROR] Sequential read 3 failed. Expected: 10000003, Got: 00000000
+[ERROR] Sequential read 4 failed. Expected: 10000004, Got: 00000000
+[ERROR] Sequential read 5 failed. Expected: 10000005, Got: 00000000
+[ERROR] Sequential read 6 failed. Expected: 10000006, Got: 00000000
+[ERROR] Sequential read 7 failed. Expected: 10000007, Got: 00000000
+[ERROR] Sequential read 8 failed. Expected: 10000008, Got: 00000000
+[ERROR] Sequential read 9 failed. Expected: 10000009, Got: 00000000
+[ERROR] Sequential read 10 failed. Expected: 1000000a, Got: 00000000
+[ERROR] Sequential read 11 failed. Expected: 1000000b, Got: 00000000
+[ERROR] Sequential read 12 failed. Expected: 1000000c, Got: 00000000
+[ERROR] Sequential read 13 failed. Expected: 1000000d, Got: 00000000
+[ERROR] Sequential read 14 failed. Expected: 1000000e, Got: 00000000
+[ERROR] Sequential read 15 failed. Expected: 1000000f, Got: 00000000
+[PASS] Sequential memory test completed
+
+[Phase 5] Endurance Monitoring
+[PASS] Write cycles register: 01010102
+
+[Phase 6] Error Handling
+[PASS] Invalid register access correctly rejected
+
+[Phase 7] Health Monitoring
+[PASS] Health summary: 00000010
+
+[Phase 8] Final Status Check
+[INFO] Total operations: 00110011
+
+==============================================
+Test Summary
+==============================================
+Total test phases: 8
+Total errors: 17
+*** 17 TESTS FAILED ***
+==============================================
+$finish called at time : 5065 ns : File "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/imports/4.0 B/tb_axi_reram_memory_controller.sv" Line 366
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 24 15:41:34 2025...

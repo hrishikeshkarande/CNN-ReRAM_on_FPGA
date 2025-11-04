@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Oct 26 13:11:13 2025
+# Process ID: 18328
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19860 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRam_Redefined\ReRam_Redefined.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/ReRAM_SPM_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Working'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:reram_axilite_wrapper:1.0'. The one found in IP location 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/ReRAM_SPM_1.0' will take precedence over the same IP in location c:/Users/hrish/Downloads/ReRAM_Working/ip repo
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 828.656 ; gain = 105.820
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 6807 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2057.492 ; gain = 63.109
+Restored from archive | CPU: 9.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2057.492 ; gain = 63.109
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 2104.426 ; gain = 1254.395
+open_report: Time (s): cpu = 00:00:22 ; elapsed = 00:00:09 . Memory (MB): peak = 2269.887 ; gain = 164.531
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+close_design
+open_bd_design {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ReRamSpm.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:user:reram_axilite_wrapper:1.0 - reram_axilite_wrapper_0
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <ReRamSpm> from BD file <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ReRamSpm.bd>
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2496.883 ; gain = 0.000
+regenerate_bd_layout
+close
+wrong # args: should be "close channelId"
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 29 16:45:34 2025...

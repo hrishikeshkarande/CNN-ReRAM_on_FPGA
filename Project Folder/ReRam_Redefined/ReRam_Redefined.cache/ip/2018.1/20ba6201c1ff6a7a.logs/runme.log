@@ -1,0 +1,1756 @@
+
+*** Running vivado
+    with args -log ReRamSpm_reram_axilite_wrapper_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ReRamSpm_reram_axilite_wrapper_0_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source ReRamSpm_reram_axilite_wrapper_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 254.309 ; gain = 23.918
+Command: synth_design -top ReRamSpm_reram_axilite_wrapper_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10896 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 394.785 ; gain = 100.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ReRamSpm_reram_axilite_wrapper_0_0' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ip/ReRamSpm_reram_axilite_wrapper_0_0/synth/ReRamSpm_reram_axilite_wrapper_0_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'reram_axilite_wrapper' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:13]
+	Parameter MEMORY_DEPTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter CORE_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter ADDR_MEM_BASE bound to: 0 - type: integer 
+	Parameter ADDR_MEM_END bound to: 63 - type: integer 
+	Parameter ADDR_REG_BASE bound to: 256 - type: integer 
+	Parameter ADDR_TOTAL_READS bound to: 256 - type: integer 
+	Parameter ADDR_TOTAL_WRITES bound to: 260 - type: integer 
+	Parameter ADDR_WORD_ERRORS bound to: 264 - type: integer 
+	Parameter ADDR_CELL_ERRORS_ANY bound to: 268 - type: integer 
+	Parameter ADDR_WRITE_CYCLES_BASE bound to: 288 - type: integer 
+	Parameter ADDR_WRITE_CYCLES_0_3 bound to: 288 - type: integer 
+	Parameter ADDR_WRITE_CYCLES_4_7 bound to: 292 - type: integer 
+	Parameter ADDR_WRITE_CYCLES_8_11 bound to: 296 - type: integer 
+	Parameter ADDR_WRITE_CYCLES_12_15 bound to: 300 - type: integer 
+	Parameter ADDR_CELL_ERRORS_BASE bound to: 512 - type: integer 
+	Parameter ADDR_CELL_ERRORS_END bound to: 575 - type: integer 
+	Parameter WORD_BITMAP_PAD bound to: 16 - type: integer 
+	Parameter WR_IDLE bound to: 2'b00 
+	Parameter WR_WAIT_CORE bound to: 2'b01 
+	Parameter WR_RESP bound to: 2'b10 
+	Parameter RD_IDLE bound to: 2'b00 
+	Parameter RD_WAIT_CORE bound to: 2'b01 
+	Parameter RD_RESP bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'reram_memory_controller_blocking' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_memory_controller_blocking.sv:35]
+	Parameter MEMORY_DEPTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter READ_DELAY_CYCLES bound to: 32'sb00000000000000000000000000000011 
+	Parameter SET_DELAY_CYCLES bound to: 32'sb00000000000000000000000000001010 
+	Parameter RESET_DELAY_CYCLES bound to: 32'sb00000000000000000000000000001010 
+	Parameter MAX_WRITE_CYCLES bound to: 32'sb00000000000000000000000011001000 
+	Parameter CMD_NOP bound to: 2'b00 
+	Parameter CMD_READ bound to: 2'b01 
+	Parameter CMD_WRITE bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'reram_word_array_simple' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_word_array_simple.sv:19]
+	Parameter WORD_WIDTH bound to: 32 - type: integer 
+	Parameter READ_DELAY_CYCLES bound to: 32'sb00000000000000000000000000000011 
+	Parameter SET_DELAY_CYCLES bound to: 32'sb00000000000000000000000000001010 
+	Parameter RESET_DELAY_CYCLES bound to: 32'sb00000000000000000000000000001010 
+	Parameter MAX_WRITE_CYCLES bound to: 32'sb00000000000000000000000011001000 
+	Parameter CMD_NOP bound to: 2'b00 
+	Parameter CMD_READ bound to: 2'b01 
+	Parameter CMD_WRITE bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'reram_cell_simple' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_cell_simple.sv:21]
+	Parameter READ_DELAY_CYCLES bound to: 32'sb00000000000000000000000000000011 
+	Parameter SET_DELAY_CYCLES bound to: 32'sb00000000000000000000000000001010 
+	Parameter RESET_DELAY_CYCLES bound to: 32'sb00000000000000000000000000001010 
+	Parameter MAX_WRITE_CYCLES bound to: 32'sb00000000000000000000000011001000 
+	Parameter CMD_NOP bound to: 2'b00 
+	Parameter CMD_READ bound to: 2'b01 
+	Parameter CMD_WRITE bound to: 2'b10 
+	Parameter ERR_NONE bound to: 2'b00 
+	Parameter ERR_BUSY bound to: 2'b01 
+	Parameter ERR_WORN_OUT bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_cell_simple.sv:107]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_cell_simple.sv:141]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_cell_simple.sv:192]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_cell_simple.sv:224]
+INFO: [Synth 8-6155] done synthesizing module 'reram_cell_simple' (1#1) [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_cell_simple.sv:21]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_word_array_simple.sv:193]
+INFO: [Synth 8-6155] done synthesizing module 'reram_word_array_simple' (2#1) [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_word_array_simple.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'reram_memory_controller_blocking' (3#1) [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_memory_controller_blocking.sv:35]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:274]
+WARNING: [Synth 8-6014] Unused sequential element read_pending_reg was removed.  [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:221]
+INFO: [Synth 8-6155] done synthesizing module 'reram_axilite_wrapper' (4#1) [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'ReRamSpm_reram_axilite_wrapper_0_0' (5#1) [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ip/ReRamSpm_reram_axilite_wrapper_0_0/synth/ReRamSpm_reram_axilite_wrapper_0_0.sv:57]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design reram_axilite_wrapper has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 449.641 ; gain = 155.109
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 449.641 ; gain = 155.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 449.641 ; gain = 155.109
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 990.594 ; gain = 43.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "read_success_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "write_success_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_word_state_reg' in module 'reram_word_array_simple'
+INFO: [Synth 8-5544] ROM "next_word_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'reram_memory_controller_blocking'
+INFO: [Synth 8-5544] ROM "read_counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'axi_wready_reg' into 'axi_awready_reg' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:162]
+WARNING: [Synth 8-6014] Unused sequential element axi_wready_reg was removed.  [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:162]
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'reram_axilite_wrapper'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'reram_axilite_wrapper'
+INFO: [Synth 8-5544] ROM "axi_awready" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "axi_arready" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               WORD_IDLE |                              001 |                               00
+            WORD_READING |                              010 |                               01
+            WORD_WRITING |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_word_state_reg' using encoding 'one-hot' in module 'reram_word_array_simple'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                 READING |                               11 |                              001
+                 WRITING |                               10 |                              010
+             ERROR_STATE |                               01 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'reram_memory_controller_blocking'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 WR_IDLE |                              001 |                               00
+            WR_WAIT_CORE |                              010 |                               01
+                 WR_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'one-hot' in module 'reram_axilite_wrapper'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RD_IDLE |                               00 |                               00
+            RD_WAIT_CORE |                               01 |                               01
+                 RD_RESP |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'reram_axilite_wrapper'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------------+------------+----------+
+|      |RTL Partition                         |Replication |Instances |
++------+--------------------------------------+------------+----------+
+|1     |reram_word_array_simple               |          16|     22776|
+|2     |reram_memory_controller_blocking__GC0 |           1|      1484|
+|3     |reram_axilite_wrapper__GC0            |           1|      1047|
++------+--------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 512   
+	   2 Input      8 Bit       Adders := 512   
++---Registers : 
+	               32 Bit    Registers := 1042  
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 512   
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 529   
+	                1 Bit    Registers := 2054  
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 548   
+	   3 Input     32 Bit        Muxes := 16    
+	   2 Input      8 Bit        Muxes := 496   
+	   7 Input      4 Bit        Muxes := 512   
+	   3 Input      3 Bit        Muxes := 32    
+	   2 Input      3 Bit        Muxes := 48    
+	   2 Input      2 Bit        Muxes := 7235  
+	   3 Input      2 Bit        Muxes := 2099  
+	   4 Input      2 Bit        Muxes := 49    
+	   4 Input      1 Bit        Muxes := 2049  
+	   2 Input      1 Bit        Muxes := 3611  
+	   3 Input      1 Bit        Muxes := 3600  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module reram_cell_simple__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__16 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__17 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__18 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__19 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__20 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__21 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__22 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__23 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__24 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__25 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__26 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__27 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__28 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__29 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__30 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple__31 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_cell_simple 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 7     
+Module reram_word_array_simple 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 31    
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module reram_memory_controller_blocking 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module reram_axilite_wrapper 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design ReRamSpm_reram_axilite_wrapper_0_0 has port S_AXI_BRESP[1] driven by constant 0
+INFO: [Synth 8-3917] design ReRamSpm_reram_axilite_wrapper_0_0 has port S_AXI_BRESP[0] driven by constant 0
+INFO: [Synth 8-3917] design ReRamSpm_reram_axilite_wrapper_0_0 has port S_AXI_RRESP[1] driven by constant 0
+INFO: [Synth 8-3917] design ReRamSpm_reram_axilite_wrapper_0_0 has port S_AXI_RRESP[0] driven by constant 0
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design ReRamSpm_reram_axilite_wrapper_0_0 has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[2]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[4]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[5]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[6]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[7]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[8]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[9]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[10]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[11]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[12]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[13]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[14]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[15]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[16]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[17]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[18]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[19]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[20]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[21]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[21]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[22]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[23]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[23]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[24]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[25]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[26]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[27]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[27]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[28]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[29]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[29]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[30]' (FDCE) to 'reram_word_array_simple:/cell_instances[0].cell_inst/target_delay_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[0].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[2]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[4]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[5]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[6]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[7]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[8]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[9]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[10]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[11]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[12]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[13]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[14]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[15]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[16]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[17]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[18]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[19]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[20]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[21]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[21]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[22]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[23]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[23]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[24]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[25]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[26]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[27]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[27]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[28]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[29]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[29]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[30]' (FDCE) to 'reram_word_array_simple:/cell_instances[1].cell_inst/target_delay_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[1].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[2]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[4]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[5]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[6]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[7]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[8]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[9]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[10]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[11]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[12]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[13]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[14]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[15]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[16]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[17]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[18]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[19]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[20]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[21]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[21]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[22]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[23]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[23]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[24]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[25]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[26]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[27]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[27]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[28]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[29]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[29]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[30]' (FDCE) to 'reram_word_array_simple:/cell_instances[2].cell_inst/target_delay_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[2].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[2]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[4]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[5]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[6]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[7]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[8]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[9]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[10]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[11]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[12]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[13]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[14]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[15]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[16]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[17]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[18]' (FDCE) to 'reram_word_array_simple:/cell_instances[3].cell_inst/target_delay_reg[19]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[3].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[4].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[5].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[6].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[7].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[8].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[9].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[10].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[11].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[12].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[13].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[14].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[15].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[16].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[17].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[18].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[19].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[20].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[21].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[22].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[23].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[24].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[25].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[26].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[27].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[28].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[29].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[30].cell_inst /\target_delay_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reram_word_array_simple:/\cell_instances[31].cell_inst /\target_delay_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__1.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__2.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__3.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__4.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__5.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__6.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__7.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__8.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__9.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__10.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__11.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__12.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__13.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__14.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__15.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__16.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__17.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__18.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__19.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__20.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__21.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__22.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__23.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__24.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__25.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__26.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__27.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__28.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__29.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__30.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple__31.
+WARNING: [Synth 8-3332] Sequential element (target_delay_reg[31]) is unused and will be removed from module reram_cell_simple.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------------+------------+----------+
+|      |RTL Partition                         |Replication |Instances |
++------+--------------------------------------+------------+----------+
+|1     |reram_word_array_simple               |          16|      9159|
+|2     |reram_memory_controller_blocking__GC0 |           1|      1271|
+|3     |reram_axilite_wrapper__GC0            |           1|       980|
++------+--------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:22 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:22 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------------+------------+----------+
+|      |RTL Partition                         |Replication |Instances |
++------+--------------------------------------+------------+----------+
+|1     |reram_word_array_simple               |          16|      9159|
+|2     |reram_memory_controller_blocking__GC0 |           1|      1271|
+|3     |reram_axilite_wrapper__GC0            |           1|       980|
++------+--------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:32 . Memory (MB): peak = 990.594 ; gain = 696.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1017.402 ; gain = 722.871
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[3] with 1st driver pin 'inst/core_addr_i_reg[3]__0/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:114]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[3] with 2nd driver pin 'inst/core_addr_i_reg[3]/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:234]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[2] with 1st driver pin 'inst/core_addr_i_reg[2]__0/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:114]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[2] with 2nd driver pin 'inst/core_addr_i_reg[2]/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:234]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[1] with 1st driver pin 'inst/core_addr_i_reg[1]__0/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:114]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[1] with 2nd driver pin 'inst/core_addr_i_reg[1]/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:234]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[0] with 1st driver pin 'inst/core_addr_i_reg[0]__0/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:114]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/core_addr_i[0] with 2nd driver pin 'inst/core_addr_i_reg[0]/Q' [c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ipshared/fca1/src/reram_axilite_wrapper.sv:234]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:31 ; elapsed = 00:01:39 . Memory (MB): peak = 1017.402 ; gain = 722.871
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1017.402 ; gain = 722.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:48 . Memory (MB): peak = 1017.402 ; gain = 722.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1017.402 ; gain = 722.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1017.402 ; gain = 722.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |  6656|
+|2     |LUT1   |   515|
+|3     |LUT2   | 16929|
+|4     |LUT3   |  4613|
+|5     |LUT4   | 20843|
+|6     |LUT5   |  5688|
+|7     |LUT6   |  5776|
+|8     |MUXF7  |   100|
+|9     |MUXF8  |    33|
+|10    |FDCE   | 25304|
+|11    |FDPE   |    16|
+|12    |FDRE   |    66|
+|13    |FDSE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------------+---------------------------------+------+
+|      |Instance                                |Module                           |Cells |
++------+----------------------------------------+---------------------------------+------+
+|1     |top                                     |                                 | 86540|
+|2     |  inst                                  |reram_axilite_wrapper            | 86540|
+|3     |    u_core                              |reram_memory_controller_blocking | 86460|
+|4     |      \word_arrays[0].word_array_inst   |reram_word_array_simple          |  5361|
+|5     |        \cell_instances[0].cell_inst    |reram_cell_simple_494            |   141|
+|6     |        \cell_instances[10].cell_inst   |reram_cell_simple_495            |   136|
+|7     |        \cell_instances[11].cell_inst   |reram_cell_simple_496            |   168|
+|8     |        \cell_instances[12].cell_inst   |reram_cell_simple_497            |   139|
+|9     |        \cell_instances[13].cell_inst   |reram_cell_simple_498            |   164|
+|10    |        \cell_instances[14].cell_inst   |reram_cell_simple_499            |   136|
+|11    |        \cell_instances[15].cell_inst   |reram_cell_simple_500            |   164|
+|12    |        \cell_instances[16].cell_inst   |reram_cell_simple_501            |   136|
+|13    |        \cell_instances[17].cell_inst   |reram_cell_simple_502            |   164|
+|14    |        \cell_instances[18].cell_inst   |reram_cell_simple_503            |   137|
+|15    |        \cell_instances[19].cell_inst   |reram_cell_simple_504            |   164|
+|16    |        \cell_instances[1].cell_inst    |reram_cell_simple_505            |   168|
+|17    |        \cell_instances[20].cell_inst   |reram_cell_simple_506            |   136|
+|18    |        \cell_instances[21].cell_inst   |reram_cell_simple_507            |   164|
+|19    |        \cell_instances[22].cell_inst   |reram_cell_simple_508            |   136|
+|20    |        \cell_instances[23].cell_inst   |reram_cell_simple_509            |   164|
+|21    |        \cell_instances[24].cell_inst   |reram_cell_simple_510            |   137|
+|22    |        \cell_instances[25].cell_inst   |reram_cell_simple_511            |   164|
+|23    |        \cell_instances[26].cell_inst   |reram_cell_simple_512            |   136|
+|24    |        \cell_instances[27].cell_inst   |reram_cell_simple_513            |   164|
+|25    |        \cell_instances[28].cell_inst   |reram_cell_simple_514            |   136|
+|26    |        \cell_instances[29].cell_inst   |reram_cell_simple_515            |   164|
+|27    |        \cell_instances[2].cell_inst    |reram_cell_simple_516            |   136|
+|28    |        \cell_instances[30].cell_inst   |reram_cell_simple_517            |   137|
+|29    |        \cell_instances[31].cell_inst   |reram_cell_simple_518            |   148|
+|30    |        \cell_instances[3].cell_inst    |reram_cell_simple_519            |   168|
+|31    |        \cell_instances[4].cell_inst    |reram_cell_simple_520            |   136|
+|32    |        \cell_instances[5].cell_inst    |reram_cell_simple_521            |   168|
+|33    |        \cell_instances[6].cell_inst    |reram_cell_simple_522            |   137|
+|34    |        \cell_instances[7].cell_inst    |reram_cell_simple_523            |   168|
+|35    |        \cell_instances[8].cell_inst    |reram_cell_simple_524            |   138|
+|36    |        \cell_instances[9].cell_inst    |reram_cell_simple_525            |   168|
+|37    |      \word_arrays[10].word_array_inst  |reram_word_array_simple_0        |  5361|
+|38    |        \cell_instances[0].cell_inst    |reram_cell_simple_462            |   141|
+|39    |        \cell_instances[10].cell_inst   |reram_cell_simple_463            |   136|
+|40    |        \cell_instances[11].cell_inst   |reram_cell_simple_464            |   168|
+|41    |        \cell_instances[12].cell_inst   |reram_cell_simple_465            |   139|
+|42    |        \cell_instances[13].cell_inst   |reram_cell_simple_466            |   164|
+|43    |        \cell_instances[14].cell_inst   |reram_cell_simple_467            |   136|
+|44    |        \cell_instances[15].cell_inst   |reram_cell_simple_468            |   164|
+|45    |        \cell_instances[16].cell_inst   |reram_cell_simple_469            |   136|
+|46    |        \cell_instances[17].cell_inst   |reram_cell_simple_470            |   164|
+|47    |        \cell_instances[18].cell_inst   |reram_cell_simple_471            |   137|
+|48    |        \cell_instances[19].cell_inst   |reram_cell_simple_472            |   164|
+|49    |        \cell_instances[1].cell_inst    |reram_cell_simple_473            |   168|
+|50    |        \cell_instances[20].cell_inst   |reram_cell_simple_474            |   136|
+|51    |        \cell_instances[21].cell_inst   |reram_cell_simple_475            |   164|
+|52    |        \cell_instances[22].cell_inst   |reram_cell_simple_476            |   136|
+|53    |        \cell_instances[23].cell_inst   |reram_cell_simple_477            |   164|
+|54    |        \cell_instances[24].cell_inst   |reram_cell_simple_478            |   137|
+|55    |        \cell_instances[25].cell_inst   |reram_cell_simple_479            |   164|
+|56    |        \cell_instances[26].cell_inst   |reram_cell_simple_480            |   136|
+|57    |        \cell_instances[27].cell_inst   |reram_cell_simple_481            |   164|
+|58    |        \cell_instances[28].cell_inst   |reram_cell_simple_482            |   136|
+|59    |        \cell_instances[29].cell_inst   |reram_cell_simple_483            |   164|
+|60    |        \cell_instances[2].cell_inst    |reram_cell_simple_484            |   136|
+|61    |        \cell_instances[30].cell_inst   |reram_cell_simple_485            |   137|
+|62    |        \cell_instances[31].cell_inst   |reram_cell_simple_486            |   148|
+|63    |        \cell_instances[3].cell_inst    |reram_cell_simple_487            |   168|
+|64    |        \cell_instances[4].cell_inst    |reram_cell_simple_488            |   136|
+|65    |        \cell_instances[5].cell_inst    |reram_cell_simple_489            |   168|
+|66    |        \cell_instances[6].cell_inst    |reram_cell_simple_490            |   137|
+|67    |        \cell_instances[7].cell_inst    |reram_cell_simple_491            |   168|
+|68    |        \cell_instances[8].cell_inst    |reram_cell_simple_492            |   138|
+|69    |        \cell_instances[9].cell_inst    |reram_cell_simple_493            |   168|
+|70    |      \word_arrays[11].word_array_inst  |reram_word_array_simple_1        |  5461|
+|71    |        \cell_instances[0].cell_inst    |reram_cell_simple_430            |   144|
+|72    |        \cell_instances[10].cell_inst   |reram_cell_simple_431            |   139|
+|73    |        \cell_instances[11].cell_inst   |reram_cell_simple_432            |   171|
+|74    |        \cell_instances[12].cell_inst   |reram_cell_simple_433            |   142|
+|75    |        \cell_instances[13].cell_inst   |reram_cell_simple_434            |   167|
+|76    |        \cell_instances[14].cell_inst   |reram_cell_simple_435            |   139|
+|77    |        \cell_instances[15].cell_inst   |reram_cell_simple_436            |   167|
+|78    |        \cell_instances[16].cell_inst   |reram_cell_simple_437            |   139|
+|79    |        \cell_instances[17].cell_inst   |reram_cell_simple_438            |   167|
+|80    |        \cell_instances[18].cell_inst   |reram_cell_simple_439            |   142|
+|81    |        \cell_instances[19].cell_inst   |reram_cell_simple_440            |   167|
+|82    |        \cell_instances[1].cell_inst    |reram_cell_simple_441            |   171|
+|83    |        \cell_instances[20].cell_inst   |reram_cell_simple_442            |   139|
+|84    |        \cell_instances[21].cell_inst   |reram_cell_simple_443            |   167|
+|85    |        \cell_instances[22].cell_inst   |reram_cell_simple_444            |   139|
+|86    |        \cell_instances[23].cell_inst   |reram_cell_simple_445            |   167|
+|87    |        \cell_instances[24].cell_inst   |reram_cell_simple_446            |   140|
+|88    |        \cell_instances[25].cell_inst   |reram_cell_simple_447            |   167|
+|89    |        \cell_instances[26].cell_inst   |reram_cell_simple_448            |   139|
+|90    |        \cell_instances[27].cell_inst   |reram_cell_simple_449            |   167|
+|91    |        \cell_instances[28].cell_inst   |reram_cell_simple_450            |   139|
+|92    |        \cell_instances[29].cell_inst   |reram_cell_simple_451            |   167|
+|93    |        \cell_instances[2].cell_inst    |reram_cell_simple_452            |   139|
+|94    |        \cell_instances[30].cell_inst   |reram_cell_simple_453            |   140|
+|95    |        \cell_instances[31].cell_inst   |reram_cell_simple_454            |   151|
+|96    |        \cell_instances[3].cell_inst    |reram_cell_simple_455            |   171|
+|97    |        \cell_instances[4].cell_inst    |reram_cell_simple_456            |   139|
+|98    |        \cell_instances[5].cell_inst    |reram_cell_simple_457            |   171|
+|99    |        \cell_instances[6].cell_inst    |reram_cell_simple_458            |   140|
+|100   |        \cell_instances[7].cell_inst    |reram_cell_simple_459            |   171|
+|101   |        \cell_instances[8].cell_inst    |reram_cell_simple_460            |   143|
+|102   |        \cell_instances[9].cell_inst    |reram_cell_simple_461            |   171|
+|103   |      \word_arrays[12].word_array_inst  |reram_word_array_simple_2        |  5377|
+|104   |        \cell_instances[0].cell_inst    |reram_cell_simple_398            |   141|
+|105   |        \cell_instances[10].cell_inst   |reram_cell_simple_399            |   136|
+|106   |        \cell_instances[11].cell_inst   |reram_cell_simple_400            |   168|
+|107   |        \cell_instances[12].cell_inst   |reram_cell_simple_401            |   139|
+|108   |        \cell_instances[13].cell_inst   |reram_cell_simple_402            |   164|
+|109   |        \cell_instances[14].cell_inst   |reram_cell_simple_403            |   136|
+|110   |        \cell_instances[15].cell_inst   |reram_cell_simple_404            |   164|
+|111   |        \cell_instances[16].cell_inst   |reram_cell_simple_405            |   136|
+|112   |        \cell_instances[17].cell_inst   |reram_cell_simple_406            |   164|
+|113   |        \cell_instances[18].cell_inst   |reram_cell_simple_407            |   137|
+|114   |        \cell_instances[19].cell_inst   |reram_cell_simple_408            |   164|
+|115   |        \cell_instances[1].cell_inst    |reram_cell_simple_409            |   168|
+|116   |        \cell_instances[20].cell_inst   |reram_cell_simple_410            |   136|
+|117   |        \cell_instances[21].cell_inst   |reram_cell_simple_411            |   164|
+|118   |        \cell_instances[22].cell_inst   |reram_cell_simple_412            |   136|
+|119   |        \cell_instances[23].cell_inst   |reram_cell_simple_413            |   164|
+|120   |        \cell_instances[24].cell_inst   |reram_cell_simple_414            |   137|
+|121   |        \cell_instances[25].cell_inst   |reram_cell_simple_415            |   164|
+|122   |        \cell_instances[26].cell_inst   |reram_cell_simple_416            |   136|
+|123   |        \cell_instances[27].cell_inst   |reram_cell_simple_417            |   164|
+|124   |        \cell_instances[28].cell_inst   |reram_cell_simple_418            |   136|
+|125   |        \cell_instances[29].cell_inst   |reram_cell_simple_419            |   164|
+|126   |        \cell_instances[2].cell_inst    |reram_cell_simple_420            |   136|
+|127   |        \cell_instances[30].cell_inst   |reram_cell_simple_421            |   137|
+|128   |        \cell_instances[31].cell_inst   |reram_cell_simple_422            |   164|
+|129   |        \cell_instances[3].cell_inst    |reram_cell_simple_423            |   168|
+|130   |        \cell_instances[4].cell_inst    |reram_cell_simple_424            |   136|
+|131   |        \cell_instances[5].cell_inst    |reram_cell_simple_425            |   168|
+|132   |        \cell_instances[6].cell_inst    |reram_cell_simple_426            |   137|
+|133   |        \cell_instances[7].cell_inst    |reram_cell_simple_427            |   168|
+|134   |        \cell_instances[8].cell_inst    |reram_cell_simple_428            |   138|
+|135   |        \cell_instances[9].cell_inst    |reram_cell_simple_429            |   168|
+|136   |      \word_arrays[13].word_array_inst  |reram_word_array_simple_3        |  5377|
+|137   |        \cell_instances[0].cell_inst    |reram_cell_simple_366            |   141|
+|138   |        \cell_instances[10].cell_inst   |reram_cell_simple_367            |   136|
+|139   |        \cell_instances[11].cell_inst   |reram_cell_simple_368            |   168|
+|140   |        \cell_instances[12].cell_inst   |reram_cell_simple_369            |   139|
+|141   |        \cell_instances[13].cell_inst   |reram_cell_simple_370            |   164|
+|142   |        \cell_instances[14].cell_inst   |reram_cell_simple_371            |   136|
+|143   |        \cell_instances[15].cell_inst   |reram_cell_simple_372            |   164|
+|144   |        \cell_instances[16].cell_inst   |reram_cell_simple_373            |   136|
+|145   |        \cell_instances[17].cell_inst   |reram_cell_simple_374            |   164|
+|146   |        \cell_instances[18].cell_inst   |reram_cell_simple_375            |   137|
+|147   |        \cell_instances[19].cell_inst   |reram_cell_simple_376            |   164|
+|148   |        \cell_instances[1].cell_inst    |reram_cell_simple_377            |   168|
+|149   |        \cell_instances[20].cell_inst   |reram_cell_simple_378            |   136|
+|150   |        \cell_instances[21].cell_inst   |reram_cell_simple_379            |   164|
+|151   |        \cell_instances[22].cell_inst   |reram_cell_simple_380            |   136|
+|152   |        \cell_instances[23].cell_inst   |reram_cell_simple_381            |   164|
+|153   |        \cell_instances[24].cell_inst   |reram_cell_simple_382            |   137|
+|154   |        \cell_instances[25].cell_inst   |reram_cell_simple_383            |   164|
+|155   |        \cell_instances[26].cell_inst   |reram_cell_simple_384            |   136|
+|156   |        \cell_instances[27].cell_inst   |reram_cell_simple_385            |   164|
+|157   |        \cell_instances[28].cell_inst   |reram_cell_simple_386            |   136|
+|158   |        \cell_instances[29].cell_inst   |reram_cell_simple_387            |   164|
+|159   |        \cell_instances[2].cell_inst    |reram_cell_simple_388            |   136|
+|160   |        \cell_instances[30].cell_inst   |reram_cell_simple_389            |   137|
+|161   |        \cell_instances[31].cell_inst   |reram_cell_simple_390            |   164|
+|162   |        \cell_instances[3].cell_inst    |reram_cell_simple_391            |   168|
+|163   |        \cell_instances[4].cell_inst    |reram_cell_simple_392            |   136|
+|164   |        \cell_instances[5].cell_inst    |reram_cell_simple_393            |   168|
+|165   |        \cell_instances[6].cell_inst    |reram_cell_simple_394            |   137|
+|166   |        \cell_instances[7].cell_inst    |reram_cell_simple_395            |   168|
+|167   |        \cell_instances[8].cell_inst    |reram_cell_simple_396            |   138|
+|168   |        \cell_instances[9].cell_inst    |reram_cell_simple_397            |   168|
+|169   |      \word_arrays[14].word_array_inst  |reram_word_array_simple_4        |  5377|
+|170   |        \cell_instances[0].cell_inst    |reram_cell_simple_334            |   141|
+|171   |        \cell_instances[10].cell_inst   |reram_cell_simple_335            |   136|
+|172   |        \cell_instances[11].cell_inst   |reram_cell_simple_336            |   168|
+|173   |        \cell_instances[12].cell_inst   |reram_cell_simple_337            |   139|
+|174   |        \cell_instances[13].cell_inst   |reram_cell_simple_338            |   164|
+|175   |        \cell_instances[14].cell_inst   |reram_cell_simple_339            |   136|
+|176   |        \cell_instances[15].cell_inst   |reram_cell_simple_340            |   164|
+|177   |        \cell_instances[16].cell_inst   |reram_cell_simple_341            |   136|
+|178   |        \cell_instances[17].cell_inst   |reram_cell_simple_342            |   164|
+|179   |        \cell_instances[18].cell_inst   |reram_cell_simple_343            |   137|
+|180   |        \cell_instances[19].cell_inst   |reram_cell_simple_344            |   164|
+|181   |        \cell_instances[1].cell_inst    |reram_cell_simple_345            |   168|
+|182   |        \cell_instances[20].cell_inst   |reram_cell_simple_346            |   136|
+|183   |        \cell_instances[21].cell_inst   |reram_cell_simple_347            |   164|
+|184   |        \cell_instances[22].cell_inst   |reram_cell_simple_348            |   136|
+|185   |        \cell_instances[23].cell_inst   |reram_cell_simple_349            |   164|
+|186   |        \cell_instances[24].cell_inst   |reram_cell_simple_350            |   137|
+|187   |        \cell_instances[25].cell_inst   |reram_cell_simple_351            |   164|
+|188   |        \cell_instances[26].cell_inst   |reram_cell_simple_352            |   136|
+|189   |        \cell_instances[27].cell_inst   |reram_cell_simple_353            |   164|
+|190   |        \cell_instances[28].cell_inst   |reram_cell_simple_354            |   136|
+|191   |        \cell_instances[29].cell_inst   |reram_cell_simple_355            |   164|
+|192   |        \cell_instances[2].cell_inst    |reram_cell_simple_356            |   136|
+|193   |        \cell_instances[30].cell_inst   |reram_cell_simple_357            |   137|
+|194   |        \cell_instances[31].cell_inst   |reram_cell_simple_358            |   164|
+|195   |        \cell_instances[3].cell_inst    |reram_cell_simple_359            |   168|
+|196   |        \cell_instances[4].cell_inst    |reram_cell_simple_360            |   136|
+|197   |        \cell_instances[5].cell_inst    |reram_cell_simple_361            |   168|
+|198   |        \cell_instances[6].cell_inst    |reram_cell_simple_362            |   137|
+|199   |        \cell_instances[7].cell_inst    |reram_cell_simple_363            |   168|
+|200   |        \cell_instances[8].cell_inst    |reram_cell_simple_364            |   138|
+|201   |        \cell_instances[9].cell_inst    |reram_cell_simple_365            |   168|
+|202   |      \word_arrays[15].word_array_inst  |reram_word_array_simple_5        |  5444|
+|203   |        \cell_instances[0].cell_inst    |reram_cell_simple_302            |   144|
+|204   |        \cell_instances[10].cell_inst   |reram_cell_simple_303            |   138|
+|205   |        \cell_instances[11].cell_inst   |reram_cell_simple_304            |   170|
+|206   |        \cell_instances[12].cell_inst   |reram_cell_simple_305            |   141|
+|207   |        \cell_instances[13].cell_inst   |reram_cell_simple_306            |   166|
+|208   |        \cell_instances[14].cell_inst   |reram_cell_simple_307            |   138|
+|209   |        \cell_instances[15].cell_inst   |reram_cell_simple_308            |   166|
+|210   |        \cell_instances[16].cell_inst   |reram_cell_simple_309            |   138|
+|211   |        \cell_instances[17].cell_inst   |reram_cell_simple_310            |   166|
+|212   |        \cell_instances[18].cell_inst   |reram_cell_simple_311            |   140|
+|213   |        \cell_instances[19].cell_inst   |reram_cell_simple_312            |   166|
+|214   |        \cell_instances[1].cell_inst    |reram_cell_simple_313            |   170|
+|215   |        \cell_instances[20].cell_inst   |reram_cell_simple_314            |   138|
+|216   |        \cell_instances[21].cell_inst   |reram_cell_simple_315            |   166|
+|217   |        \cell_instances[22].cell_inst   |reram_cell_simple_316            |   138|
+|218   |        \cell_instances[23].cell_inst   |reram_cell_simple_317            |   166|
+|219   |        \cell_instances[24].cell_inst   |reram_cell_simple_318            |   139|
+|220   |        \cell_instances[25].cell_inst   |reram_cell_simple_319            |   166|
+|221   |        \cell_instances[26].cell_inst   |reram_cell_simple_320            |   138|
+|222   |        \cell_instances[27].cell_inst   |reram_cell_simple_321            |   166|
+|223   |        \cell_instances[28].cell_inst   |reram_cell_simple_322            |   138|
+|224   |        \cell_instances[29].cell_inst   |reram_cell_simple_323            |   166|
+|225   |        \cell_instances[2].cell_inst    |reram_cell_simple_324            |   138|
+|226   |        \cell_instances[30].cell_inst   |reram_cell_simple_325            |   139|
+|227   |        \cell_instances[31].cell_inst   |reram_cell_simple_326            |   166|
+|228   |        \cell_instances[3].cell_inst    |reram_cell_simple_327            |   170|
+|229   |        \cell_instances[4].cell_inst    |reram_cell_simple_328            |   138|
+|230   |        \cell_instances[5].cell_inst    |reram_cell_simple_329            |   170|
+|231   |        \cell_instances[6].cell_inst    |reram_cell_simple_330            |   139|
+|232   |        \cell_instances[7].cell_inst    |reram_cell_simple_331            |   170|
+|233   |        \cell_instances[8].cell_inst    |reram_cell_simple_332            |   141|
+|234   |        \cell_instances[9].cell_inst    |reram_cell_simple_333            |   170|
+|235   |      \word_arrays[1].word_array_inst   |reram_word_array_simple_6        |  5361|
+|236   |        \cell_instances[0].cell_inst    |reram_cell_simple_270            |   141|
+|237   |        \cell_instances[10].cell_inst   |reram_cell_simple_271            |   136|
+|238   |        \cell_instances[11].cell_inst   |reram_cell_simple_272            |   168|
+|239   |        \cell_instances[12].cell_inst   |reram_cell_simple_273            |   139|
+|240   |        \cell_instances[13].cell_inst   |reram_cell_simple_274            |   164|
+|241   |        \cell_instances[14].cell_inst   |reram_cell_simple_275            |   136|
+|242   |        \cell_instances[15].cell_inst   |reram_cell_simple_276            |   164|
+|243   |        \cell_instances[16].cell_inst   |reram_cell_simple_277            |   136|
+|244   |        \cell_instances[17].cell_inst   |reram_cell_simple_278            |   164|
+|245   |        \cell_instances[18].cell_inst   |reram_cell_simple_279            |   137|
+|246   |        \cell_instances[19].cell_inst   |reram_cell_simple_280            |   164|
+|247   |        \cell_instances[1].cell_inst    |reram_cell_simple_281            |   168|
+|248   |        \cell_instances[20].cell_inst   |reram_cell_simple_282            |   136|
+|249   |        \cell_instances[21].cell_inst   |reram_cell_simple_283            |   164|
+|250   |        \cell_instances[22].cell_inst   |reram_cell_simple_284            |   136|
+|251   |        \cell_instances[23].cell_inst   |reram_cell_simple_285            |   164|
+|252   |        \cell_instances[24].cell_inst   |reram_cell_simple_286            |   137|
+|253   |        \cell_instances[25].cell_inst   |reram_cell_simple_287            |   164|
+|254   |        \cell_instances[26].cell_inst   |reram_cell_simple_288            |   136|
+|255   |        \cell_instances[27].cell_inst   |reram_cell_simple_289            |   164|
+|256   |        \cell_instances[28].cell_inst   |reram_cell_simple_290            |   136|
+|257   |        \cell_instances[29].cell_inst   |reram_cell_simple_291            |   164|
+|258   |        \cell_instances[2].cell_inst    |reram_cell_simple_292            |   136|
+|259   |        \cell_instances[30].cell_inst   |reram_cell_simple_293            |   137|
+|260   |        \cell_instances[31].cell_inst   |reram_cell_simple_294            |   148|
+|261   |        \cell_instances[3].cell_inst    |reram_cell_simple_295            |   168|
+|262   |        \cell_instances[4].cell_inst    |reram_cell_simple_296            |   136|
+|263   |        \cell_instances[5].cell_inst    |reram_cell_simple_297            |   168|
+|264   |        \cell_instances[6].cell_inst    |reram_cell_simple_298            |   137|
+|265   |        \cell_instances[7].cell_inst    |reram_cell_simple_299            |   168|
+|266   |        \cell_instances[8].cell_inst    |reram_cell_simple_300            |   138|
+|267   |        \cell_instances[9].cell_inst    |reram_cell_simple_301            |   168|
+|268   |      \word_arrays[2].word_array_inst   |reram_word_array_simple_7        |  5361|
+|269   |        \cell_instances[0].cell_inst    |reram_cell_simple_238            |   141|
+|270   |        \cell_instances[10].cell_inst   |reram_cell_simple_239            |   136|
+|271   |        \cell_instances[11].cell_inst   |reram_cell_simple_240            |   168|
+|272   |        \cell_instances[12].cell_inst   |reram_cell_simple_241            |   139|
+|273   |        \cell_instances[13].cell_inst   |reram_cell_simple_242            |   164|
+|274   |        \cell_instances[14].cell_inst   |reram_cell_simple_243            |   136|
+|275   |        \cell_instances[15].cell_inst   |reram_cell_simple_244            |   164|
+|276   |        \cell_instances[16].cell_inst   |reram_cell_simple_245            |   136|
+|277   |        \cell_instances[17].cell_inst   |reram_cell_simple_246            |   164|
+|278   |        \cell_instances[18].cell_inst   |reram_cell_simple_247            |   137|
+|279   |        \cell_instances[19].cell_inst   |reram_cell_simple_248            |   164|
+|280   |        \cell_instances[1].cell_inst    |reram_cell_simple_249            |   168|
+|281   |        \cell_instances[20].cell_inst   |reram_cell_simple_250            |   136|
+|282   |        \cell_instances[21].cell_inst   |reram_cell_simple_251            |   164|
+|283   |        \cell_instances[22].cell_inst   |reram_cell_simple_252            |   136|
+|284   |        \cell_instances[23].cell_inst   |reram_cell_simple_253            |   164|
+|285   |        \cell_instances[24].cell_inst   |reram_cell_simple_254            |   137|
+|286   |        \cell_instances[25].cell_inst   |reram_cell_simple_255            |   164|
+|287   |        \cell_instances[26].cell_inst   |reram_cell_simple_256            |   136|
+|288   |        \cell_instances[27].cell_inst   |reram_cell_simple_257            |   164|
+|289   |        \cell_instances[28].cell_inst   |reram_cell_simple_258            |   136|
+|290   |        \cell_instances[29].cell_inst   |reram_cell_simple_259            |   164|
+|291   |        \cell_instances[2].cell_inst    |reram_cell_simple_260            |   136|
+|292   |        \cell_instances[30].cell_inst   |reram_cell_simple_261            |   137|
+|293   |        \cell_instances[31].cell_inst   |reram_cell_simple_262            |   148|
+|294   |        \cell_instances[3].cell_inst    |reram_cell_simple_263            |   168|
+|295   |        \cell_instances[4].cell_inst    |reram_cell_simple_264            |   136|
+|296   |        \cell_instances[5].cell_inst    |reram_cell_simple_265            |   168|
+|297   |        \cell_instances[6].cell_inst    |reram_cell_simple_266            |   137|
+|298   |        \cell_instances[7].cell_inst    |reram_cell_simple_267            |   168|
+|299   |        \cell_instances[8].cell_inst    |reram_cell_simple_268            |   138|
+|300   |        \cell_instances[9].cell_inst    |reram_cell_simple_269            |   168|
+|301   |      \word_arrays[3].word_array_inst   |reram_word_array_simple_8        |  5606|
+|302   |        \cell_instances[0].cell_inst    |reram_cell_simple_206            |   148|
+|303   |        \cell_instances[10].cell_inst   |reram_cell_simple_207            |   143|
+|304   |        \cell_instances[11].cell_inst   |reram_cell_simple_208            |   175|
+|305   |        \cell_instances[12].cell_inst   |reram_cell_simple_209            |   146|
+|306   |        \cell_instances[13].cell_inst   |reram_cell_simple_210            |   171|
+|307   |        \cell_instances[14].cell_inst   |reram_cell_simple_211            |   143|
+|308   |        \cell_instances[15].cell_inst   |reram_cell_simple_212            |   171|
+|309   |        \cell_instances[16].cell_inst   |reram_cell_simple_213            |   143|
+|310   |        \cell_instances[17].cell_inst   |reram_cell_simple_214            |   171|
+|311   |        \cell_instances[18].cell_inst   |reram_cell_simple_215            |   148|
+|312   |        \cell_instances[19].cell_inst   |reram_cell_simple_216            |   171|
+|313   |        \cell_instances[1].cell_inst    |reram_cell_simple_217            |   175|
+|314   |        \cell_instances[20].cell_inst   |reram_cell_simple_218            |   143|
+|315   |        \cell_instances[21].cell_inst   |reram_cell_simple_219            |   171|
+|316   |        \cell_instances[22].cell_inst   |reram_cell_simple_220            |   143|
+|317   |        \cell_instances[23].cell_inst   |reram_cell_simple_221            |   171|
+|318   |        \cell_instances[24].cell_inst   |reram_cell_simple_222            |   144|
+|319   |        \cell_instances[25].cell_inst   |reram_cell_simple_223            |   171|
+|320   |        \cell_instances[26].cell_inst   |reram_cell_simple_224            |   143|
+|321   |        \cell_instances[27].cell_inst   |reram_cell_simple_225            |   171|
+|322   |        \cell_instances[28].cell_inst   |reram_cell_simple_226            |   143|
+|323   |        \cell_instances[29].cell_inst   |reram_cell_simple_227            |   171|
+|324   |        \cell_instances[2].cell_inst    |reram_cell_simple_228            |   143|
+|325   |        \cell_instances[30].cell_inst   |reram_cell_simple_229            |   144|
+|326   |        \cell_instances[31].cell_inst   |reram_cell_simple_230            |   155|
+|327   |        \cell_instances[3].cell_inst    |reram_cell_simple_231            |   175|
+|328   |        \cell_instances[4].cell_inst    |reram_cell_simple_232            |   143|
+|329   |        \cell_instances[5].cell_inst    |reram_cell_simple_233            |   175|
+|330   |        \cell_instances[6].cell_inst    |reram_cell_simple_234            |   144|
+|331   |        \cell_instances[7].cell_inst    |reram_cell_simple_235            |   175|
+|332   |        \cell_instances[8].cell_inst    |reram_cell_simple_236            |   162|
+|333   |        \cell_instances[9].cell_inst    |reram_cell_simple_237            |   175|
+|334   |      \word_arrays[4].word_array_inst   |reram_word_array_simple_9        |  5361|
+|335   |        \cell_instances[0].cell_inst    |reram_cell_simple_174            |   141|
+|336   |        \cell_instances[10].cell_inst   |reram_cell_simple_175            |   136|
+|337   |        \cell_instances[11].cell_inst   |reram_cell_simple_176            |   168|
+|338   |        \cell_instances[12].cell_inst   |reram_cell_simple_177            |   139|
+|339   |        \cell_instances[13].cell_inst   |reram_cell_simple_178            |   164|
+|340   |        \cell_instances[14].cell_inst   |reram_cell_simple_179            |   136|
+|341   |        \cell_instances[15].cell_inst   |reram_cell_simple_180            |   164|
+|342   |        \cell_instances[16].cell_inst   |reram_cell_simple_181            |   136|
+|343   |        \cell_instances[17].cell_inst   |reram_cell_simple_182            |   164|
+|344   |        \cell_instances[18].cell_inst   |reram_cell_simple_183            |   137|
+|345   |        \cell_instances[19].cell_inst   |reram_cell_simple_184            |   164|
+|346   |        \cell_instances[1].cell_inst    |reram_cell_simple_185            |   168|
+|347   |        \cell_instances[20].cell_inst   |reram_cell_simple_186            |   136|
+|348   |        \cell_instances[21].cell_inst   |reram_cell_simple_187            |   164|
+|349   |        \cell_instances[22].cell_inst   |reram_cell_simple_188            |   136|
+|350   |        \cell_instances[23].cell_inst   |reram_cell_simple_189            |   164|
+|351   |        \cell_instances[24].cell_inst   |reram_cell_simple_190            |   137|
+|352   |        \cell_instances[25].cell_inst   |reram_cell_simple_191            |   164|
+|353   |        \cell_instances[26].cell_inst   |reram_cell_simple_192            |   136|
+|354   |        \cell_instances[27].cell_inst   |reram_cell_simple_193            |   164|
+|355   |        \cell_instances[28].cell_inst   |reram_cell_simple_194            |   136|
+|356   |        \cell_instances[29].cell_inst   |reram_cell_simple_195            |   164|
+|357   |        \cell_instances[2].cell_inst    |reram_cell_simple_196            |   136|
+|358   |        \cell_instances[30].cell_inst   |reram_cell_simple_197            |   137|
+|359   |        \cell_instances[31].cell_inst   |reram_cell_simple_198            |   148|
+|360   |        \cell_instances[3].cell_inst    |reram_cell_simple_199            |   168|
+|361   |        \cell_instances[4].cell_inst    |reram_cell_simple_200            |   136|
+|362   |        \cell_instances[5].cell_inst    |reram_cell_simple_201            |   168|
+|363   |        \cell_instances[6].cell_inst    |reram_cell_simple_202            |   137|
+|364   |        \cell_instances[7].cell_inst    |reram_cell_simple_203            |   168|
+|365   |        \cell_instances[8].cell_inst    |reram_cell_simple_204            |   138|
+|366   |        \cell_instances[9].cell_inst    |reram_cell_simple_205            |   168|
+|367   |      \word_arrays[5].word_array_inst   |reram_word_array_simple_10       |  5361|
+|368   |        \cell_instances[0].cell_inst    |reram_cell_simple_142            |   141|
+|369   |        \cell_instances[10].cell_inst   |reram_cell_simple_143            |   136|
+|370   |        \cell_instances[11].cell_inst   |reram_cell_simple_144            |   168|
+|371   |        \cell_instances[12].cell_inst   |reram_cell_simple_145            |   139|
+|372   |        \cell_instances[13].cell_inst   |reram_cell_simple_146            |   164|
+|373   |        \cell_instances[14].cell_inst   |reram_cell_simple_147            |   136|
+|374   |        \cell_instances[15].cell_inst   |reram_cell_simple_148            |   164|
+|375   |        \cell_instances[16].cell_inst   |reram_cell_simple_149            |   136|
+|376   |        \cell_instances[17].cell_inst   |reram_cell_simple_150            |   164|
+|377   |        \cell_instances[18].cell_inst   |reram_cell_simple_151            |   137|
+|378   |        \cell_instances[19].cell_inst   |reram_cell_simple_152            |   164|
+|379   |        \cell_instances[1].cell_inst    |reram_cell_simple_153            |   168|
+|380   |        \cell_instances[20].cell_inst   |reram_cell_simple_154            |   136|
+|381   |        \cell_instances[21].cell_inst   |reram_cell_simple_155            |   164|
+|382   |        \cell_instances[22].cell_inst   |reram_cell_simple_156            |   136|
+|383   |        \cell_instances[23].cell_inst   |reram_cell_simple_157            |   164|
+|384   |        \cell_instances[24].cell_inst   |reram_cell_simple_158            |   137|
+|385   |        \cell_instances[25].cell_inst   |reram_cell_simple_159            |   164|
+|386   |        \cell_instances[26].cell_inst   |reram_cell_simple_160            |   136|
+|387   |        \cell_instances[27].cell_inst   |reram_cell_simple_161            |   164|
+|388   |        \cell_instances[28].cell_inst   |reram_cell_simple_162            |   136|
+|389   |        \cell_instances[29].cell_inst   |reram_cell_simple_163            |   164|
+|390   |        \cell_instances[2].cell_inst    |reram_cell_simple_164            |   136|
+|391   |        \cell_instances[30].cell_inst   |reram_cell_simple_165            |   137|
+|392   |        \cell_instances[31].cell_inst   |reram_cell_simple_166            |   148|
+|393   |        \cell_instances[3].cell_inst    |reram_cell_simple_167            |   168|
+|394   |        \cell_instances[4].cell_inst    |reram_cell_simple_168            |   136|
+|395   |        \cell_instances[5].cell_inst    |reram_cell_simple_169            |   168|
+|396   |        \cell_instances[6].cell_inst    |reram_cell_simple_170            |   137|
+|397   |        \cell_instances[7].cell_inst    |reram_cell_simple_171            |   168|
+|398   |        \cell_instances[8].cell_inst    |reram_cell_simple_172            |   138|
+|399   |        \cell_instances[9].cell_inst    |reram_cell_simple_173            |   168|
+|400   |      \word_arrays[6].word_array_inst   |reram_word_array_simple_11       |  5361|
+|401   |        \cell_instances[0].cell_inst    |reram_cell_simple_110            |   141|
+|402   |        \cell_instances[10].cell_inst   |reram_cell_simple_111            |   136|
+|403   |        \cell_instances[11].cell_inst   |reram_cell_simple_112            |   168|
+|404   |        \cell_instances[12].cell_inst   |reram_cell_simple_113            |   139|
+|405   |        \cell_instances[13].cell_inst   |reram_cell_simple_114            |   164|
+|406   |        \cell_instances[14].cell_inst   |reram_cell_simple_115            |   136|
+|407   |        \cell_instances[15].cell_inst   |reram_cell_simple_116            |   164|
+|408   |        \cell_instances[16].cell_inst   |reram_cell_simple_117            |   136|
+|409   |        \cell_instances[17].cell_inst   |reram_cell_simple_118            |   164|
+|410   |        \cell_instances[18].cell_inst   |reram_cell_simple_119            |   137|
+|411   |        \cell_instances[19].cell_inst   |reram_cell_simple_120            |   164|
+|412   |        \cell_instances[1].cell_inst    |reram_cell_simple_121            |   168|
+|413   |        \cell_instances[20].cell_inst   |reram_cell_simple_122            |   136|
+|414   |        \cell_instances[21].cell_inst   |reram_cell_simple_123            |   164|
+|415   |        \cell_instances[22].cell_inst   |reram_cell_simple_124            |   136|
+|416   |        \cell_instances[23].cell_inst   |reram_cell_simple_125            |   164|
+|417   |        \cell_instances[24].cell_inst   |reram_cell_simple_126            |   137|
+|418   |        \cell_instances[25].cell_inst   |reram_cell_simple_127            |   164|
+|419   |        \cell_instances[26].cell_inst   |reram_cell_simple_128            |   136|
+|420   |        \cell_instances[27].cell_inst   |reram_cell_simple_129            |   164|
+|421   |        \cell_instances[28].cell_inst   |reram_cell_simple_130            |   136|
+|422   |        \cell_instances[29].cell_inst   |reram_cell_simple_131            |   164|
+|423   |        \cell_instances[2].cell_inst    |reram_cell_simple_132            |   136|
+|424   |        \cell_instances[30].cell_inst   |reram_cell_simple_133            |   137|
+|425   |        \cell_instances[31].cell_inst   |reram_cell_simple_134            |   148|
+|426   |        \cell_instances[3].cell_inst    |reram_cell_simple_135            |   168|
+|427   |        \cell_instances[4].cell_inst    |reram_cell_simple_136            |   136|
+|428   |        \cell_instances[5].cell_inst    |reram_cell_simple_137            |   168|
+|429   |        \cell_instances[6].cell_inst    |reram_cell_simple_138            |   137|
+|430   |        \cell_instances[7].cell_inst    |reram_cell_simple_139            |   168|
+|431   |        \cell_instances[8].cell_inst    |reram_cell_simple_140            |   138|
+|432   |        \cell_instances[9].cell_inst    |reram_cell_simple_141            |   168|
+|433   |      \word_arrays[7].word_array_inst   |reram_word_array_simple_12       |  5427|
+|434   |        \cell_instances[0].cell_inst    |reram_cell_simple_78             |   143|
+|435   |        \cell_instances[10].cell_inst   |reram_cell_simple_79             |   138|
+|436   |        \cell_instances[11].cell_inst   |reram_cell_simple_80             |   170|
+|437   |        \cell_instances[12].cell_inst   |reram_cell_simple_81             |   141|
+|438   |        \cell_instances[13].cell_inst   |reram_cell_simple_82             |   166|
+|439   |        \cell_instances[14].cell_inst   |reram_cell_simple_83             |   138|
+|440   |        \cell_instances[15].cell_inst   |reram_cell_simple_84             |   166|
+|441   |        \cell_instances[16].cell_inst   |reram_cell_simple_85             |   138|
+|442   |        \cell_instances[17].cell_inst   |reram_cell_simple_86             |   166|
+|443   |        \cell_instances[18].cell_inst   |reram_cell_simple_87             |   140|
+|444   |        \cell_instances[19].cell_inst   |reram_cell_simple_88             |   166|
+|445   |        \cell_instances[1].cell_inst    |reram_cell_simple_89             |   170|
+|446   |        \cell_instances[20].cell_inst   |reram_cell_simple_90             |   138|
+|447   |        \cell_instances[21].cell_inst   |reram_cell_simple_91             |   166|
+|448   |        \cell_instances[22].cell_inst   |reram_cell_simple_92             |   138|
+|449   |        \cell_instances[23].cell_inst   |reram_cell_simple_93             |   166|
+|450   |        \cell_instances[24].cell_inst   |reram_cell_simple_94             |   139|
+|451   |        \cell_instances[25].cell_inst   |reram_cell_simple_95             |   166|
+|452   |        \cell_instances[26].cell_inst   |reram_cell_simple_96             |   138|
+|453   |        \cell_instances[27].cell_inst   |reram_cell_simple_97             |   166|
+|454   |        \cell_instances[28].cell_inst   |reram_cell_simple_98             |   138|
+|455   |        \cell_instances[29].cell_inst   |reram_cell_simple_99             |   166|
+|456   |        \cell_instances[2].cell_inst    |reram_cell_simple_100            |   138|
+|457   |        \cell_instances[30].cell_inst   |reram_cell_simple_101            |   139|
+|458   |        \cell_instances[31].cell_inst   |reram_cell_simple_102            |   150|
+|459   |        \cell_instances[3].cell_inst    |reram_cell_simple_103            |   170|
+|460   |        \cell_instances[4].cell_inst    |reram_cell_simple_104            |   138|
+|461   |        \cell_instances[5].cell_inst    |reram_cell_simple_105            |   170|
+|462   |        \cell_instances[6].cell_inst    |reram_cell_simple_106            |   139|
+|463   |        \cell_instances[7].cell_inst    |reram_cell_simple_107            |   170|
+|464   |        \cell_instances[8].cell_inst    |reram_cell_simple_108            |   141|
+|465   |        \cell_instances[9].cell_inst    |reram_cell_simple_109            |   170|
+|466   |      \word_arrays[8].word_array_inst   |reram_word_array_simple_13       |  5361|
+|467   |        \cell_instances[0].cell_inst    |reram_cell_simple_46             |   141|
+|468   |        \cell_instances[10].cell_inst   |reram_cell_simple_47             |   136|
+|469   |        \cell_instances[11].cell_inst   |reram_cell_simple_48             |   168|
+|470   |        \cell_instances[12].cell_inst   |reram_cell_simple_49             |   139|
+|471   |        \cell_instances[13].cell_inst   |reram_cell_simple_50             |   164|
+|472   |        \cell_instances[14].cell_inst   |reram_cell_simple_51             |   136|
+|473   |        \cell_instances[15].cell_inst   |reram_cell_simple_52             |   164|
+|474   |        \cell_instances[16].cell_inst   |reram_cell_simple_53             |   136|
+|475   |        \cell_instances[17].cell_inst   |reram_cell_simple_54             |   164|
+|476   |        \cell_instances[18].cell_inst   |reram_cell_simple_55             |   137|
+|477   |        \cell_instances[19].cell_inst   |reram_cell_simple_56             |   164|
+|478   |        \cell_instances[1].cell_inst    |reram_cell_simple_57             |   168|
+|479   |        \cell_instances[20].cell_inst   |reram_cell_simple_58             |   136|
+|480   |        \cell_instances[21].cell_inst   |reram_cell_simple_59             |   164|
+|481   |        \cell_instances[22].cell_inst   |reram_cell_simple_60             |   136|
+|482   |        \cell_instances[23].cell_inst   |reram_cell_simple_61             |   164|
+|483   |        \cell_instances[24].cell_inst   |reram_cell_simple_62             |   137|
+|484   |        \cell_instances[25].cell_inst   |reram_cell_simple_63             |   164|
+|485   |        \cell_instances[26].cell_inst   |reram_cell_simple_64             |   136|
+|486   |        \cell_instances[27].cell_inst   |reram_cell_simple_65             |   164|
+|487   |        \cell_instances[28].cell_inst   |reram_cell_simple_66             |   136|
+|488   |        \cell_instances[29].cell_inst   |reram_cell_simple_67             |   164|
+|489   |        \cell_instances[2].cell_inst    |reram_cell_simple_68             |   136|
+|490   |        \cell_instances[30].cell_inst   |reram_cell_simple_69             |   137|
+|491   |        \cell_instances[31].cell_inst   |reram_cell_simple_70             |   148|
+|492   |        \cell_instances[3].cell_inst    |reram_cell_simple_71             |   168|
+|493   |        \cell_instances[4].cell_inst    |reram_cell_simple_72             |   136|
+|494   |        \cell_instances[5].cell_inst    |reram_cell_simple_73             |   168|
+|495   |        \cell_instances[6].cell_inst    |reram_cell_simple_74             |   137|
+|496   |        \cell_instances[7].cell_inst    |reram_cell_simple_75             |   168|
+|497   |        \cell_instances[8].cell_inst    |reram_cell_simple_76             |   138|
+|498   |        \cell_instances[9].cell_inst    |reram_cell_simple_77             |   168|
+|499   |      \word_arrays[9].word_array_inst   |reram_word_array_simple_14       |  5361|
+|500   |        \cell_instances[0].cell_inst    |reram_cell_simple                |   141|
+|501   |        \cell_instances[10].cell_inst   |reram_cell_simple_15             |   136|
+|502   |        \cell_instances[11].cell_inst   |reram_cell_simple_16             |   168|
+|503   |        \cell_instances[12].cell_inst   |reram_cell_simple_17             |   139|
+|504   |        \cell_instances[13].cell_inst   |reram_cell_simple_18             |   164|
+|505   |        \cell_instances[14].cell_inst   |reram_cell_simple_19             |   136|
+|506   |        \cell_instances[15].cell_inst   |reram_cell_simple_20             |   164|
+|507   |        \cell_instances[16].cell_inst   |reram_cell_simple_21             |   136|
+|508   |        \cell_instances[17].cell_inst   |reram_cell_simple_22             |   164|
+|509   |        \cell_instances[18].cell_inst   |reram_cell_simple_23             |   137|
+|510   |        \cell_instances[19].cell_inst   |reram_cell_simple_24             |   164|
+|511   |        \cell_instances[1].cell_inst    |reram_cell_simple_25             |   168|
+|512   |        \cell_instances[20].cell_inst   |reram_cell_simple_26             |   136|
+|513   |        \cell_instances[21].cell_inst   |reram_cell_simple_27             |   164|
+|514   |        \cell_instances[22].cell_inst   |reram_cell_simple_28             |   136|
+|515   |        \cell_instances[23].cell_inst   |reram_cell_simple_29             |   164|
+|516   |        \cell_instances[24].cell_inst   |reram_cell_simple_30             |   137|
+|517   |        \cell_instances[25].cell_inst   |reram_cell_simple_31             |   164|
+|518   |        \cell_instances[26].cell_inst   |reram_cell_simple_32             |   136|
+|519   |        \cell_instances[27].cell_inst   |reram_cell_simple_33             |   164|
+|520   |        \cell_instances[28].cell_inst   |reram_cell_simple_34             |   136|
+|521   |        \cell_instances[29].cell_inst   |reram_cell_simple_35             |   164|
+|522   |        \cell_instances[2].cell_inst    |reram_cell_simple_36             |   136|
+|523   |        \cell_instances[30].cell_inst   |reram_cell_simple_37             |   137|
+|524   |        \cell_instances[31].cell_inst   |reram_cell_simple_38             |   148|
+|525   |        \cell_instances[3].cell_inst    |reram_cell_simple_39             |   168|
+|526   |        \cell_instances[4].cell_inst    |reram_cell_simple_40             |   136|
+|527   |        \cell_instances[5].cell_inst    |reram_cell_simple_41             |   168|
+|528   |        \cell_instances[6].cell_inst    |reram_cell_simple_42             |   137|
+|529   |        \cell_instances[7].cell_inst    |reram_cell_simple_43             |   168|
+|530   |        \cell_instances[8].cell_inst    |reram_cell_simple_44             |   138|
+|531   |        \cell_instances[9].cell_inst    |reram_cell_simple_45             |   168|
++------+----------------------------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1017.402 ; gain = 722.871
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:24 . Memory (MB): peak = 1017.402 ; gain = 181.918
+Synthesis Optimization Complete : Time (s): cpu = 00:01:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1017.402 ; gain = 722.871
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6789 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+183 Infos, 54 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 1104.992 ; gain = 821.961
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.runs/ReRamSpm_reram_axilite_wrapper_0_0_synth_1/ReRamSpm_reram_axilite_wrapper_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1104.992 ; gain = 0.000
+write_verilog: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1104.992 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1104.992 ; gain = 0.000

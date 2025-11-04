@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_reram_axilite_wrapper_behav/xsimk.exe -simmode gui -wdb tb_reram_axilite_wrapper_behav.wdb -simrunnum 0 -socket 64935
+Design successfully loaded
+Design Loading Memory Usage: 12888 KB (Peak: 12888 KB)
+Design Loading CPU Usage: 93 ms
+Simulation completed
+Simulation Memory Usage: 22804 KB (Peak: 22804 KB)
+Simulation CPU Usage: 390 ms

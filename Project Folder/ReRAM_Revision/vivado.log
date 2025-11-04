@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Oct 17 16:32:59 2025
+# Process ID: 2216
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_Revision
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17748 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRAM_Revision\ReRAM_Revision.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_Revision/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_Revision\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_Revision/ReRAM_Revision.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/axi_reram_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/axi_reram_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ip_repo/axi_reram_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:43 ; elapsed = 00:00:38 . Memory (MB): peak = 853.906 ; gain = 123.191
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_Revision/ReRAM_Revision.srcs/sources_1/bd/RevisionDesign/RevisionDesign.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding cell -- xilinx.com:user:axi_reram:1.0 - axi_reram_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_reram_0/bram_clkb(undef) and /blk_mem_gen_0/clkb(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_reram_0/bram_rstb(undef) and /blk_mem_gen_0/rstb(rst)
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <RevisionDesign> from BD file <C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRAM_Revision/ReRAM_Revision.srcs/sources_1/bd/RevisionDesign/RevisionDesign.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 947.523 ; gain = 87.949
+regenerate_bd_layout
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 19 08:54:14 2025...

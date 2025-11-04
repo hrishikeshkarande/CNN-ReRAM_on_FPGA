@@ -1,0 +1,39 @@
+#include "xparameters.h"
+#include "xil_io.h"
+#include <stdio.h> // Added stdio.h for printf
+
+// Define base address from Vivado Address Editor
+#define RERAM_BASE_ADDR XPAR_RERAM_AXILITE_WRAPPER_0_S00_AXI_BASEADDR
+
+// Define register offsets from reram_axilite_wrapper
+#define MEM_OFFSET(addr) (RERAM_BASE_ADDR + (addr * 4)) // Corrected multiplication symbol
+#define TOTAL_WRITES_REG (RERAM_BASE_ADDR + 0x104)
+
+int main() {
+    u32 write_data = 0xABCD1234;
+    u32 read_data;
+    u32 write_count;
+
+    printf("--- ReRAM AXI Test Started ---\n");
+
+    // 1. Write data to memory address 5
+    Xil_Out32(MEM_OFFSET(5), write_data);
+    printf("Wrote 0x%08X to address 5\n", write_data);
+
+    // 2. Read data back from memory address 5
+    read_data = Xil_In32(MEM_OFFSET(5));
+    printf("Read 0x%08X from address 5\n", read_data);
+
+    // 3. Check for match
+    if (read_data == write_data) {
+        printf("SUCCESS: Data matches!\n");
+    } else {
+        printf("ERROR: Data mismatch!\n");
+    }
+
+    // 4. Read the total_writes status register
+    write_count = Xil_In32(TOTAL_WRITES_REG);
+    printf("Total write operations reported by core: %d\n", write_count);
+
+    return 0;
+}

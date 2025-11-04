@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Oct 24 12:17:25 2025
+# Process ID: 14956
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3104 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRam_Redefined\ReRam_Redefined.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.xpr}
+update_compile_order -fileset sources_1
+reset_simulation -simset sim_1 -mode behavioral
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_axi_reram_memory_controller.tcl
+restart
+run all
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_axi_reram_memory_controller.tcl
+restart
+run all
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_axi_reram_memory_controller.tcl
+restart
+run all
+close_sim
+update_compile_order -fileset sources_1

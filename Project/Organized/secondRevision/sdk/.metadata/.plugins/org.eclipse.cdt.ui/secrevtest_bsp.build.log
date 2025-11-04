@@ -1,4 +1,4 @@
-22:48:05 **** Build of project secrevtest_bsp ****
+01:53:04 **** Build of project secrevtest_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/axi_reram_v1_0/src"
 C:/Xilinx/SDK/2018.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/axi_reram_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -46,7 +46,6 @@ axi_reram_selftest.c:52:58: warning: comparison between signed and unsigned inte
 axi_reram_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
   int Index;
       ^~~~~
-arm-none-eabi-ar: creating ../../../lib/libxil.a
 "Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src"
 C:/Xilinx/SDK/2018.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling bram"
@@ -122,5 +121,5 @@ C:/Xilinx/SDK/2018.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s
 "Compiling xadcps"
 'Finished building libraries'
 
-22:48:39 Build Finished (took 34s.76ms)
+01:53:59 Build Finished (took 55s.814ms)
 

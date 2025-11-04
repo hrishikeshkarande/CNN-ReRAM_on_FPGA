@@ -1,0 +1,23 @@
+verilog xil_defaultlib --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/ec67/hdl" --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/02c8/hdl/verilog" --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/b193/hdl" \
+"../../../bd/ReRamSpm/ip/ReRamSpm_processing_system7_0_0/sim/ReRamSpm_processing_system7_0_0.v" \
+
+sv xil_defaultlib --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/ec67/hdl" --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/02c8/hdl/verilog" --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/b193/hdl" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/reram_cell_simple.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/tb_reram_cell_simple.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/reram_word_array_simple.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/tb_reram_word_array_simple.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/reram_memory_controller_blocking.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/tb_reram_memory_controller_blocking.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/reram_axilite_wrapper.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/sim/tb_reram_axilite_wrapper.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/src/reram_memory_controller_blocking.sv" \
+"../../../bd/ReRamSpm/ipshared/6975/src/reram_axilite_wrapper.sv" \
+"../../../bd/ReRamSpm/ip/ReRamSpm_reram_axilite_wrapper_0_0/sim/ReRamSpm_reram_axilite_wrapper_0_0.sv" \
+
+verilog xil_defaultlib --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/ec67/hdl" --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/02c8/hdl/verilog" --include "../../../../Configuration1.srcs/sources_1/bd/ReRamSpm/ipshared/b193/hdl" \
+"../../../bd/ReRamSpm/ip/ReRamSpm_auto_pc_0/sim/ReRamSpm_auto_pc_0.v" \
+"../../../bd/ReRamSpm/sim/ReRamSpm.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ReRam_Redefined.ip_user_files/bd/ReRamSpm/ip/ReRamSpm_rst_ps7_0_50M_0/sim/ReRamSpm_rst_ps7_0_50M_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -105,3 +105,9 @@ con
 13:43:18 INFO  : XSCT server has started successfully.
 13:43:24 INFO  : Successfully done setting XSCT server connection channel  
 13:43:24 INFO  : Successfully done setting SDK workspace  
+01:52:41 INFO  : Registering command handlers for SDK TCF services
+01:52:42 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\hrish\Downloads\ReRAM_Thesis\Project\Organized\secondRevision\sdk\temp_xsdb_launch_script.tcl
+01:52:47 INFO  : XSCT server has started successfully.
+01:52:47 INFO  : Successfully done setting XSCT server connection channel  
+01:52:54 INFO  : Successfully done setting SDK workspace  
+01:52:54 INFO  : Processing command line option -hwspec C:/Users/hrish/Downloads/ReRAM_Thesis/Project/Organized/secondRevision/hw/RevisionDesign_wrapper.hdf.

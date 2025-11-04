@@ -1,0 +1,78 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+=========================================================================
+ReRAM AXI-Lite Wrapper Testbench
+=========================================================================
+[0] Resetting AXI Wrapper and Core...
+[65000] Reset complete
+
+--- Phase 1: Basic Memory Read/Write Operations (Mem Space 0x000) ---
+[65000] AXI Write: 0xdeadbeef to Addr 0x000
+[235000] AXI Write: 0xcafebabe to Addr 0x004
+[405000] AXI Write: 0x12345678 to Addr 0x03c
+[575000] AXI Read: from Addr 0x000
+[675000] AXI Read Data: 0xdeadbeef
+[PASS] Data verification passed at 0x000
+[675000] AXI Read: from Addr 0x004
+[775000] AXI Read Data: 0xcafebabe
+[PASS] Data verification passed at 0x004
+[775000] AXI Read: from Addr 0x03c
+[875000] AXI Read Data: 0x12345678
+[PASS] Data verification passed at 0x03c
+Phase 1 completed with 0 errors
+
+--- Phase 2: Read Status Registers (Reg Space 0x100) ---
+[875000] AXI Read: from Addr 0x100
+[915000] AXI Read Data: 0x00000000
+[ERROR] Data mismatch at 0x100: expected=0x00000003, actual=0x00000000
+[915000] AXI Read: from Addr 0x104
+[955000] AXI Read Data: 0x00000003
+[PASS] Data verification passed at 0x104
+[955000] AXI Read: from Addr 0x108
+[995000] AXI Read Data: 0x00000003
+[ERROR] Data mismatch at 0x108: expected=0x00000000, actual=0x00000003
+[995000] AXI Read: from Addr 0x10c
+[1035000] AXI Read Data: 0x00000000
+[PASS] Data verification passed at 0x10c
+Phase 2 completed with 2 errors
+
+--- Phase 3: Verify Endurance Counter Updates (Reg Space 0x120) ---
+Performing 5 more writes to word 2 (Addr 0x008)...
+[1035000] AXI Write: 0xa5a50000 to Addr 0x008
+[1205000] AXI Write: 0xa5a50001 to Addr 0x008
+[1375000] AXI Write: 0xa5a50002 to Addr 0x008
+[1545000] AXI Write: 0xa5a50003 to Addr 0x008
+[1715000] AXI Write: 0xa5a50004 to Addr 0x008
+Reading packed write cycle counters (Addr 0x120)...
+[1885000] AXI Read: from Addr 0x120
+[1925000] AXI Read Data: 0x00000000
+[ERROR] Write cycle counter mismatch: expected=0x00050101, actual=0x00000000
+Phase 3 completed with 3 errors
+
+--- Phase 4: Test Write to Read-Only Register ---
+Attempting to write 0xBADF00D to TOTAL_READS (0x100)...
+[1925000] AXI Write: 0x0badf00d to Addr 0x100
+Reading back TOTAL_READS. Should be unchanged.
+[1965000] AXI Read: from Addr 0x100
+[2005000] AXI Read Data: 0x00050101
+[ERROR] Data mismatch at 0x100: expected=0x00000008, actual=0x00050101
+Phase 4 completed with 4 errors
+
+--- Phase 5: Test Cell Error Array Read (Reg Space 0x200) ---
+Reading cell error flags for word 0 (Addr 0x200). Should be 0.
+[2005000] AXI Read: from Addr 0x200
+[2045000] AXI Read Data: 0x00000003
+[ERROR] Data mismatch at 0x200: expected=0x00000000, actual=0x00000003
+Reading cell error flags for word 15 (Addr 0x23C). Should be 0.
+[2045000] AXI Read: from Addr 0x23c
+[2085000] AXI Read Data: 0x00000000
+[PASS] Data verification passed at 0x23c
+Phase 5 completed with 5 errors
+
+=========================================================================
+AXI Wrapper Test Summary
+=========================================================================
+Total test errors: 5
+*** 5 AXI WRAPPER TESTS FAILED ***
+=========================================================================
+$finish called at time : 2185 ns : File "C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.ip_user_files/bd/ReRamSpm/ipshared/f2a6/sim/tb_reram_axilite_wrapper.sv" Line 298

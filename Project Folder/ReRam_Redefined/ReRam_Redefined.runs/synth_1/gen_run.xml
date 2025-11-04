@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1761867554">
+  <File Type="PA-TCL" Name="ReRamSpm_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ReRamSpm_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ReRamSpm_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ReRamSpm_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="ReRamSpm_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ReRamSpm_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ReRamSpm_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ReRamSpm_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ReRamSpm_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/reram_cell_simple.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../reram_cell_simple.sv"/>
+        <Attr Name="ImportTime" Val="1761058409"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/tb_reram_cell_simple.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../tb_reram_cell_simple.sv"/>
+        <Attr Name="ImportTime" Val="1761058411"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2.0/reram_word_array_simple.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ReRAM With Sumukh/2.0/reram_word_array_simple.sv"/>
+        <Attr Name="ImportTime" Val="1761083063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2.0/tb_reram_word_array_simple.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ReRAM With Sumukh/2.0/tb_reram_word_array_simple.sv"/>
+        <Attr Name="ImportTime" Val="1761083061"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3.0/reram_memory_controller_blocking.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ReRAM With Sumukh/3.0/reram_memory_controller_blocking.sv"/>
+        <Attr Name="ImportTime" Val="1761174050"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3.0/tb_reram_memory_controller_blocking.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ReRAM With Sumukh/3.0/tb_reram_memory_controller_blocking.sv"/>
+        <Attr Name="ImportTime" Val="1761174048"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ReRAM_Working/reram_axilite_wrapper.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ReRAM_Working/reram_axilite_wrapper.sv"/>
+        <Attr Name="ImportTime" Val="1761327077"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ReRAM_Working/tb_reram_axilite_wrapper.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ReRAM_Working/tb_reram_axilite_wrapper.sv"/>
+        <Attr Name="ImportTime" Val="1761327118"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ip_repo/ReRAM_SPM_1.0/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/ReRamSpm/ReRamSpm.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/ReRamSpm/hdl/ReRamSpm_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ReRamSpm_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

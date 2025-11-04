@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1394075819156337957  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 2413a4e8c8dd4490957e722b50b7e2e6 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_2 -L axi_vip_v1_1_2 -L processing_system7_vip_v1_0_4 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_12 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_2 -L axi_data_fifo_v2_1_15 -L axi_register_slice_v2_1_16 -L axi_protocol_converter_v2_1_16 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_reram_axilite_wrapper_behav xil_defaultlib.tb_reram_axilite_wrapper xil_defaultlib.glbl" , 
+    buildDate : "Apr  4 2018" , 
+    buildTime : "19:30:32" , 
+    linkCmd : "C:\\Xilinx\\Vivado\\2018.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/tb_reram_axilite_wrapper_behav/xsimk.exe\"   \"xsim.dir/tb_reram_axilite_wrapper_behav/obj/xsim_0.win64.obj\" \"xsim.dir/tb_reram_axilite_wrapper_behav/obj/xsim_1.win64.obj\" \"C:\\Xilinx\\Vivado\\2018.1\\lib\\win64.o\\\\librdi_simulator_kernel.dll\"  \"C:\\Xilinx\\Vivado\\2018.1\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

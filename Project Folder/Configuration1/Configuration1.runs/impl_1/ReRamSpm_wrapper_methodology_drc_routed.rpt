@@ -1,0 +1,210 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Oct 31 03:30:55 2025
+| Host         : LOREFARM running 64-bit major release  (build 9200)
+| Command      : report_methodology -file ReRamSpm_wrapper_methodology_drc_routed.rpt -pb ReRamSpm_wrapper_methodology_drc_routed.pb -rpx ReRamSpm_wrapper_methodology_drc_routed.rpx
+| Design       : ReRamSpm_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 35
++-----------+----------+-----------------------+------------+
+| Rule      | Severity | Description           | Violations |
++-----------+----------+-----------------------+------------+
+| TIMING-16 | Warning  | Large setup violation | 35         |
++-----------+----------+-----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -18.132 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[16]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -18.411 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -18.426 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -18.435 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[22]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -18.443 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[21]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -18.454 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -18.475 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[19]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -18.538 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -18.545 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -18.555 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[18]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -18.562 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -18.575 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[20]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -18.595 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[17]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -18.604 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -18.610 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -18.611 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[30]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -18.612 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -18.663 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -18.667 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -18.719 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -18.726 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[6].word_array_inst/cell_instances[1].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[23]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -18.729 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[25]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -18.742 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[28]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -18.744 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -18.745 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[26]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -18.757 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -18.839 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[0].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[1]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -18.842 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[5].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -18.871 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[29]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -18.896 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[24]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -18.905 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[31]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -19.072 ns between ReRamSpm_i/reram_axilite_wrapper_0/inst/u_core/word_arrays[3].word_array_inst/cell_instances[0].cell_inst/write_counter_reg[3]/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[27]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -6.653 ns between ReRamSpm_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[19]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -6.912 ns between ReRamSpm_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[16]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -7.202 ns between ReRamSpm_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and ReRamSpm_i/reram_axilite_wrapper_0/inst/axi_rdata_reg_reg[23]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

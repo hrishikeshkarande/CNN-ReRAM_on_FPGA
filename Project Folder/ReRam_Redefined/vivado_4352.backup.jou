@@ -1,0 +1,79 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Oct 23 01:16:45 2025
+# Process ID: 4352
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9520 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRam_Redefined\ReRam_Redefined.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.xpr}
+update_compile_order -fileset sources_1
+reset_simulation -simset sim_1 -mode behavioral
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_reram_memory_controller_blocking.tcl
+restart
+run all
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_reram_memory_controller_blocking.tcl
+restart
+run all
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_reram_memory_controller_blocking.tcl
+restart
+run all
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_reram_memory_controller_blocking.tcl
+restart
+run all
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_reram_word_array_simple [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_reram_word_array_simple.tcl
+restart
+run all
+close_sim
+close_project
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.xpr}
+update_compile_order -fileset sources_1
+import_files -norecurse {{C:/Users/hrish/Downloads/ReRAM With Sumukh/4.0 B/axi_reram_memory_controller.sv} {C:/Users/hrish/Downloads/ReRAM With Sumukh/4.0 B/tb_axi_reram_memory_controller.sv}}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_axi_reram_memory_controller [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_axi_reram_memory_controller [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source tb_axi_reram_memory_controller.tcl
+restart
+run all
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+close_project

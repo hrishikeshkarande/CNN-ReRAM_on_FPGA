@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Oct 31 00:39:17 2025
+# Process ID: 5280
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.runs/synth_1
+# Command line: vivado.exe -log ReRamSpm_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ReRamSpm_wrapper.tcl
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.runs/synth_1/ReRamSpm_wrapper.vds
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ReRamSpm_wrapper.tcl -notrace

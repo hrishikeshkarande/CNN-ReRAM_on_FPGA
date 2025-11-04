@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Oct 26 13:11:13 2025
+# Process ID: 18328
+# Current directory: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19860 C:\Users\hrish\Downloads\ReRAM_Thesis\Project Folder\ReRam_Redefined\ReRam_Redefined.xpr
+# Log file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/vivado.log
+# Journal file: C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.xpr}
+open_run impl_1
+close_design
+open_bd_design {C:/Users/hrish/Downloads/ReRAM_Thesis/Project Folder/ReRam_Redefined/ReRam_Redefined.srcs/sources_1/bd/ReRamSpm/ReRamSpm.bd}
+regenerate_bd_layout
+close

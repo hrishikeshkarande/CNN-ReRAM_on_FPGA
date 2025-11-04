@@ -1,0 +1,88 @@
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include <stdint.h>
+
+#ifndef RERAM_BASE
+// Replace this with your Address Editor base, e.g. 0x43C00000
+#define RERAM_BASE 0x43C00000U
+#endif
+
+// Register offsets
+#define REG_CONTROL   (RERAM_BASE + 0x00) // W: [0]=start, [1]=target_state, [2]=data_in
+#define REG_ADDR      (RERAM_BASE + 0x04) // W: [ADDR_WIDTH-1:0]
+#define REG_STATUS    (RERAM_BASE + 0x08) // R: [0]=busy,[1]=failed,[2]=read_state,[3]=data_out
+
+
+// Treat 0 as LRS, 1 as HRS (matches RTL)
+#define STATE_LRS 0u
+#define STATE_HRS 1u
+
+
+
+// Pretty-print helper (optional)
+static inline const char* phys_state(uint32_t st) { return ((st>>2)&1u) ? "HRS" : "LRS"; }
+// where read bit = STATUS[2]
+
+
+static inline void rr_set_addr(uint32_t a)       { Xil_Out32(REG_ADDR, a); }
+static inline uint32_t rr_status(void)           { return Xil_In32(REG_STATUS); }
+static inline void rr_kick(uint32_t target, uint32_t din) {
+    // bit0=start(1), bit1=target_state, bit2=data_in
+    uint32_t ctl = (1u<<0) | ((target & 1u) << 1) | ((din & 1u) << 2);
+    Xil_Out32(REG_CONTROL, ctl);
+}
+
+// Helpers to decode STATUS
+static inline uint32_t rr_busy(uint32_t st)      { return  st        & 1u; }
+static inline uint32_t rr_failed(uint32_t st)    { return (st >> 1)  & 1u; }
+static inline uint32_t rr_read(uint32_t st)      { return (st >> 2)  & 1u; } // resistive LRS/HRS
+static inline uint32_t rr_dataout(uint32_t st)   { return (st >> 3)  & 1u; } // stored bit (valid in LRS)
+
+static void rr_write_cell(uint32_t addr, uint32_t target_state, uint32_t data_in)
+{
+    rr_set_addr(addr);
+    rr_kick(target_state, data_in);
+    // Poll BUSY
+    uint32_t st;
+    do {
+        st = rr_status();
+    } while (rr_busy(st));
+
+    xil_printf("ADDR=%lu -> busy=%lu failed=%lu read=%lu data_out=%lu\r\n",
+               addr, rr_busy(st), rr_failed(st), rr_read(st), rr_dataout(st));
+}
+
+int main()
+{
+    xil_printf("ReRAM AXI test starting...\r\n");
+
+    // Example: set addr=3 to LRS with data=1
+    rr_write_cell(3, STATE_LRS, 1);
+
+    // Example sequence:
+    // 1) Set addr=3 to LRS and store bit=1
+    rr_write_cell(3, /*target_state LRS=*/1, /*data_in=*/1);
+
+    // 2) Read back status (should show read=1 (LRS), data_out=1, failed=0)
+    uint32_t st = rr_status();
+    xil_printf("Status@3: busy=%lu failed=%lu read=%lu data_out=%lu\r\n",
+               rr_busy(st), rr_failed(st), rr_read(st), rr_dataout(st));
+
+    // 3) Reset same addr=3 to HRS (data_in ignored in HRS)
+    rr_write_cell(3, /*HRS=*/0, /*ignored=*/0);
+    st = rr_status();
+    xil_printf("After RESET@3: busy=%lu failed=%lu read=%lu data_out=%lu\r\n",
+               rr_busy(st), rr_failed(st), rr_read(st), rr_dataout(st));
+
+    // 4) Try a few addresses
+    for (uint32_t a = 0; a < 4; ++a) {
+        rr_write_cell(a, 1, a & 1u); // set to LRS with data pattern
+        rr_write_cell(a, 0, 0);      // then reset to HRS
+    }
+
+    xil_printf("Done.\r\n");
+    while (1) { /* idle */ }
+    return 0;
+}
